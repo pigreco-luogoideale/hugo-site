@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+	<section class="contContainer">
+		<div class="content colorlink">
+			<h3>Iscriviti alla nostra newsletter</h3>
+			<div id="newsletterbox" style='padding: 10px'>
+				<div style="text-align: center">
+					<img src="/images/trequattordici300.png" />
+
+					<!-- Begin MailChimp Signup Form -->
+					<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+					<style type="text/css">
+						#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+						/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+						   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+					</style>
+					<div id="mc_embed_signup">
+					<form action="//luogoideale.us9.list-manage.com/subscribe/post?u=1af09ae2148140b5521f04a68&amp;id=1613978c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div id="mc_embed_signup_scroll">
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="La tua e-mail" required>
+						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1af09ae2148140b5521f04a68_1613978c88" tabindex="-1" value=""></div>
+						<div class="clear"><input type="submit" value="Iscriviti" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+						<div><a href='/informativa-privacy' target='_blank'>Informativa sulla privacy</a></div>
+						</div>
+					</form>
+					</div>
+					<!--End mc_embed_signup-->
+				</div>
+			</div>
+			<div>
+				<h2>Archivio newsletter</h2>
+				<!--Per consultare le newsletter precedenti, <a href="http://us9.campaign-archive2.com/home/?u=1af09ae2148140b5521f04a68&id=1613978c88">visita l'archivio</a>.-->
+				<ul>
+					{{ range $ix, $val := $.Site.Data.newsletter.releases }}
+					<li><a href='{{ index $val 1}}' target='_blank'>Trequattordici #{{ add 1 $ix }} - {{ index $val 0 }}</a></li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+	</section>
+{{ partial "footer.html" . }}

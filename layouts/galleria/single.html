@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+	<section class="contContainer">
+		<div class="content activity colorlink">
+			<h1>{{ .Params.title }}</h1>
+			{{ if not (isset .Params "skipimage") }}<img src="{{ .Params.image }}" alt="{{ .Params.alt }}"/>{{ end }}
+
+			{{ .Content }}
+
+			<div class="galleria">
+				{{ range $img := readDir (print "/static" .Params.gallery) }}
+				<img src="{{ $.Params.gallery}}/{{ $img.Name }}" />
+				{{ end }}
+			</div>
+			<script>
+				(function() { 
+					Galleria.loadTheme('/js/galleria/themes/classic/galleria.classic.min.js');
+					Galleria.run('.galleria');
+				}());
+			</script>
+		</div>
+	</section>
+{{ partial "footer.html" . }}
