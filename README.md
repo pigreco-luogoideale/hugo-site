@@ -1,12 +1,13 @@
-Idealmente, questo codice va su Github di PiGreco.
+# Il sito di PiGreco
 
-Le pigrechine potranno editare i file da lì.
+Quasi tutto nel sito è pubblico e viene messo su Github.
 
-Quando in github si fa un commit, deve partire un hook che compila il sito e fa il deploy in automatico.
+Si fa push sul repo, dove si può modificare il contenuto.
 
-https://www.netlify.com/ (sono entrato con il mio github)
+Per pubblicarlo, per ora è necessario fare pull, eseguire hugo e copiarlo sul
+server FTP.
 
-https://gomakethings.com/automating-the-deployment-of-your-static-site-with-hugo-and-github/
+## TODO
 
- -[ ] Paginate news
- -[ ] Automatic deploy with netlify.com
+ - Avere un sistema di deploy automatico, tipo [questo](https://gomakethings.com/automating-the-deployment-of-your-static-site-with-hugo-and-github/).
+ - Paginazione delle news
