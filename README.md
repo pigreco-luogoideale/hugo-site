@@ -9,5 +9,7 @@ server FTP.
 
 ## TODO
 
- - Avere un sistema di deploy automatico, tipo [questo](https://gomakethings.com/automating-the-deployment-of-your-static-site-with-hugo-and-github/).
- - Paginazione delle news
+ - [ ] Avere un sistema di deploy automatico, tipo [questo](https://gomakethings.com/automating-the-deployment-of-your-static-site-with-hugo-and-github/).
+ - [ ] Paginazione delle news
+ - [ ] Display migliore dell'archivio newsletter
+ - [ ] Mappa del sito

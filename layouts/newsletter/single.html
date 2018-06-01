@@ -32,7 +32,7 @@
 				<!--Per consultare le newsletter precedenti, <a href="http://us9.campaign-archive2.com/home/?u=1af09ae2148140b5521f04a68&id=1613978c88">visita l'archivio</a>.-->
 				<ul>
 					{{ range $ix, $val := $.Site.Data.newsletter.releases }}
-					<li><a href='{{ index $val 1}}' target='_blank'>Trequattordici #{{ add 1 $ix }} - {{ index $val 0 }}</a></li>
+					<li><a href='{{ index $val 1}}' target='_blank'>Trequattordici #{{ sub (len $.Site.Data.newsletter.releases) $ix }} - {{ index $val 0 }}</a></li>
 					{{ end }}
 				</ul>
 			</div>
