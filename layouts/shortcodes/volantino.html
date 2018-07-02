@@ -1,0 +1,5 @@
+{{ if len .Params | eq 0 }}
+<a href="/volantini/volantino_1819.pdf" target="_blank">{{ .Inner }}</a>
+{{ else }}
+<a href="/volantini/{{ .Get 0 }}.pdf" target="_blank">{{ .Inner }}</a>
+{{ end }}
