@@ -269,7 +269,7 @@ section {
 img.people {
 	width: 100%;
 	margin: 0px;
-}			
+}
 
 .balloonbox {
 	display: flex;
@@ -352,7 +352,7 @@ img.people {
 }
 .activities .activity .description {
 	display: inline-block;
-	width: 180px; 
+	width: 180px;
 	vertical-align: top;
 	background: white;
 	padding: 10px;
@@ -448,9 +448,16 @@ img.people {
 	margin: 10px;
 }
 
-.activity ul.list {
+.activity ul {
 	display: block;
 	padding: 0px;
+}
+
+.activity ul > li {
+	margin: 10px;
+	padding: 0px;
+	margin-left: 25px;
+	list-style: none;
 }
 
 .activity ul.list > li {
@@ -458,9 +465,6 @@ img.people {
 	background: white;
 	height: 120px;
 	width: 65%;
-	margin: 10px;
-	margin-left: 25px;
-	padding: 0px;
 	position: relative;
 }
 
@@ -470,13 +474,20 @@ img.people {
 	position: absolute;
 }
 
-.activity ul.list > li > h1 {
+.activity ul > li > h1 {
 	font-family: 'Open Sans Condensed', sans-serif;
-	margin: 0px;
 	font-size: 120%;
+	margin: 0px;
+}
+
+.activity ul.list > li > h1 {
 	position: absolute;
 	left: 130px;
 	top: 10px;
+}
+
+.activity ul > li > p {
+	padding-left: 10px;
 }
 
 .activity ul.list > li > p {
@@ -487,7 +498,6 @@ img.people {
 	top: 3EM;
 	margin: 0px;
 }
-
 
 h2.inline-header {
 	font-family: 'Open Sans Condensed', sans-serif;
