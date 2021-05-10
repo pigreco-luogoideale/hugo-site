@@ -1,0 +1,72 @@
+html {
+  background: #eee;
+  color: #333;
+  font: 16px/1.4 Open Sans, Helvetica, Arial, sans-serif;
+}
+
+body {
+  max-width: 1000px;
+  padding: 20px 40px;
+  margin: 0 auto;
+}
+
+a {
+  color: #e3695f;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+	color: #333;
+	line-height: 1.2;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 2.6em;
+}
+
+p {
+  margin: 1em 0;
+}
+
+.container {
+  padding: 40px 60px;
+  margin: 0 0 3em;
+  background: #f7f0dd;
+  text-align: center;
+  box-shadow: 2px 4px 6px 1px rgba(50, 50, 50, 0.14);
+}
+
+
+
+h3 {
+	margin-top: 70px;
+}
+#picker {
+	margin-bottom: 70px;
+}
+
+div#picker span {
+	display: inline-block;
+	margin: 2px 7px;
+	width: 40px;
+	height: 30px;
+	border: 2px;
+	cursor: pointer;
+	border: 2px dotted #ccc;
+	border-radius: 5px;
+}
+
+div#picker span.active_color {
+	margin: 0 5px;
+	border: 4px solid #333;
+}

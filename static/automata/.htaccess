@@ -1,0 +1,4 @@
+AuthUserFile /home/mhd-01/www.luogoideale.org/htdocs/automata/.htpasswd
+AuthName "Username and Password, please"
+AuthType Basic
+Require valid-user

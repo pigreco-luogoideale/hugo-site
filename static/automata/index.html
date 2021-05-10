@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+	OK (low) Fare disegno tenendo premuto
+	OK Cambiare (y,x) -&gt; (x,y)
+	OK Settare i colori in modo programmatico
+	OK FIX click sulla griglia
+	OK? Salva/carica configurazione E LA GRIGLIA dopo averla disegnata
+	   -> Non salva il codice
+	NO -> Settare la dimensione della griglia in modo programmatico
+
+	Entro 27 gennaio (demo con la prof)
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Simulatore Programmabile di Automi Cellulari</title>
+		<link href="style.css" rel="stylesheet" />
+		<script src="jscolor.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lz-string.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="globalEval.js" type="text/javascript" charset="utf-8"></script>
+		<script src="cellautomata.js" type="text/javascript" charset="utf-8"></script>
+		<script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="d_tabs">
+			<ul><li><a href="#tab_setup">Setup</a></li><li><a href="#tab_code">Output</a></li><li><a href="#tab_log">Messaggi</a></li><li><a href="#tab_state">Esporta/Carica</a></li><li><a href="#tab_help">Aiuto</a></li></ul>
+			<section id="tab_setup" class="tabb">
+				<div id="d_num_clrs"><label>Nr. colori</label><input id="colors" value="0" /></div>
+				<div id="d_num_cols"><label>Colonne</label><input id="gridcols" value="100" /></div>
+				<div id="d_num_rows"><label>Righe</label><input id="gridrows" value="100" /></div>
+				<div id="d_col_setters">
+					<div id="colorPickers"></div>
+				</div>
+				<!--
+				<div id="d_clrs_pick">
+					<radiogroup id="colorPickers"><div><input id="radio_color_0" data-idx="0" name="currentColor" type="radio"><label for="radio_color_0"></label><input class="jscolor" value="ffffff" /></div><div><input id="radio_color_1" data-idx="1" name="currentColor" type="radio"><label for="radio_color_1"></label><input class="jscolor" value="000000" /></div></radiogroup>
+				</div>
+				-->
+				<div id="d_nbgrid"><h1>Griglia vicini</h1><div id="nbgrid"></div></div>
+				<div id="d_source">
+					<h1>Codice</h1>
+					<pre><code id="source" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">// Impostiamo uno spazio toroidale
+var at = function (mtx, col, row) {
+    if (row &lt; 0) { row += mtx.rows; }
+    if (col &lt; 0) { col += mtx.cols; }
+    if (row &gt;= mtx.rows) { row -= mtx.rows; }
+    if (col &gt;= mtx.cols) { col -= mtx.cols; }
+    return mtx.get(col, row);
+};
+
+var init = function (mtx) {
+    mtx.neighbors = NB_MOORE; // getNBGrid();
+    mtx.randomize();
+};
+
+var cell = function (mtx, col, row) {
+    var n = mtx.nbcount(col, row, 1);
+    var v = mtx.get(col, row);
+    if (v == 1) {
+        if (n &lt; 2) { return 0; }
+        if (n &gt; 3) { return 0; }
+    } else {
+        if (n == 3) { return 1; }
+    }
+    return v;
+};
+
+var num_steps = 0;
+var after = function (mtx) {
+    mtx.draw();
+    num_steps += 1;
+    //print("Steps: " + num_steps);
+};
+</code></pre>
+				</div>
+				<div id="d_btn_init"><button onclick="_setup();">Inizializza</button></div>
+			</section>
+			<section id="tab_code" class="tabb">
+				<div id="d_btn_rand"><button onclick="_mt_rand();">Randomizza...</button></div>
+				<div id="d_btn_fill"><button onclick="_mt_fill();">Riempi...</button></div>
+				<div id="d_btn_step"><button onclick="single_step();">Passo</button></div>
+				<div id="d_sim_speed">Passi/sec: <input id="sim_speed" value="10" size="7"/></div>
+				<div id="d_btn_start"><button id="btn_start" onclick="_sim_start();">Start</button></div>
+				<div id="d_btn_stop"><button id="btn_stop" onclick="_sim_stop();" disabled>Stop</button></div>
+				<div id="d_palette">
+					<radiogroup id="colorPalette"></radiogroup>
+				</div>
+				<div id="d_canvas">
+					<div id="microlog"></div>
+					<canvas id="cnvs" height="600" width="760">
+					HTML5 canvas tag not supported.
+					</canvas>
+				</div>
+				<div id="d_cmd">
+					Linea di comando<br>
+					<input id="cmd" type="text" value=""/> <button id="btn_cmd" onclick="_cmd();">Esegui!</button>
+				</div>
+			</section>
+			<section id="tab_log" class="tabb">
+				<div id="d_btn_clearlog"><button onclick="clean();">Pulisci!</button></div>
+				<textarea id="log"></textarea>
+			</section>
+			<section id="tab_state" class="tabb">
+				<div id="d_loadsave">
+					<div id="d_btn_save"><button onclick="_state_save();">Esporta</button></div>
+					<div id="d_btn_load"><button onclick="_state_load();">Carica</button></div>
+					<textarea id="savestate"></textarea>
+				</div>
+			</section>
+			<section id="tab_help" class="tabb">
+				<div id="help">
+					<h1>Simulatore Programmabile di Automi Cellulari</h1>
+					<h2>Setup</h2>
+					Inizia col SETUP. Imposta il numero di colori che vuoi usare. Dovrebbero comparire dei campi che permettono di selezionare i colori della griglia. Dopo imposta la dimensione della griglia. È quindi possibile impostare un vicinato a piacere, in aggiunta a quelli già definiti (NB_MOORE e NB_VON_NEUMANN), attivando le celle corrispondenti nella griglia. Quella griglia è accessibile tramite la funzione getNBGrid().
+
+					Dopo aver modificato il codice, e in particolare le funzioni at, init e cell, è possibile compilare il codice e inizializzare la matrice col pulsante INIZIALIZZA.
+					<h2>Simulazione</h2>
+					Dal pannello OUTPUT è possibile visualizzare la simulazione e impostare i valori nella griglia. Selezionando un colore e clickando sulla griglia, si imposterà la cella clickata del colore scelto. I pulsanti RANDOMIZZA e RIEMPI riempiono la griglia rispettivamente con colori a caso e con il colore selezonato. Il pulsante PASSO effettua un singolo passo di simulazione, mentre START/STOP avviano la simulazione alla velocità specificata in passi al secondo.
+					<h2>Messaggi</h2>
+					Nella sezione MESSAGGI sono presenti i messaggi scritti con la funzione print(). Il pulsante PULISCI svuota il registro.
+					<h2>Esporta/Carica</h2>
+					Nella sezione ESPORTA/CARICA è possibile esportare i dati attuali (ma NON il codice) in formato testuale. Dopo aver premuto ESPORTA, comparirà del testo contenente l'attuale configurazione del simulatore. Quel testo può essere copiato altrove, e non verrà cancellato fino al ricaricamento della pagina o fino ad una nuova pressione di ESPORTA. Il pulsante CARICA legge il testo presente nella cella e lo carica nel sistema.
+				</div>
+			</section>
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			document.addEventListener("load", _main(), false);
+					
+			var editor = ace.edit("source");
+			editor.setTheme("ace/theme/chrome");
+			editor.session.setMode("ace/mode/javascript");
+			//editor.renderer.setShowGutter(false);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="application/javascript">
+    /*
+        ===== TODO ======
+        X vietare le mosse fuori turno
+        X mosse solo di una casella alla volta FATTO IN PARTE (due caselle per volta per i casi di sorpasso)
+        X sistemare colori FATTO
+        X indicazioni "è il tuo turno"
+        - ridurre i pop-up
+        X generare id partita a caso quando uno si collega
+        X supportare 2 giocatori 
+        X supportare pagina su pigreco
+    */
+    
+    // Valori che cambiano e rappresentano lo stato del gioco
+    var stato = { 
+        finePartita: false,
+
+        // elenco delle posizioni dei giocatori e.g. [[0, 3], [6, 4]]
+        players: [],
+        conta_barriere: 0,
+        // elenco delle barriere posizionate
+        barriere: [],
+        id_giocatore: null,
+        num_giocatori: null,
+        turno: 0,
+        mouse: [0, 0],
+        id_partita: 0
+    };
+
+    // Valori che non devono cambiare
+    var lato = 50;
+    var bordo = 12;
+    var lato_pedina = 10;
+    var server = "http://ring.ale.re:8900";
+    var colors = ["rgb(180,0,0)", "rgb(0,0,180)", "rgb(0,180,0)", "rgb(250,180,0)"];    
+
+    function richiesta(indirizzo, funzione) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if (funzione) {
+                    funzione(JSON.parse(this.responseText));
+                }
+            }
+        };
+        xhttp.open("GET", server + indirizzo, true);
+        xhttp.send();
+    }
+
+    // verifica se due array sono uguali
+    function array_eq(a, b) {
+        return a.length === b.length && a.every(function(v, i) {
+            return v === b[i];
+        });
+    }
+    
+    // verifica se a si trova in b
+    function array_in(a, b) {
+        return b.some(function(v){
+            return array_eq(a,v);
+        });
+    }
+
+    function nuovaPartita(n) {
+      //chiedo al server di darmi un url con l'id partita e già il numero di giocatori corretto 
+        // richiesta ("")
+        // window.location.search = window.location.search + "giulia";
+        var coppia = n == 2;
+        var idPartita = -1;
+
+        preparagioco(idPartita, coppia);
+    }
+
+    function preparagioco(idPartita, coppia) {
+        var canvas = document.getElementById('board');
+        canvas.addEventListener("mousedown", onClick, false);
+        canvas.addEventListener("mousemove", onMove, false);
+
+        if (coppia) {
+            coppia = "?coppia=true";
+        } else {
+            coppia = "";
+        }
+        console.log(idPartita, coppia);
+
+        // Comunica l'id partita e il numero di giocatori (controlla siano massimo 4)
+        richiesta("/partita/" + idPartita + coppia, function(risposta) {
+            if (risposta.errore) {
+                alert(risposta.errore);
+                return;
+            }
+
+            stato.id_partita = risposta.id_partita;
+            stato.id_giocatore = risposta.id_giocatore;
+            stato.num_giocatori = risposta.num_giocatori;
+
+            if (stato.num_giocatori == 2) {
+                stato.conta_barriere = 10;
+            } else {
+                stato.conta_barriere = 5;
+            }
+            
+            var colore_giocatore = document.getElementById('giocatore');
+            colore_giocatore.style.backgroundColor = colors[risposta.id_giocatore];
+            
+            document.getElementById('barriere').innerText = stato.conta_barriere;
+            document.getElementById('num_partita').innerText = stato.id_partita;
+            draw();
+
+            document.getElementById('gioco').style.display = 'block';
+            document.getElementById('inizio').style.display = 'none';
+            
+            window.history.replaceState("", "Partita Numero " + stato.id_partita, window.location.pathname+"?partita="+stato.id_partita)
+
+            // chiede al server ogni tot tempo la lista di posizioni dei giocatori
+            // (per vedere le mosse dei giocatori in tempo reale)
+
+            var intervalId = setInterval(function(){
+                if (!stato.finePartita) {
+                    richiesta("/posizioni/" + stato.id_partita, function(posizioni) {
+                        stato.players = posizioni.giocatori;
+                        stato.barriere = posizioni.barriere;
+                        stato.turno = posizioni.turno;
+                        draw();
+                        if (stato.players[0][1] == 8) { // ha vinto il primo giocatore
+                            stato.finePartita = true;
+                            
+                        }
+                        if (stato.num_giocatori == 2 && stato.players[1][1] == 0) { // ha vinto il secondo giocatore
+                            stato.finePartita = true;
+                        }
+                        if (stato.num_giocatori != 2) {
+                            if (stato.players[1][0] == 8 || stato.players[2][1] == 0 || stato.players[3][0] == 0 ) { // ha vinto uno dei giocatori - tranne 1
+                                stato.finePartita = true;
+                            }
+                        }
+                    });
+                } else {
+                    //alert("Partita terminata!");
+                    clearInterval(intervalId);
+                    document.getElementById('finegioco').style.display = 'block';
+                    document.getElementById('chimuove').style.display = 'none';
+                    var vincitore_colore = document.getElementById('vincitore');
+                    vincitore_colore.style.backgroundColor = colors[(stato.turno-1) % stato.num_giocatori];
+                }
+                
+            }, 1000);
+        });
+
+    }
+
+    function unisciti() {
+        var idPartita = document.getElementById('idpartita').value;
+        preparagioco(idPartita, false);
+    }
+
+    function uniscitiDaUrl() {
+        // Estrae id partita dall'url: 127.0.0.1/static/index.html?partita=...
+        // per ora non la usiamo, ma sarebbe per giocare con il link della partita
+        var urlParams = new URLSearchParams(window.location.search);
+        var idPartita = urlParams.get('partita');
+        if (idPartita != null) {
+            var coppia = urlParams.get('coppia');
+            console.log(idPartita, coppia);
+            preparagioco(idPartita, coppia);
+        }
+    }
+
+    function draw() {
+        // prepara la canvas per il disegno
+        var canvas = document.getElementById('board');
+        var ctx = canvas.getContext('2d');
+
+        // cancella tutto
+        ctx.fillStyle = "rgb(255,255,255)";
+        ctx.fillRect(0, 0, 460, 460);
+
+        // disegna griglia
+        ctx.fillStyle = "rgb(180,180,180)";
+        for (var i=0; i < 10; i++){
+            ctx.fillRect(0, i * lato, 9 * lato, bordo); // righe
+            ctx.fillRect(i * lato, 0, bordo, 9 * lato + bordo);
+        }
+        
+        // disegna giocatori
+        for (var i = 0; i < stato.players.length; i++) {
+            ctx.fillStyle = colors[i];
+            ctx.beginPath();
+            ctx.arc(stato.players[i][0] * lato + (lato + bordo) * 0.5, stato.players[i][1] * lato + (lato + bordo) * 0.5, lato_pedina, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        
+        // Disegna barriere
+        ctx.fillStyle = "rgb(0,0,0)";
+        for (var i = 0; i < stato.barriere.length; i++) {
+            // Barriere
+            var xabs = stato.barriere[i][0];
+            var yabs = stato.barriere[i][1];
+            if (stato.barriere[i][2] == 0) {
+                // orizzontale
+                ctx.fillRect(xabs - lato + bordo, yabs, 2 * lato - bordo, bordo);
+            } else {
+                // verticale
+                ctx.fillRect(xabs, yabs + bordo, bordo, 2 * lato - bordo);
+            }
+        }
+
+        // disegna oggetto sotto il mouse
+        var pos = [Math.floor(stato.mouse[0] / lato), Math.floor(stato.mouse[1] / lato)]; 
+        var xabs = pos[0] * lato;
+        var yabs = pos[1] * lato;
+        
+        var x1 = stato.mouse[0] % lato;
+        var y1 = stato.mouse[1] % lato;
+        
+        
+        ctx.lineWidth = 4.0;
+        if (x1 >= bordo && y1 >= bordo) {
+            // Oggetto: spostamento pedina
+            ctx.strokeStyle = colors[stato.id_giocatore];
+            ctx.beginPath();
+            ctx.arc(pos[0] *lato + (lato+bordo)*0.5 , pos[1] * lato + (lato+bordo)*0.5, lato_pedina, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+        // Barriere
+        else if (x1 < (lato + bordo) * 0.5 && y1 < bordo) {
+            ctx.strokeStyle = "rgb(100,100,100)";
+            ctx.strokeRect(xabs - lato + bordo, yabs, 2 * lato - bordo, bordo);
+        } else if (x1 > (lato + bordo) * 0.5 && y1 < bordo){
+            ctx.strokeStyle = "rgb(100,100,100)";
+            ctx.strokeRect(xabs + bordo, yabs, 2 * lato - bordo, bordo);
+        } else if (y1 < (lato + bordo) * 0.5 && x1 < bordo) {
+            ctx.strokeStyle = "rgb(100,100,100)";
+            ctx.strokeRect(xabs, yabs - lato + bordo, bordo, 2 * lato - bordo);
+        } else if (y1 > (lato + bordo) * 0.5 && x1 < bordo){
+            ctx.strokeStyle = "rgb(100,100,100)";
+            ctx.strokeRect(xabs, yabs + bordo, bordo, 2 * lato - bordo);
+        }
+        
+        // indica di chi è il turno
+        var turno_colore = document.getElementById('turno');
+        turno_colore.style.backgroundColor = colors[stato.turno % stato.num_giocatori];
+    }
+    
+    function distanza(pos1, pos2) {
+        dist = Math.abs(pos1[0] - pos2[0]) + Math.abs(pos1[1]-pos2[1])
+        return dist
+    }
+
+    function onClick(event) {
+        if (stato.finePartita){
+            return;
+        }
+        // var urlParams = new URLSearchParams(window.location.search);
+        // var idPartita = urlParams.get('partita');
+        console.log("Partita", stato.id_partita);
+        var canvas = document.getElementById('board');
+
+        var x = event.x - canvas.offsetLeft;
+        var y = event.y - canvas.offsetTop;
+
+        var i = stato.id_giocatore; //turn % stato.players.length;
+        var pos = [Math.floor(x / lato), Math.floor(y / lato)];
+
+        var xabs = pos[0] * lato;
+        var yabs = pos[1] * lato;
+        
+        var x1 = x % lato;
+        var y1 = y % lato;
+        
+        if (x1 >= bordo && y1 >= bordo) {
+            console.log(stato.players);
+            if (array_in(pos, stato.players)) {
+                alert("Invalido, riprova");
+            } else {
+                if (distanza(pos,stato.players[i]) <= 2) {
+                    richiesta("/muovi/" + stato.id_partita + "/" + stato.id_giocatore + "/" + pos[0] + "/" + pos[1], function(ris) {
+                        if (ris.ok) {
+                            stato.players[i] = pos;
+                        }
+                        else {
+                            alert("Non è il tuo turno");
+                        }
+                    });
+                }
+                else {
+                    alert("Mossa non permessa") 
+                }
+            }
+        } else if (x1 < (lato + bordo) * 0.5 && y1 < bordo) {
+            if (stato.conta_barriere < 1) {
+                alert("Non hai più barriere a disposizione!");
+            } else {
+                richiesta("/blocca/" + stato.id_partita + "/" + stato.id_giocatore + "/" + xabs + "/" + yabs + "/0", function(ris) {
+                    if (ris.ok) {
+                        stato.barriere.push([xabs, yabs, 0]);
+                        stato.conta_barriere--;
+                        document.getElementById('barriere').innerText = stato.conta_barriere;
+                    }
+                    else {
+                        alert("Non è il tuo turno");
+                    }
+                });
+            }
+        } else if (x1 > (lato + bordo) * 0.5 && y1 < bordo) {
+            if (stato.conta_barriere < 1) {
+                alert("Non hai più barriere a disposizione!");
+            } else {
+                richiesta("/blocca/" + stato.id_partita + "/" + stato.id_giocatore + "/" + (xabs + lato) + "/" + yabs + "/0", function(ris){
+                    if (ris.ok) {
+                        stato.barriere.push([xabs + lato, yabs, 0]);
+                        stato.conta_barriere--;
+                        document.getElementById('barriere').innerText = stato.conta_barriere;
+                    }
+                    else {
+                        alert("Non è il tuo turno");
+                    }
+                });
+                
+            }
+        } else if (y1 < (lato + bordo) * 0.5 && x1 < bordo) {
+            if (stato.conta_barriere < 1) {
+                alert("Non hai più barriere a disposizione!");
+            } else {
+                richiesta("/blocca/" + stato.id_partita + "/" + stato.id_giocatore + "/" + xabs + "/" + (yabs - lato) + "/1", function(ris){
+                    if (ris.ok) {
+                        stato.barriere.push([xabs, yabs - lato, 1]);
+                        stato.conta_barriere--;
+                        document.getElementById('barriere').innerText = stato.conta_barriere;
+                    }
+                    else {
+                        alert("Non è il tuo turno");
+                    }
+                });
+            }
+        } else if (y1 > (lato + bordo) * 0.5 && x1 < bordo) {
+            if (stato.conta_barriere < 1) {
+                alert("Non hai più barriere a disposizione!");
+            } else {
+                richiesta("/blocca/" + stato.id_partita + "/" + stato.id_giocatore + "/" + xabs + "/" + yabs + "/1", function(ris){
+                    if (ris.ok) {
+                        stato.barriere.push([xabs, yabs, 1]);
+                        stato.conta_barriere--;
+                        document.getElementById('barriere').innerText = stato.conta_barriere;
+                    }
+                    else {
+                        alert("Non è il tuo turno");
+                    }
+                });
+
+            }
+        }
+        draw();
+    }
+
+    function onMove(event) {
+        if (stato.finePartita){
+            return;
+        }
+        var canvas = document.getElementById('board');
+        var x = event.x - canvas.offsetLeft;
+        var y = event.y - canvas.offsetTop;
+        
+        stato.mouse[0] = x;
+        stato.mouse[1] = y;
+        draw();
+    }
+    </script>
+    
+    <style>
+    #turno {
+        display: inline-block;
+        vertical-align: middle;
+        background-color: white;
+        width: 20px;
+        height: 20px;
+    }
+    
+    #giocatore {
+        display: inline-block;
+        vertical-align: middle;
+        background-color: white;
+        width: 20px;
+        height: 20px;
+    }
+    
+    #crea {
+        display: inline-block;
+        border: 2px solid green;
+        padding: 10px;
+        margin: 5px;
+        vertical-align: top;
+    }
+
+    #unisciti {
+        display: inline-block;
+        border: 2px dotted red;
+        padding: 10px;
+        margin: 5px;
+        vertical-align: top;
+        text-align: center;
+    }
+    
+    #unisciti label, #unisciti input {
+        display: block;
+        margin: 5px auto;
+    }
+
+    #unisciti button {
+        display: block;
+        margin: 15px auto;
+    }
+    
+    #gioco {
+        display: none;
+    }
+    
+    #finegioco {
+        display: none;
+    }
+    
+    #vincitore {
+        display: inline-block;
+        vertical-align: middle;
+        background-color: red;
+        width: 20px;
+        height: 20px;
+    }
+    
+    
+    body {
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body onload="uniscitiDaUrl()">
+    <h1>Quoridor by GIULIASUPERBRAVATOP!!</h1>
+    
+    <div id="inizio">
+        <div id="crea">
+            <h2>Crea nuova partita</h2>
+            <button onclick="nuovaPartita(2)">Siamo in 2 </button>
+            <button onclick="nuovaPartita(4)">Siamo in 4 </button>
+        </div>
+        
+        <div id="unisciti">
+            <h2>Unisciti ai tuoi amici</h2>
+            <label for="idpartita">Inserisci l'id della partita:</label>
+            <input type="text" name="idpartita" id="idpartita">
+            <button onclick="unisciti()">Gioca! </button>
+        </div>
+        
+        <div>
+            <h2>Regole quoridor</h2>
+        </div>
+
+    </div>
+
+    <div id="gioco">
+        <div id="finegioco">
+            <h2> Partita terminata! </h2>
+            <p> Ha vinto il giocatore <span id="vincitore"></span> </p>
+            <p> <a href="http://pigreco.luogoideale.org/giochi/quoridor.html?">Crea un nuovo gioco</a> </p>
+        </div>
+        <div>
+            <p>Questa è la partita: <span id="num_partita" </p>
+            <p>Sei il giocatore: <span id="giocatore"></span></p>
+            <p>Hai a disposizione ancora <span id="barriere"> </span> barriere.</p>
+        <div id="chimuove">    
+            <p>Deve muovere il giocatore <span id="turno"></span></p>
+        </div>
+        </div>
+        
+        <canvas id="board" width="460" height="460"></canvas>
+    </div>
+</body>
+</html>

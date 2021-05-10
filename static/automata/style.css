@@ -1,0 +1,147 @@
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 0.9em;
+	background-color: #eee;
+	background-attachment: fixed;
+	background-image: url('http://pigreco.luogoideale.org/images/pattern.png');
+}
+
+#tab_setup, #tab_code, #tab_state, #tab_log, #tab_help {
+	position: relative;
+	height: 750px;
+	width: 760px;
+	margin: 0px auto;
+	background-color: #fed;
+	border: 1px solid orange;
+	padding: 10px;
+}
+
+#d_num_clrs, #d_num_cols, #d_num_rows, #d_col_setters, #d_source, #d_nbgrid, #d_btn_init {
+	position: absolute;
+	width: 300px;
+}
+#d_num_clrs { top: 10px; left: 10px; }
+#d_col_setters { top: 50px; left: 10px; height: 220px;}
+#d_num_cols { top: 320px; left: 10px; }
+#d_num_rows { top: 365px; left: 10px; }
+#d_source { right: 5px; top: 0px; width: 400px;  height: 640px;}
+#d_source>pre { width: 100%; height: 100%; background: #eee; position: relative;}
+#source { width: 97%; height: 97%; background: #fff; overflow: auto; position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+#d_nbgrid { bottom: 100px; left: 10px; }
+#d_btn_init { bottom: 30px; left: 10px; text-align: center;}
+#nbgrid {
+	display: table;
+	width: 100px;
+	margin: 0px auto;
+}
+#nbgrid>div {
+	display: table-row;
+	width: 100px;
+	height: 20px;
+}
+#nbgrid span {
+	display: table-cell;
+	background-color: gray;
+	width: 20px;
+	border: 1px solid #f1511b;
+}
+#nbgrid span.on {
+	background-color: #eee;
+}
+#nbgrid span.on:hover {
+	background-color: #ccc;
+}
+#nbgrid span.on.nbor {
+	background-color: black;
+}
+
+#d_num_clrs input, #d_num_rows input, #d_num_cols input {
+	float: right;
+}
+
+.tabb {
+	display: none;
+}
+
+.tabb:target {
+	border: 1px solid black;
+	display: block;
+}
+
+#d_tabs>ul * {
+	padding: 0px;
+	margin: 0px;
+}
+
+#d_tabs>ul>li>a {
+	display: inline-block;
+	background-color: #f1511b;
+	width: 100%;
+	padding: 7px 0px 7px 0px;
+	text-decoration: none;
+	color: white;
+}
+#d_tabs>ul>li>a:hover {
+	background-color: #f18b13;
+}
+#d_tabs>ul>li {
+	display: inline-block;
+	width: 18%;
+	padding: 0px;
+	margin: 0% 1%;
+	text-align: center;
+}
+#d_tabs>ul {
+	width: 70%;
+	margin: 0px auto;
+	padding: 0px;
+}
+#d_tabs { margin: 0px; padding: 0px; }
+
+#tab_code>#d_btn_rand { display: inline; }
+#tab_code>#d_btn_fill { display: inline; }
+#tab_code>#d_btn_step { display: inline; }
+#tab_code>#d_sim_speed { display: inline; }
+#tab_code>#d_btn_start { display: inline; }
+#tab_code>#d_btn_stop { display: inline; }
+#tab_code>#d_palette {
+	padding: 10px 0;
+	text-align: center;
+	height: 50px;
+}
+#tab_code>#d_cmd {
+	padding-top: 10px;
+}
+#tab_code>#d_palette #colorPalette div {
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+	padding: 10px;
+}
+
+#cnvs {
+	border: 1px solid #aaa;
+	display: block;
+}
+
+#cmd {
+	font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+	width: 88%;
+}
+
+#d_btn_save, #d_btn_load {
+	display: inline-block;
+}
+
+#savestate, #log {
+	display: block;
+	top: 40px;
+	left: 10px;
+	width: 740px;
+	height: 690px;
+	margin-top: 10px;
+}
+
+#help {
+	padding: 20px;
+}

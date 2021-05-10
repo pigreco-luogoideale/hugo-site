@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Al fuoco!</title>
+		<link href="css/fonts.css" rel="stylesheet" />
+		<link href="css/fire.css" rel="stylesheet" />
+		<script src="js/array.generics.min.js"></script>
+		<script src="js/classList.min.js"></script>
+		<script src="js/eventListener.polyfill.min.js"></script>
+		<script src="js/utilities.js"></script>
+		<script src="js/fire.js"></script>
+		</head>
+	<body>
+		<div id="container">
+		<section id="header">
+			<div style="text-align:left;">
+				<h3><a href="http://pigreco.luogoideale.org/"><span></span>Homepage di PiGreco</a></h3>
+			</div>
+			<div style="text-align:center;">
+				<p>Facci sapere come utilizzi la questa applicazione (e se trovi errori)!</p>
+				<p>Contatti: <a href="mailto:maurizio@luogoideale.org">maurizio@luogoideale.org</a> o <a href="mailto:pigreco@luogoideale.org">pigreco@luogoideale.org</a></p>
+			</div>
+		</section>
+		<section id="settings">
+			<h2>Impostazioni</h2>
+			<div id="rows"><label>Righe</label><div class="details" onclick="details(this)"><div>Altezza della griglia (nr. di caselle)</div></div><input id="nr_rows" value="40" /></div>
+			<div id="cols"><label>Colonne</label><div class="details" onclick="details(this)"><div>Larghezza della griglia (nr. di caselle)</div></div><input id="nr_cols" value="50" /></div>
+			<div id="density"><label>Densit&agrave; (%)</label><div class="details" onclick="details(this)"><div>Percentuale di alberi calcolata rispetto al nr. totale di caselle</div></div><input id="perc_density" min="0" max="100" value="50" type="number"/></div>
+			<!--<div id="diffusivity"><label>Diffusivit&agrave; (%)</label><input id="perc_diffusivity" min="0" max="100" value="100"/></div>-->
+			<div id="neighbourhood"><label>Vicini</label><div class="details" onclick="details(this)"><div>In verde, le caselle alle quali si propaga l'incendio se al posto della casella gialla c'&egrave; un albero in fiamme. (Clicca sulle caselle per attivarle/disattivarle.)</div></div><div id="nbtable"></div></div>
+			<div id="boundary">
+				<label>Bordi</label><div class="details" onclick="details(this)"><div><ul><li><b>Cilindro</b>: le celle lungo il lato destro sono trattate come se fossero incollate a quelle sulla stessa riga lungo il lato sinistro e viceversa.</li><li><b>Nastro di Moebius</b>: come il cilindro, ma l'attaccamento &egrave; fatto incollando le celle in alto a destra a quelle in basso a sinistra e viceversa.</li><li><b>Toro</b>: come il cilindro, incollando anche le celle lungo il lato superiore a quelle sulla stessa colonna lungo il lato inferiore e viceversa.</li><li><b>Bottiglia di Klein</b>: come il nastro di Moebius, incollando anche le celle lungo il lato superiore a quelle sulla stessa colonna lungo il lato inferiore e viceversa.</li><li><b>Rettangolo</b>: nessun incollamento.</li></ul></div></div>
+				<select id="topology">
+					<option value="Torus">Toro</option>
+					<option value="KleinBottle">Bottiglia di Klein</option>
+					<option value="Rectangle" selected="selected">Rettangolo</option>
+					<option value="Cylinder">Cilindro</option>
+					<option value="Moebius">Nastro di Moebius</option>
+				</select>
+			</div>
+			<div id="front"><button id="firefront" class="green" onclick="firefront();">Fronte di fiamma?</button></div>
+			<div id="initialize"><button id="init" onclick="init();">Carica impostazioni</button></div>
+			<div class="clearer"></div>
+		</section>
+		<section id="output">
+			<h2>Output</h2>
+			<div id="speed"><label>Velocit&agrave; (<span id="vel">20</span> gen/s)</label><input type="range" min="1" max="50" id="val_speed" value="20"/></div>
+			<div id="palette"><label>Tavolozza</label><div id="colorchoice"></div></div>
+			<div id="filler"><button id="fill" onclick="fill();" disabled>Riempi</button></div>
+			<!--<div id="draw"><button id="draw_updates" class="green" onclick="draw_updates();" disabled>Visualizza?</button></div>-->
+			<div id="ctrl"><button id="step" onclick="step();" disabled>Step</button><button id="start" onclick="start();" disabled>Start</button><button id="stop" onclick="stop();" disabled>Stop</button></div>
+			<canvas id="cnvs" height="600" width="760">
+				HTML5 canvas tag not supported!
+			</canvas>
+			<div id="generation">Istanti trascorsi: <span id="nrsteps">0</span></div>
+			<div id="soil">Terreno senza alberi: <span id="nrsoil">0 (0%)</span></div>
+			<div id="living_trees">Alberi verdi: <span id="nralive">0 (0%)</span></div>
+			<div id="burning_trees">Alberi in fiamme: <span id="nrfire">0  (0%)</span></div>
+			<div id="burned_trees">Alberi carbonizzati: <span id="nrburned">0  (0%)</span></div>
+			<div class="clearer"></div>
+		</section>
+		<section id="instructions">
+			<h2>Istruzioni</h2>
+			<p>Questo simulatore consente di testare un semplice modello di incendio boschivo, in cui gli alberi vivi disposti su una griglia possono essere incendiati e carbonizzarsi. Quando la simulazione &egrave; in corso, il tempo avanza "a scatti" detti <b>istanti</b>. Ad ogni nuovo istante temporale viene applicata la seguente <b>regola: ciascun albero in fiamme incendia i vicini e diventa carbonizzato</b>.</p>
+			<p>Nelle <b>IMPOSTAZIONI</b> &egrave; possibile stabilire il numero di <b>righe</b> e di <b>colonne</b> della griglia, la <b>densit&agrave; di alberi</b> (in percentuale) che verranno posizionati a caso inizialmente, quali siano da considerarsi i <b>vicini</b> di ciascun albero (cio&egrave; le celle a cui si estendono le eventuali fiamme dell'albero stesso), quale sia il <b>comportamento ai bordi</b> della griglia (cio&egrave; se alcuni lati vengono incollati tra loro oppure no) e se inizializzare o meno un <b>fronte di fiamma</b> (ovvero una colonna di alberi in fiamme) lungo il lato sinistro della griglia.</p>
+			<p>Per iniziare la simulazione, una volta scelte le impostazioni desiderate, premere su "Carica impostazioni". Nella scheda <b>OUTPUT</b> si vedr&agrave; comparire una griglia coerentemente configurata, il cui stato pu&ograve; essere modificato cliccando sugli elementi della "Tavolozza" che si vogliono inserire e successivamente sulle zone che si vogliono modificare. Per avanzare solamente di un istante temporale, premere il tasto "Step"; per avanzare ripetutamente, premere su "Start"; per fermare la simulazione, premere "Stop". Il valore di "Velocit&agrave;" controlla il numero di step eseguiti al secondo (compatibilmente con le possibilit&agrave; del calcolatore che si utilizza).</p>
+			<p>Sotto la griglia compaiono semplici <b>statistiche</b> della situazione visualizzata. Se si vogliono modificare le impostazioni occorre premere sempre su "Carica impostazioni" dopo aver effettuato le modifiche desiderate e aver (eventualmente) fermato la simulazione in corso.</p>
+		</section>
+		<p style="text-align:right;">Ispirato al modello "<a href="http://en.wikipedia.org/wiki/Forest-fire_model">Forest-fire</a>", a quello di NetLogo "<a href="http://ccl.northwestern.edu/netlogo/models/Fire">Fire</a>" e al <a href="http://ncase.me/simulating/model/">lavoro di Nicky Case</a>.</p>
+		</div>
+		<script>
+			document.getElementById('val_speed').addEventListener("change", function() { document.getElementById("vel").innerHTML = this.value; }, false);
+			document.addEventListener("DOMContentLoaded", load, false);
+		</script>
+		
+		<script>
+			function details(popup) {
+				popup.lastElementChild.classList.toggle("detShow");
+			}
+		</script>
+	</body>
+</html>

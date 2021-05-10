@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1024, initial-scale=1.0">
+		<title>Colorare mappe - Stati Uniti d'America</title>
+		<link href="css/normalize.css" rel="stylesheet" />
+		<link href="css/stile.css" rel="stylesheet" />
+		<!--[if lte IE 8]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+		<script src="js/excanvas.js"></script>
+		<script src="js/paintfill.js"></script>
+		</head>
+	<body>
+		<div class="container">
+		
+			<a href="./"><h1>Colorare mappe</h1></a>
+			<h2>Stati Uniti d'America</h2>
+			<p>Quale &egrave; il numero minimo di colori che si possono utilizzare per colorare questa mappa, in modo che le regioni vicine non siano dello stesso colore?</p>
+			
+			<div id="paintfill"></div>
+		
+			<p><a href="./">Torna alla scelta delle mappe</a></p>
+		</div>
+		
+		<script>
+			var mappa = new Image();
+			mappa.src = "img/usa.png";
+			document.addEventListener("DOMContentLoaded", init, false);
+		</script>
+	</body>
+</html>
