@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+	<section class="contContainer">
+		<div class="content colorlink">
+			<img src="{{ .Params.image }}" alt="{{ .Params.alt }}" width="500"/>
+
+            {{ .Content }}
+		</div>
+	</section>
+{{ partial "footer.html" . }}

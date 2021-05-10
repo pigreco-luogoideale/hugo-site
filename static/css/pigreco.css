@@ -780,3 +780,16 @@ p.slogan {
 .activities .hsplit .activity-group.altro {
 	order: 99;
 }
+
+
+/* concorso estivo */
+
+.co-es-lab-laboratorio.image-right img {
+    float: right;
+    width: 150px;
+}
+
+.co-es-lab-laboratorio.image-left img {
+    float: left;
+    width: 150px;
+}
