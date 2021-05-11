@@ -2,12 +2,13 @@
 title: Concorso Estivo
 type: concorso_estivo
 image: /images/concorso_estivo/matematica_vacanza.png
-alt: pigreco sotto l'ombrellone
+alt: Concorso estivo la matematica in vacanza
 ---
+## La matematica in vacanza
 
 Quante volte, dopo tre mesi di vacanze estive, tutto quello che gli insegnanti hanno spiegato e gli studenti hanno studiato sembra… pouf, sparito? Eppure la matematica ci circonda nella vita di tutti i giorni e non dovrebbe essere difficile trovarla anche durante i caldi mesi estivi, in coda dal gelataio, nascosta nei boschi o appisolata sotto l’ombrellone.
 
-L’associazione “PiGreco – il Luogo Ideale”, in collaborazione con il Laboratorio Effediesse del Politecnico di Milano, lancia una sfida agli studenti di tutta Italia: cercare la matematica durante le vacanze estive e mandare una testimonianza ai compagni di classe!
+L’associazione “PiGreco – il Luogo Ideale”, in collaborazione con il [Laboratorio Effediesse del Politecnico di Milano](http://effediesse.mate.polimi.it/), lancia una sfida agli studenti di tutta Italia: cercare la matematica durante le vacanze estive e mandare una testimonianza ai compagni di classe!
 
 L’obiettivo è riconoscere in quali occasioni della vita quotidiana si ha a che fare con questa materia: ad esempio ritrovando delle forme nella realtà che ci circonda, descrivendo situazioni in cui è stata usata la matematica per prendere delle decisioni, rappresentando un fenomeno con strumenti matematici, raccontando problemi affrontati e le strategie per risolverli.
 
@@ -22,43 +23,30 @@ I dettagli per la partecipazione sono illustrati nel regolamento, ma ecco una gu
 <table>
   <thead>
     <tr>
-      <th> </th>
       <th>Per Insegnanti</th>
       <th>Per Studenti</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td> 1 </td>
-        <td> Entro il 30 giugno pre-iscrivete la vostra classe compilando il [form](https://forms.gle/57HGQtdDB6VEAUZK6) e lanciate la sfida ai vostri studenti: cercare la matematica durante le vacanze e raccontarla con un video o una cartolina.</td>
-      <td> Mentre vi godete le vacanze state all’erta! In quale occasione avete incontrato della matematica?</td>
+        <td> 1. Entro il 30 giugno pre-iscrivete la vostra classe compilando il <a href="https://forms.gle/57HGQtdDB6VEAUZK6" target="_blank">form</a> e lanciate la sfida ai vostri studenti: cercare la matematica durante le vacanze e raccontarla con un video o una cartolina.</td>
+      <td> 1. Mentre vi godete le vacanze state all’erta! In quale occasione avete incontrato della matematica?</td>
     </tr>
     <tr>
-      <td> 2 </td>
-      <td>
-        Raccogliete gli elaborati dei vostri studenti in attesa del rientro a settembre.</td>
-    <td> Dopo aver trovato della matematica, scegliete come volete raccontarlo: con un video o una cartolina? Preparate il vostro elaborato e condividetelo con il vostro insegnante e i vostri compagni di classe.</td>
+      <td>2. Raccogliete gli elaborati dei vostri studenti in attesa del rientro a settembre.</td>
+    <td>2. Dopo aver trovato della matematica, scegliete come volete raccontarlo: con un video o una cartolina? Preparate il vostro elaborato e condividetelo con il vostro insegnante e i vostri compagni di classe.</td>
     </tr>
     <tr>
-       <td> 3 </td>
-<td>Utilizzate una delle prime lezioni dell’anno per condividere gli elaborati con tutta la classe. Scegliete, insieme ai vostri alunni, i tre elaborati da inviare entro il 30 settembre per partecipare al concorso.</td>
-    <td>A settembre rientrati in classe discutete insieme ai vostri compagni dei lavori che avete svolto, selezionate i tre lavori che vi colpiscono di più e che volete inviare a nome della vostra classe.</td>
+    <td>3. Utilizzate una delle prime lezioni dell’anno per condividere gli elaborati con tutta la classe. Scegliete, insieme ai vostri alunni, i tre elaborati da inviare entro il 30 settembre per partecipare al concorso.</td>
+    <td>3. A settembre rientrati in classe discutete insieme ai vostri compagni dei lavori che avete svolto, selezionate i tre lavori che vi colpiscono di più e che volete inviare a nome della vostra classe.</td>
     </tr>
     <tr>
-      <td> 4 </td>
-    <td>Attendete la valutazione della giuria… Iniziate a pensare: se vinceste, quale laboratorio vorreste avere?</td>
-      <td>Attendete la valutazione della giuria… </td>
+      <td>4. Attendete la valutazione della giuria… Iniziate a pensare: se vinceste, quale laboratorio vorreste avere?</td>
+      <td>4. Attendete la valutazione della giuria… </td>
     </tr>
     <tr>
-      <td> 5 </td>
-   <td> Partecipate con la vostra classe all’evento di premiazione.</td>
-   <td>  Partecipate all’evento di premiazione per scoprire quali sono state le altre situazioni in cui la matematica è apparsa in vacanza e per sapere se… avete vinto!</td>
-    </tr>
-    
-    
-    
-
-    
+      <td>5. Partecipate con la vostra classe all’evento di premiazione.</td>
+   <td>5. Partecipate all’evento di premiazione per scoprire quali sono state le altre situazioni in cui la matematica è apparsa in vacanza e per sapere se… avete vinto!</td>
     </tr>
   </tbody>
 </table>
