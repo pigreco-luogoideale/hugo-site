@@ -23,12 +23,14 @@ I dettagli per la partecipazione sono illustrati nel [regolamento](https://pigre
 <table>
   <thead>
     <tr>
+      <th> </th>
       <th>Per Insegnanti</th>
       <th>Per Studenti</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td>  <img src="/images/concorso_estivo/uno.png">  </td>
         <td> 1. Entro il 30 giugno pre-iscrivete la vostra classe compilando il <a href="https://forms.gle/57HGQtdDB6VEAUZK6" target="_blank">form</a> e lanciate la sfida ai vostri studenti: cercare la matematica durante le vacanze e raccontarla con un video o una cartolina.</td>
       <td> 1. Mentre vi godete le vacanze state all’erta! In quale occasione avete incontrato della matematica?</td>
     </tr>
