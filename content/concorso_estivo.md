@@ -25,6 +25,7 @@ I dettagli per la partecipazione sono illustrati nel [regolamento](https://pigre
     <tr>
       <th> </th>
       <th>Per Insegnanti</th>
+       <th> </th>
       <th>Per Studenti</th>
     </tr>
   </thead>
