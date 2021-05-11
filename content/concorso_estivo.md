@@ -1,7 +1,7 @@
 ---
 title: Concorso Estivo
 type: concorso_estivo
-image: /images/concorso_estivo/matematica_vacanza.png
+image: /images/concorso_estivo/pigreco_areo_orizzontale.jpg
 alt: Concorso estivo la matematica in vacanza
 ---
 ## La matematica in vacanza
@@ -41,7 +41,7 @@ I dettagli per la partecipazione sono illustrati nel [regolamento](https://pigre
     <td>3. A settembre rientrati in classe discutete insieme ai vostri compagni dei lavori che avete svolto, selezionate i tre lavori che vi colpiscono di più e che volete inviare a nome della vostra classe.</td>
     </tr>
     <tr>
-      <td>4. Attendete la valutazione della giuria… Iniziate a pensare: se vinceste, quale laboratorio vorreste avere?</td>
+      <td>4. Attendete la valutazione della giuria… Iniziate a pensare: se vinceste, quale <a href="http://pigreco.luogoideale.org/concorso_estivo_laboratori/">laboratorio</a> vorreste avere?</td>
       <td>4. Attendete la valutazione della giuria… </td>
     </tr>
     <tr>
