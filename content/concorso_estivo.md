@@ -30,23 +30,27 @@ I dettagli per la partecipazione sono illustrati nel [regolamento](https://pigre
   </thead>
   <tbody>
     <tr>
-      <td>  <img src="/images/concorso_estivo/uno.png">  </td>
+      <td>  <img src="/images/concorso_estivo/uno.png" width="50" height="50" >  </td>
         <td> 1. Entro il 30 giugno pre-iscrivete la vostra classe compilando il <a href="https://forms.gle/57HGQtdDB6VEAUZK6" target="_blank">form</a> e lanciate la sfida ai vostri studenti: cercare la matematica durante le vacanze e raccontarla con un video o una cartolina.</td>
       <td> 1. Mentre vi godete le vacanze state all’erta! In quale occasione avete incontrato della matematica?</td>
     </tr>
     <tr>
+       <td>  <img src="/images/concorso_estivo/due.png" width="50" height="50" >  </td>
       <td>2. Raccogliete gli elaborati dei vostri studenti in attesa del rientro a settembre.</td>
     <td>2. Dopo aver trovato della matematica, scegliete come volete raccontarlo: con un video o una cartolina? Preparate il vostro elaborato e condividetelo con il vostro insegnante e i vostri compagni di classe.</td>
     </tr>
     <tr>
+            <td>  <img src="/images/concorso_estivo/tre.png" width="50" height="50" >  </td>
     <td>3. Utilizzate una delle prime lezioni dell’anno per condividere gli elaborati con tutta la classe. Scegliete, insieme ai vostri alunni, i tre elaborati da inviare entro il 30 settembre per partecipare al concorso.</td>
     <td>3. A settembre rientrati in classe discutete insieme ai vostri compagni dei lavori che avete svolto, selezionate i tre lavori che vi colpiscono di più e che volete inviare a nome della vostra classe.</td>
     </tr>
     <tr>
+       <td>  <img src="/images/concorso_estivo/quattro.png" width="50" height="50" >  </td>
       <td>4. Attendete la valutazione della giuria… Iniziate a pensare: se vinceste, quale <a href="http://pigreco.luogoideale.org/concorso_estivo_laboratori/">laboratorio</a> vorreste avere?</td>
       <td>4. Attendete la valutazione della giuria… </td>
     </tr>
     <tr>
+           <td>  <img src="/images/concorso_estivo/cinque.png" width="50" height="50" >  </td>
       <td>5. Partecipate con la vostra classe all’evento di premiazione.</td>
    <td>5. Partecipate all’evento di premiazione per scoprire quali sono state le altre situazioni in cui la matematica è apparsa in vacanza e per sapere se… avete vinto!</td>
     </tr>
