@@ -1,7 +1,7 @@
 ---
 title: Concorso Estivo
 type: concorso_estivo
-image: /images/concorso_estivo/pigreco_areo_orizzontale.jpg
+image: /images/concorso_estivo/pigreco_aereo_orizzontale.jpg
 alt: Concorso estivo la matematica in vacanza
 ---
 ## La matematica in vacanza
