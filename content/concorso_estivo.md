@@ -1,7 +1,7 @@
 ---
 title: Concorso Estivo
 type: concorso_estivo
-image: /images/concorso_estivo/pigreco_aereo_orizzontale.jpg
+image: /images/concorso_estivo/mare.png
 alt: Concorso estivo la matematica in vacanza
 ---
 ## La matematica in vacanza
@@ -63,4 +63,4 @@ I dettagli per la partecipazione sono illustrati nel [regolamento](http://pigrec
   </tbody>
 </table>
 
-Scarica il [regolamento completo](https://pigreco.luogoideale.org/volantini/Regolamento_matematica_in_vacanza.pdf).
+Scarica il [regolamento completo](http://pigreco.luogoideale.org/volantini/Regolamento_matematica_in_vacanza.pdf).
