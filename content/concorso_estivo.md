@@ -18,7 +18,7 @@ I premi sono costituiti dalla realizzazione gratuita in ciascuna delle classi vi
 
 ## Come funziona il concorso?
 
-I dettagli per la partecipazione sono illustrati nel [regolamento](https://pigreco.luogoideale.org/volantini/Regolamento_matematica_in_vacanza.pdf), ma ecco una guida pratica per gli insegnanti che vogliono partecipare con i loro studenti. 
+I dettagli per la partecipazione sono illustrati nel [regolamento](http://pigreco.luogoideale.org/volantini/Regolamento_matematica_in_vacanza.pdf), ma ecco una guida pratica per gli insegnanti che vogliono partecipare con i loro studenti. 
 
 <table>
   <thead>
