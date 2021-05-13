@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="news" class="contContainer">
+    {% for page in section.pages %}
+    <section class="news content colorlink">
+        <span class="datetime">Pubblicato il {{ page.date | date(format="%d %b %Y") }}</span>
+        <p><img alt="{{ page.title }}" src="{{ page.extra.image }}" /></p>
+        <h2>{{ page.title }}</h2>
+        {{ page.content | safe }}
+    </section>
+    {% endfor %}
+    <section class="news content colorlink"></section>
+</section>
+{% endblock %}

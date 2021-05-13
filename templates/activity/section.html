@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="activity" class="contContainer">
+	<div class="content activities">
+        {% if section.content %}<div>{{ section.content | safe }}</div>{% endif %}
+		<div class="hsplit">
+            {% for subsec in section.subsections %}
+                {% set group = get_section(path=subsec) %}
+                <a href="{{ group.permalink }}" class="activity-group {{ group.extra.css_name }}">
+                    <h2>{{ group.title }}</h2>
+                    <img src="{{group.extra.image}}" alt="Un mondo con i numeri">
+                    <div class="description">
+                        <p>{{ group.content | safe }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+		</div>
+	</div>
+</section>
+
+{% endblock content %}

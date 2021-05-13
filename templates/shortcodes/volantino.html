@@ -1,0 +1,5 @@
+{% if file %}
+<a href="/volantini/{{ file }}.pdf" target="_blank">{{ body }}</a>
+{% else %}
+<a href="/volantini/volantino.pdf" target="_blank">{{ body }}</a>
+{% endif %}
