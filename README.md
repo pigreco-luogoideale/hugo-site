@@ -1,6 +1,6 @@
 # Il sito di PiGreco
 
-Quasi tutto nel sito è pubblico e viene messo su Github.
+Tutto nel sito è pubblico e viene messo su Github.
 
 Si fa push sul repo, dove si può modificare il contenuto.
 
