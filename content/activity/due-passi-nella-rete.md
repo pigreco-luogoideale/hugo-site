@@ -5,13 +5,20 @@ description = "Internet funziona anche grazie alla matematica"
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
+date = 2020-01-01
+
 [taxonomies]
-activity = ["incontri"]
+scuole = ["incontri"]
+volantino = ["superiori"]
 
 [extra]
 thumb = "/images/activities/due_passi.jpg"
 image = "/images/activities/due_passi.jpg"
 alt = "Foto dell'attività sai mandare un messaggio segreto"
+
+[extra.volantino]
+weight = 120
+price = "10 eur"
 +++
 ## Teorema
 

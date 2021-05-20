@@ -6,7 +6,7 @@ description = "Mettere alla prova le abilità logiche - matematiche e tutto quel
 template = "activity/page.html"
 
 [taxonomies]
-activity = ["animazione"]
+scuole = ["animazione"]
 
 [extra]
 thumb = "/images/activities/pi_gioco.jpg"

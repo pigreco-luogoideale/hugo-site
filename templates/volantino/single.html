@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/volantino-print.css") | safe }}" media="print" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/volantino-screen.css") | safe }}" />
+    </head>
+    <body>
+        <h1>Volantino {{ term.name }}</h1>
+
+        {# itera tutte le pagine con tassonomia volantino #}
+        {% for page in term.pages | sort(attribute="extra.volantino.weight") %}
+            <!--pre>{{ page | json_encode(pretty=true) | safe }}</pre-->
+            {% if page.extra.volantino.raw %}
+                {{ page.content | safe }}
+            {% else %}
+                <section class="page">
+                    {% if page.extra.volantino.header.text %}
+                        <div class="page-header {{ term.name }}">
+                            <span>{{ page.extra.volantino.header.text }}</span>
+                        </div>
+                    {% else %}
+                        <div class="page-header {{ term.name }}">
+                            <span>{{ config.extra.taxonomies[taxonomy.name][term.name].header.text }}</span>
+                        </div>
+                    {% endif %}
+
+                    <div class="page-content">
+                        {% if page.extra.title_logo_left %}
+                            <h1><img src="{{ get_url(path=page.extra.title_logo_left) }}" />{{ page.title }}</h1>
+                        {% else %}
+                            <h1>{{ page.title }}</h1>
+                        {% endif %}
+
+                        {% if page.extra.volantino.price %}
+                            <p>{{ page.extra.volantino.price }}</p>
+                        {% endif %}
+
+                        <p>{{ page.content | safe }}</p>
+                    </div>
+                    <div class="page-footer"><div class="page-number">
+                        <span>{{ loop.index }}</span>
+                    </div></div>
+                </section>
+            {% endif %}
+        {% endfor %}
+
+        <pre>{{ __tera_context }}</pre>
+    </body>
+</html>

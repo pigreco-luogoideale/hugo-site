@@ -6,7 +6,7 @@ description = "Si può fare matematica ovunque, anche al parco in una bella gior
 template = "activity/page.html"
 
 [taxonomies]
-activity = ["animazione"]
+scuole = ["animazione"]
 
 [extra]
 thumb = "/images/activities/matematica_al_parco.jpg"

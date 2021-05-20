@@ -1,7 +1,28 @@
 +++
 title = "Volantinone"
-weight = 1
+description = "Pagina di copertina del volantino delle superiori"
+
+# Questa è una singola pagina di attività
+template = "activity/page.html"
+
+date = 2020-01-01
+
+[taxonomies]
+scuole = ["incontri"]
+volantino = ["superiori"]
+
+[extra]
+thumb = "/images/activities/due_passi.jpg"
+image = "/images/activities/due_passi.jpg"
+alt = "Foto dell'attività sai mandare un messaggio segreto"
+
+[extra.volantino]
+weight = 2
+price = "10 eur"
+raw = true
 +++
+
+<section class="page">
 
 # Attività 2021-2022
 
@@ -35,4 +56,4 @@ dedicate solo alle scuole sono
 segnalate nei dettagli a fondo
 pagina.
 
-
+</section>

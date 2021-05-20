@@ -9,7 +9,7 @@ description = """
 template = "activity/page.html"
 
 [taxonomies]
-activity = ["percorsi"]
+scuole = ["percorsi"]
 
 [extra]
 thumb = "/images/activities/giochiamo_mate.jpg"

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="activity" class="contContainer">
+	<div class="content activities">
+		<div class="hsplit">
+            {% for term in terms %}
+            {% set term_data = config.extra.taxonomies.activity[term.slug] %}
+                <a href="{{ term.permalink }}" class="activity-group {{ term.slug }}">
+                    <h2>{{ term_data.name }}</h2>
+                    <img src="/images/activity/{{ term.slug }}.png" alt="Copertina della sezione {{ term_data.name }}">
+                    <div class="description">
+                        <p>{{ term_data.description }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+		</div>
+	</div>
+</section>
+
+{% endblock content %}

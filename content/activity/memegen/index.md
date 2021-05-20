@@ -8,6 +8,9 @@ description = """
 # template = "gallery.html"
 template = "activity/page.html"
 
+[taxonomies]
+privati = ["altro"]
+
 [extra]
 thumb = "/images/activities/memegen.jpg"
 alt = "Come to the math side"

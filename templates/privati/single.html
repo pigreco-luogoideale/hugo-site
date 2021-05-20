@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contContainer">
+	<div class="content activities">
+        {% set term_data = config.extra.taxonomies.activity[term.slug] %}
+		<h2>{{ term_data.name }}</h2>
+        {% for page in term.pages %}
+		<a href="{{ page.permalink }}" class="activity">
+			<img src="{{ page.extra.thumb }}" alt="" />
+			<div class="description">
+				<h1>{{ page.title }}</h1>
+				<p>{{ page.description }}</p>
+			</div>
+		</a>
+		{% endfor %}
+	</div>
+</section>
+{% endblock content %}

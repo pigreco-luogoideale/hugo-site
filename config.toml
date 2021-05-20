@@ -15,15 +15,25 @@ highlight_code = false
 build_search_index = true
 
 taxonomies = [
-    { name = "activity" },
-    { name = "pubblico" },
+    # Per le pagine che sono offerte alle scuole
+    { name = "scuole" },
+    # Per le pagine che sono offerte ai privati
+    { name = "privati" },
+    # Per le pagine che vengono messe su volantino/i
+    { name = "volantino" },
 ]
 
 [extra]
-# Put all your custom variables here
-# 
+    [extra.taxonomies.volantino.privati]
+    header = { text = "Roba Privati" }
 
-[extra.taxonomies.activity]
+    [extra.taxonomies.volantino.primarie]
+    header = { text = "Roba primarie" }
+
+    [extra.taxonomies.volantino.superiori]
+    header = { text = "Roba superiori" }
+
+    # Roba vecchia
 	[extra.taxonomies.activity.animazione]
 	name = "Animazione Matematica"
 	description = """
@@ -43,11 +53,15 @@ taxonomies = [
 	[extra.taxonomies.activity.percorsi]
 	name = "Percorsi per le scuole"
 	description = """
-    Laboratori dedicati alle classi scuola dell’infanzia, primaria e secondaria per approfondire argomenti del programma scolastico (ma non solo!) coinvolgendo tutti gli alunni.
+        Laboratori dedicati alle classi scuola dell’infanzia,
+        primaria e secondaria per approfondire argomenti del
+        programma scolastico (ma non solo!) coinvolgendo tutti gli alunni.
     """
 
 	[extra.taxonomies.activity.altro]
 	name = "#math"
 	description = """
-    Alcune delle nostre iniziative per contribuire alla diffusione della matematica nel mondo (reale e virtuale) con divertimento e simpatia.
+        Alcune delle nostre iniziative per contribuire alla
+        diffusione della matematica nel mondo (reale e virtuale)
+        con divertimento e simpatia.
     """

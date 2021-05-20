@@ -6,7 +6,7 @@ description = "Scoprire la matematica che è attorno a noi, stimolati da sfide e
 template = "activity/page.html"
 
 [taxonomies]
-activity = ["animazione"]
+scuole = ["animazione"]
 
 [extra]
 thumb = "/images/activities/pi_gioco.jpg"

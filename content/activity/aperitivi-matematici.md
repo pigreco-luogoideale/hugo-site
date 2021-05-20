@@ -4,13 +4,23 @@ description = "Scoprire la matematica mentre si sorseggia una birra"
 
 template = "activity/page.html"
 
+date = 2021-01-01
+
 [taxonomies]
-activity = ["altro"]
+scuole = ["incontri"]
+privati = ["altro"]
+volantino = ["primarie", "superiori"]
 
 [extra]
 thumb = "/images/news/spritz_matematico_mate_opinione.jpg"
 image = "/images/news/spritz_matematico_mate_opinione.jpg"
 alt = "Volantino del primo aperitivo matematico, la matematica è un'opinione"
+
+[extra.volantino]
+weight = 110
+header = { text = "Sovrascrivo default" }
+price = "500 eur"
+
 +++
 
 Uno stand colorato e interattivo rivolto a grandi e piccini, per mettersi alla prova e portare a casa un po' di matematica.

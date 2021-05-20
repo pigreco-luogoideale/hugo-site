@@ -1,0 +1,49 @@
++++
+title = "Volantinone"
+description = "Pagina di copertina del volantino delle superiori"
+
+# Questa è una singola pagina di attività
+template = "activity/page.html"
+
+date = 2020-01-01
+
+[taxonomies]
+scuole = ["incontri"]
+volantino = ["superiori"]
+
+[extra]
+thumb = "/images/activities/due_passi.jpg"
+image = "/images/activities/due_passi.jpg"
+alt = "Foto dell'attività sai mandare un messaggio segreto"
+
+[extra.volantino]
+weight = 3
+price = "10 eur"
+raw = true
++++
+
+<section class="page">
+
+# Informazioni generali
+
+- Tutte le attività sono pensate per essere svolte (anche) in uno
+  spazio chiuso, escluse Matematica al parco e Safari Matematico che
+  necessitano di uno spazio ampio e possibilmente all'aperto.
+
+- Le attività nelle scuole sono pensate per classi di circa 25 studenti,
+  ad eccezione di quelle per la fascia 3-5 anni, che sono pensate per
+  gruppi di massimo 15 bambini.
+
+- Tutte le attività possono essere adattate per venire incontro alle esigenze.
+
+- I rimborsi indicati non comprendono IVA ed eventuali spese di viaggio.
+
+# Contatti
+
+- **Mail:** pigreco@luogoideale.org
+- **Telefono:** +39 3388842571 (Martina) +39 3476540364 (Giulia)
+- **Sito:** www.luogoideale.org
+- **Facebook:** pigreco.luogoideale
+- **Instagram:** pigrecoluogoideale
+
+</section>
