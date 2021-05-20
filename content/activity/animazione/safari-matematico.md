@@ -5,6 +5,9 @@ description = "Scoprire la matematica che è attorno a noi, stimolati da sfide e
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
+[taxonomies]
+fascia_eta = ["superiori"]
+
 [extra]
 thumb = "/images/activities/pi_gioco.jpg"
 image = "/images/activities/pi_gioco.jpg"

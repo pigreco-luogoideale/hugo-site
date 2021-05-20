@@ -1,0 +1,20 @@
+$header-height: 3cm;
+$footer-height: 2cm;
+
+// A4 pages, no margins
+@page {
+    margin: 0cm;
+    size: A4;
+}
+
+// Remove margins around body, removing white spaces on the left
+body {
+    margin: 0cm;
+}
+
+section.page {
+    // Ensure each .page is separate
+    page-break-before: always;
+    // Remove margin used in screen
+    margin: 0cm;
+}

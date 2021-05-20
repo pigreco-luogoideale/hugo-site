@@ -1,6 +1,9 @@
 # The URL the site will be built for
 base_url = "https://pigreco.luogoideale.org/dev_branches/zola-migration/"
 
+# The language of this website
+default_language = "it"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -10,6 +13,19 @@ highlight_code = false
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
+
+taxonomies = [
+    { name = "fascia_eta", feed = true },
+    { name = "pubblico", feed = true },
+#     TODO sistemare questa cosa delle taxonomies
+#     la generazione del volantino dovrà passare da queste, perché
+#     non è detto che vengano suddivise per attività.
+#     In generale, potrebbe essere utile strutturare l'intero sito usando
+#     le taxonomies (forse).
+#     Non so come andare a recuperarle una volta create, però:
+#     il volantino può andare ad interrogare le taxonomies (che sono per pagina, non per sezione)
+#     e andare a iterare tutte le pagine di una certa tax?
+]
 
 [extra]
 # Put all your custom variables here

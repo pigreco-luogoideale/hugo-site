@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h1>Pagine per il pubblico</h1>
+        <pre>{{ __tera_context }}</pre>
+
+        {% for term in terms %}
+        <div>{{ term.name }}</div>
+        {% endfor %}
+    </body>
+</html>

@@ -11,6 +11,18 @@ image = "/images/activities/copertine/percorsi.png"
 
 # È il nome usato nei css per questo gruppo di attività
 css_name = "percorsi"
+
+# Impostazioni per la generazione del volantino
+[extra.pdf]
+# Abilita questa sezione nel volantino.
+enable = true
+
+# Header di questa sezione nel volantino
+[extra.pdf.header]
+# Testo nell'header
+text = "Sezionciccia"
+# Classe CSS dell'header
+class = "percorsi"
 +++
 
 Laboratori dedicati alle classi scuola dell’infanzia, primaria e secondaria per approfondire argomenti del programma scolastico (ma non solo!) coinvolgendo tutti gli alunni.

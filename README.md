@@ -55,4 +55,19 @@ Il volantino è anch'esso generato automaticamente, ma in modo particolare: una
 parte specifica del sito viene compilata e si producono delle pagine HTML che
 poi vengono automaticamente trasformate in PDF.
 
-Il codice per fare ciò è nel file `flier.sh`.
+Il codice per fare ciò è nel file `flier.sh`. Per modificarlo, è necessario
+seguire i seguenti passi:
+
+1. Installare `zola` e `weasyprint` (weasyprint.org)
+2. Eseguire `zola serve`, che dovrebbe rendere il sito disponibile all'indirizzo
+   http://127.0.0.1:1111
+3. Trasformare la pagina del volantino in un PDF con
+   `weasyprint http://127.0.0.1:1111/volantino volantino-dev.pdf`
+4. Aprire `volantino-dev.pdf` con un programma che lo ricarichi automaticamente
+   in caso di modifiche, così da rendere più veloce vedere cosa è cambiato,
+   (ad esempio con [SumatraPDF](https://www.sumatrapdfreader.org) o evince).
+5. Se possibile, eseguire il passo 3 in automatico (e.g. con watchman)
+
+Con nix si può usare ad esempio:
+
+    $ nix-shell -p python38Packages.{cairosvg,weasyprint} watchman zola

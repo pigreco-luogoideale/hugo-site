@@ -8,6 +8,9 @@ description = """
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
+[taxonomies]
+fascia_eta = ["infanzia"]
+
 [extra]
 thumb = "/images/activities/pi_gioco.jpg"
 image = "/images/activities/pi_gioco.jpg"

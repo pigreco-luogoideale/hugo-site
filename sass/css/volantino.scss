@@ -1,0 +1,109 @@
+// THIS IS THE OLD PAGE
+
+
+
+
+
+
+
+
+$header-height: 3cm;
+$footer-height: 2cm;
+
+// A4 pages, no margins
+@page {
+    margin: 0cm;
+    size: A4;
+}
+
+// Remove margins around body, removing white spaces on the left
+body {
+    margin: 0cm;
+}
+
+// Ensure each .page is separate
+section.page {
+    page-break-before: always;
+}
+
+// Header
+.page-header {
+    position: absolute;
+    top: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: $header-height;
+
+    margin: 0cm;
+    padding: 0cm;
+    background: orange;
+    color: white;
+    text-align: center;
+
+    border: 1px solid blue;
+
+    span {
+        display: inline-block;
+        margin: 2cm 0cm;
+        font-size: 30pt;
+    }
+
+    .bluette {
+        background: blue;
+    }
+}
+
+.page-content {
+    position: absolute;
+    top: $header-height;
+    left: 0cm;
+    right: 0cm;
+    bottom: $footer-height;
+
+    font-family: sans;
+    font-size: 12pt;
+    margin: 1cm;
+    padding: 0cm;
+    border: 1px solid green;
+
+    h1 {
+        margin: 0cm;
+        color: #ff0000;
+
+        img {
+            height: 1.5cm;
+            position: relative;
+            top: 1cm;
+        }
+    }
+}
+
+
+.page-footer {
+    position: absolute;
+    height: $footer-height;
+    bottom: 0cm;
+    left: 0cm;
+    right: 0cm;
+
+    margin: 0cm;
+    padding: 0cm;
+    background: gray;
+    text-align: center;
+
+    .page-number {
+        background: blue;
+        width: 3cm;
+        margin: 0cm auto;
+        position: relative;
+        top: 1cm;
+        span {
+            display: inline-block;
+            background: red;
+            position: relative;
+            top: -50%;
+            color: white;
+            font-size: 20pt;
+        }
+    }
+}

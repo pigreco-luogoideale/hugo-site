@@ -50,8 +50,6 @@ Per imparare a conoscere le forme e le simmetrie, partendo da quello che
 si trova a tavola tutti i giorni.
 
 </li>
-<ul>
-</p>
-</div>
+</ul>
 
 {{ volantino_o_scrivici() }}

@@ -1,0 +1,48 @@
+$header-height: 30mm;
+$footer-height: 20mm;
+$page-height: 297mm;
+$page-width: 210mm;
+
+.page {
+    width: $page-width;
+    height: $page-height;
+    border: 1px solid black;
+    position: relative;
+    margin: 1cm;
+
+    .page-header {
+        position: absolute;
+        width: 100%;
+        height: $header-height;
+        border: 1px solid red;
+        background-color: red;
+
+        text-align: center;
+        font-size: 11mm;
+
+        &.bluette {
+            background-color: blue;
+        }
+    }
+
+    .page-content {
+        position: absolute;
+        width: 100%;
+        top: $header-height;
+        bottom: $footer-height;
+        border: 2px solid green;
+
+        img {
+            width: 10mm;
+            float: left;
+        }
+    }
+
+    .page-footer {
+        position: absolute;
+        width: 100%;
+        height: $footer-height;
+        bottom: 0cm;
+        border: 1px solid pink;
+    }
+}

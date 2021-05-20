@@ -5,6 +5,10 @@ description = "Internet funziona anche grazie alla matematica"
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
+[taxonomies]
+pubblico = ["adulti"]
+fascia_eta = ["infanzia"]
+
 [extra]
 thumb = "/images/activities/due_passi.jpg"
 image = "/images/activities/due_passi.jpg"
