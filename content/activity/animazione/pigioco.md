@@ -9,7 +9,7 @@ description = """
 template = "activity/page.html"
 
 [taxonomies]
-fascia_eta = ["infanzia"]
+activity = ["animazione"]
 
 [extra]
 thumb = "/images/activities/pi_gioco.jpg"

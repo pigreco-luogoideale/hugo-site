@@ -8,6 +8,9 @@ description = """
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
+[taxonomies]
+activity = ["percorsi"]
+
 [extra]
 thumb = "/images/activities/giochiamo_mate.jpg"
 image = "/images/activities/giochiamo_mate.jpg"

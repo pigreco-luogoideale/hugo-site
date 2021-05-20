@@ -15,17 +15,39 @@ highlight_code = false
 build_search_index = true
 
 taxonomies = [
-    { name = "fascia_eta", feed = true },
-    { name = "pubblico", feed = true },
-#     TODO sistemare questa cosa delle taxonomies
-#     la generazione del volantino dovrà passare da queste, perché
-#     non è detto che vengano suddivise per attività.
-#     In generale, potrebbe essere utile strutturare l'intero sito usando
-#     le taxonomies (forse).
-#     Non so come andare a recuperarle una volta create, però:
-#     il volantino può andare ad interrogare le taxonomies (che sono per pagina, non per sezione)
-#     e andare a iterare tutte le pagine di una certa tax?
+    { name = "activity" },
+    { name = "pubblico" },
 ]
 
 [extra]
 # Put all your custom variables here
+# 
+
+[extra.taxonomies.activity]
+	[extra.taxonomies.activity.animazione]
+	name = "Animazione Matematica"
+	description = """
+        Occasioni per giocare e divertirsi,
+        rivolte a tutti: dai più piccoli al pubblico adulto,
+        per affrontare la matematica da un nuovo punto di vista.
+    """
+
+	[extra.taxonomies.activity.incontri]
+	name = "Inconti con la matematica"
+	description = """
+        Conferenze informali, rivolte agli studenti della scuola
+        secondaria e al grande pubblico per fornire spunti,
+        approfondimenti e curiosità.
+    """
+
+	[extra.taxonomies.activity.percorsi]
+	name = "Percorsi per le scuole"
+	description = """
+    Laboratori dedicati alle classi scuola dell’infanzia, primaria e secondaria per approfondire argomenti del programma scolastico (ma non solo!) coinvolgendo tutti gli alunni.
+    """
+
+	[extra.taxonomies.activity.altro]
+	name = "#math"
+	description = """
+    Alcune delle nostre iniziative per contribuire alla diffusione della matematica nel mondo (reale e virtuale) con divertimento e simpatia.
+    """

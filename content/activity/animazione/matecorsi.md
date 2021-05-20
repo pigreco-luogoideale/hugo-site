@@ -5,6 +5,9 @@ description = "Allenare la propria mente per fare matematica (e imparare), diver
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
+[taxonomies]
+activity = ["animazione"]
+
 [extra]
 thumb = "/images/activities/pi_gioco.jpg"
 image = "/images/activities/pi_gioco.jpg"

@@ -5,6 +5,9 @@ description = "Si può imparare la matematica ascoltando una storia?"
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
+[taxonomies]
+activity = ["animazione"]
+
 [extra]
 thumb = "/images/activities/racconto_matematica.jpg"
 image = "/images/activities/racconto_matematica.jpg"

@@ -5,6 +5,9 @@ description = "Come aggiungere un tocco di matematica alle festività natalizie?
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
+[taxonomies]
+activity = ["animazione"]
+
 [extra]
 thumb = "/images/activities/matenatale.jpg"
 image = "/images/activities/matenatale.jpg"

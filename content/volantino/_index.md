@@ -1,6 +1,6 @@
 +++
 title = "Volantinone"
-template = "volantino.html"
+# template = "volantino.html"
 # Ordina le pagine di introduzione del volantino per peso
 # (sono le pagine in questa stessa sezione: presentazione.md, informazioni.md etc)
 sort_by = "weight"

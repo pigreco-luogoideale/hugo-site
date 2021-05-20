@@ -5,6 +5,9 @@ description = "Si può fare matematica ovunque, anche al parco in una bella gior
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
+[taxonomies]
+activity = ["animazione"]
+
 [extra]
 thumb = "/images/activities/matematica_al_parco.jpg"
 image = "/images/activities/matematica_al_parco.jpg"

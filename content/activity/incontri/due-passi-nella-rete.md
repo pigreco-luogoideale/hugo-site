@@ -6,8 +6,7 @@ description = "Internet funziona anche grazie alla matematica"
 template = "activity/page.html"
 
 [taxonomies]
-pubblico = ["adulti"]
-fascia_eta = ["infanzia"]
+activity = ["incontri"]
 
 [extra]
 thumb = "/images/activities/due_passi.jpg"
