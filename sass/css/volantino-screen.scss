@@ -2,6 +2,7 @@ $header-height: 30mm;
 $footer-height: 20mm;
 $page-height: 297mm;
 $page-width: 210mm;
+$arancione-pli: #ff00ff;
 
 .page {
     width: $page-width;
@@ -10,31 +11,77 @@ $page-width: 210mm;
     position: relative;
     margin: 1cm;
 
+    font-family: sans-serif;
+
     .page-header {
         position: absolute;
         width: 100%;
         height: $header-height;
         border: 1px solid red;
-        background-color: red;
+        background-color: $arancione-pli;
 
         text-align: center;
-        font-size: 11mm;
+        font-size: 1.1cm;
+
+        font-family: serif;
 
         &.bluette {
             background-color: blue;
         }
+
+        span {
+            border: 1px solid green;
+            position: absolute;
+            bottom: 0.25cm;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            color: white;
+        }
     }
 
     .page-content {
+        $lr-margin: 2cm;
+        $tb-margin: 0cm;
         position: absolute;
-        width: 100%;
-        top: $header-height;
-        bottom: $footer-height;
+        width: $page-width - 2 * $lr-margin;
+        left: $lr-margin;
+        top: $header-height + $tb-margin;
+        bottom: $footer-height + $tb-margin;
         border: 2px solid green;
 
+        font-size: 14pt;
+        text-align: justify;
+
+        line-height: 1.25;
+
+        p {
+            margin-top: 1cm;
+        }
+
         img {
-            width: 10mm;
             float: left;
+
+            &.right {
+                float: right;
+                margin: -0.5cm 0.5cm 0.25cm 1.0cm;
+                width: 5cm;
+            }
+
+            &.left {
+                float: left;
+                margin: 0.15cm 1.0cm 0.5cm 0.5cm;
+                width: 6cm;
+            }
+        }
+
+        h1 {
+            color: $arancione-pli;
+            margin: 1.25cm 0cm;
+
+            img {
+                width: 1.0cm;
+                margin: -0.150cm 0.1cm 0.0cm 0.0cm;
+            }
         }
     }
 
@@ -44,5 +91,24 @@ $page-width: 210mm;
         height: $footer-height;
         bottom: 0cm;
         border: 1px solid pink;
+
+        .page-number {
+            position: absolute;
+            background-color: $arancione-pli;
+            width: 2cm;
+            height: 0.75cm;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            span {
+                font-size: 18pt;
+                position: absolute;
+                left: 50%;
+                top: 0%;
+                transform: translate(-50%, -50%);
+
+            }
+        }
     }
 }
