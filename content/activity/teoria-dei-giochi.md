@@ -30,5 +30,3 @@ gli amici o decidere con chi uscire a cena.
 
 Un incontro per conoscere le ipotesi della teoria e scoprire, attraverso
 racconti ed esempi, come risolvere alcuni problemi... trasformandoli in giochi!
-
-{{ volantino_o_scrivici() }}

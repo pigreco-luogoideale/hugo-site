@@ -31,5 +31,3 @@ Gli incontri disponibili affrontano i seguenti argomenti:
  - teoria dei giochi
  - logica
  - piano cartesiano
-
-{{ volantino_o_scrivici() }}

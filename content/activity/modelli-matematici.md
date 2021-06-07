@@ -29,5 +29,3 @@ complicati, strani o addirittura controintuitivi. Grazie ad una griglia e
 ad una manciata di semplici regole, si possono generare simulazioni
 di “mondi” dai comportamenti complessi, che talvolta ci aiutano a
 capire qualcosa in più del mondo in cui viviamo.
-
-{{ volantino_o_scrivici() }}

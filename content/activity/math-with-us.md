@@ -38,5 +38,3 @@ I nostri percorsi:
    Come affrontare le prove INVALSI con più serenità? Proviamo a
    lavorarci insieme, riscriverle, discuterle, risolverle per trasformarle
    da un test a un gioco collettivo!
-
-{{ volantino_o_scrivici() }}

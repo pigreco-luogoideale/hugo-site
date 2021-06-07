@@ -23,5 +23,3 @@ Una caccia al tesoro che permette ai ragazzi di mettersi alla prova
 per vedere quanto li può guidare la loro logica e quanto invece
 serviranno le loro conoscenze geometriche e numeriche. Una sfida
 per vedere chi per primo riuscirà a risolvere tutti gli indovinelli!
-
-{{ volantino_o_scrivici() }}

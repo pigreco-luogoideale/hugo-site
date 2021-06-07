@@ -28,5 +28,3 @@ Un percorso attraverso testimonianze reali e storie di grandi matematici,
 di scoperte immediate e di altre lunghe secoli, per scoprire che la matematica
 non è solo quella che si studia a scuola e per capire se matematici si nasce...
 o si diventa!
-
-{{ volantino_o_scrivici() }}

@@ -29,5 +29,3 @@ indietro, a quando avevamo 4 anni e guardavamo il mondo con
 occhi topologici. Un mondo che oggi ci apparirebbe assai bizzarro,
 quasi folle, fatto di superfici che hanno perso l'orientamento, sfere
 che non si lasciano pettinare e tazze che sono ciambelle...
-
-{{ volantino_o_scrivici() }}

@@ -18,13 +18,13 @@ alt = "Foto dell'attività sai mandare un messaggio segreto"
 
 [extra.volantino]
 weight = 3
-price = "10 eur"
 raw = true
 +++
 
-<section class="page">
-
-# Informazioni generali
+<section class="page info">
+<div class="page-header"><span>Informazioni</span></div>
+<div class="page-content">
+<h1 class="ico ico-basketball">Informazioni generali</h1>
 
 - Tutte le attività sono pensate per essere svolte (anche) in uno
   spazio chiuso, escluse Matematica al parco e Safari Matematico che
@@ -38,12 +38,14 @@ raw = true
 
 - I rimborsi indicati non comprendono IVA ed eventuali spese di viaggio.
 
-# Contatti
+<h1 class="ico ico-think">Contatti</h1>
+<div class="page-meta">
 
 - **Mail:** pigreco@luogoideale.org
-- **Telefono:** +39 3388842571 (Martina) +39 3476540364 (Giulia)
+- **Telefono:** +39 3388842571 (Martina) <br/> +39 3476540364 (Giulia)
 - **Sito:** www.luogoideale.org
 - **Facebook:** pigreco.luogoideale
 - **Instagram:** pigrecoluogoideale
 
+</div>
 </section>

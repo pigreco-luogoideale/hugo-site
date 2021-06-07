@@ -1,1 +1,7 @@
 ELENCO DEI VOLANTINI DEL SITO
+
+<ul>
+{% for term in terms %}
+<li><a href="{{ term.permalink }}">{{ term.name }}</a></li>
+{% endfor %}
+</ul>

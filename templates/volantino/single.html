@@ -10,11 +10,10 @@
 
         {# itera tutte le pagine con tassonomia volantino #}
         {% for page in term.pages | sort(attribute="extra.volantino.weight") %}
-            <!--pre>{{ page | json_encode(pretty=true) | safe }}</pre-->
             {% if page.extra.volantino.raw %}
                 {{ page.content | safe }}
             {% else %}
-                <section class="page">
+                <section class="page standard">
                     {% if page.extra.volantino.header.text %}
                         <div class="page-header {{ term.name }}">
                             <span>{{ page.extra.volantino.header.text }}</span>
@@ -32,11 +31,17 @@
                             <h1>{{ page.title }}</h1>
                         {% endif %}
 
-                        {% if page.extra.volantino.price %}
-                            <p>{{ page.extra.volantino.price }}</p>
-                        {% endif %}
+                        <img class="page-image" src="{{ page.extra.image }}" />
 
                         <p>{{ page.content | safe }}</p>
+
+                        <div class="page-meta footer">
+                            <ul>
+                                {% for meta_key, meta_value in page.extra.volantino.meta %}
+                                    <li><strong class="{{ meta_key }}">{{ meta_value.0 }}</strong><span>{{ meta_value.1 }}</span></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                     <div class="page-footer"><div class="page-number">
                         <span>{{ loop.index }}</span>
@@ -44,7 +49,5 @@
                 </section>
             {% endif %}
         {% endfor %}
-
-        <pre>{{ __tera_context }}</pre>
     </body>
 </html>

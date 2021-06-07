@@ -28,5 +28,3 @@ mondo piatto di Flatlandia, fa tappa in quello a tre dimensioni e poi
 approda nell'iperspazio quadridimensionale, per tentare di
 immaginare e visualizzare dei modelli significativi di alcuni oggetti
 4D.
-
-{{ volantino_o_scrivici() }}

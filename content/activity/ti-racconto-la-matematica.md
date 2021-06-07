@@ -7,17 +7,28 @@ template = "activity/page.html"
 
 [taxonomies]
 scuole = ["animazione"]
+volantino = ["superiori"]
 
 [extra]
 thumb = "/images/activities/racconto_matematica.jpg"
 image = "/images/activities/racconto_matematica.jpg"
 alt = "Un libro aperto con delle cifre in carta che spuntano dalle pagine"
+
+[extra.volantino]
+weight = 110
+header = { text = "dai 3 ai 5 anni" }
+
+[extra.volantino.meta]
+ico-basketball = ["Per chi?", "Per tutti"]
+ico-read = ["Durata?", "2 ore per ogni storia e laboratorio creativo"]
+rimborso = ["Rimborso?", "123 euro per ogni storia"]
 +++
-## Problema
+
+<h2 class="ico-think">Problema</h2>
 
 Si può imparare la matematica ascoltando una storia?
 
-## Soluzione
+<h2 class="ico-think">Soluzione</h2>
 
 La magia di un racconto incanta sempre i più piccoli.
 Se poi il racconto diventa un'occasione per imparare qualcosa,
@@ -26,7 +37,7 @@ sono contenti anche i più grandi.
 Una storia che parla di matematica, seguita da un laboratorio
 per approfondire e costruire insieme un ricordo dell'esperienza.
 
-**Le nostre storie:**
+### Le nostre storie
 
 <ul class='list'>
 <li>
@@ -45,6 +56,12 @@ Una storia di matematica e integrazione, che parla di figure geometriche e di ac
 Un viaggio nel mondo magico della matematica, alla scoperta di ombre e geometrie...
 
 </li>
-</ul>
+<li>
+<img src="/images/activities/matebosco_bassa_qualita.jpg" alt="Foto dell'attività matebosco"/>
 
-{{ volantino_o_scrivici() }}
+# Un piatto di matematica
+
+Alla scoperta di una fabbrica di pasta per imparare a giocare con sequenze e combinazioni.
+
+</li>
+</ul>

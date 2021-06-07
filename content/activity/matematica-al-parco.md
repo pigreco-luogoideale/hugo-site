@@ -24,5 +24,3 @@ Non è affatto così! Saltando e correndo ci sarà l'occasione per i bambini di
 liberare le loro energie, giocare con le cifre, imparare a viaggiare tra i
 numeri negativi, osservare le forme che ci circondano, scoprire le proprietà
 delle figure geometriche... e passare un pomeriggio all'aria aperta.
-
-{{ volantino_o_scrivici() }}

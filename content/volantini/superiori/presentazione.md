@@ -18,14 +18,13 @@ alt = "Foto dell'attività sai mandare un messaggio segreto"
 
 [extra.volantino]
 weight = 2
-price = "10 eur"
 raw = true
 +++
 
-<section class="page" style="position: relative; padding: 0">
+<section class="page info" style="position: relative; padding: 0">
 <div class="page-header"><span>Attività 2021-2022</span></div>
 <div class="page-content">
-<h1><img src="/images/logo.png" alt="Logo dell'associazione" />Associazione PiGreco - il Luogo Ideale</h1>
+<h1 class="ico ico-logo">Associazione PiGreco - il Luogo Ideale</h1>
 
 PiGreco - il Luogo Ideale è un'associazione culturale nata con lo
 scopo di diffondere la passione e l'interesse per la matematica. Per

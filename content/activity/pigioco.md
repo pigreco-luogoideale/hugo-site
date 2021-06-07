@@ -27,5 +27,3 @@ le proprie conoscenze matematiche (e non), ecco un gioco a squadre fatto di
 domande logiche, oggetti da costruire, curiosità e aneddoti da imparare,
 abilità artistiche e teatrali. Una sfida da lanciare ai propri amici,
 per imparare e divertirsi insieme.
-
-{{ volantino_o_scrivici() }}

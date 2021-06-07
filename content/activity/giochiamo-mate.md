@@ -32,5 +32,3 @@ creando occasioni di approfondimento o nuovi stimoli per l'apprendimento.
 I bambini saranno incentivati a lavorare autonomamente, formulare ipotesi e
 discutere le risposte, per stimolare le loro capacità logiche-deduttive
 e l'apprendimento diretto.
-
-{{ volantino_o_scrivici() }}

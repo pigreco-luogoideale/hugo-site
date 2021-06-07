@@ -19,8 +19,11 @@ alt = "Volantino del primo aperitivo matematico, la matematica è un'opinione"
 [extra.volantino]
 weight = 110
 header = { text = "Sovrascrivo default" }
-price = "500 eur"
 
+[extra.volantino.meta]
+ico-basketball = ["Per chi?", "Solo per scuole"]
+ico-read = ["Durata?", "5 Incontri da 2 ore"]
+rimborso = ["Rimborso?", "123 euro per ogni secondo"]
 +++
 
 Uno stand colorato e interattivo rivolto a grandi e piccini, per mettersi alla prova e portare a casa un po' di matematica.

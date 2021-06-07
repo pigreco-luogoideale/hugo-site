@@ -51,5 +51,3 @@ si trova a tavola tutti i giorni.
 
 </li>
 </ul>
-
-{{ volantino_o_scrivici() }}
