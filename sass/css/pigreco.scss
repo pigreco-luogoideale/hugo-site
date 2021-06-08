@@ -1,3 +1,33 @@
+// Definizione dei colori
+$col-scuola: (
+    "infanzia": #FC0,
+    "primaria": #5DF,
+    "primogrado": #9F5,
+    "secondogrado": #F40,
+);
+
+$col-tutti: (
+    "altro": #F40,
+    "animazione": #9F5,
+    "corsi": #5DF,
+    "lezioni": #FC0,
+);
+
+// Definizione dell'ordine negli elenchi
+$ord-scuola: (
+    "infanzia": 1,
+    "primaria": 2,
+    "primogrado": 3,
+    "secondogrado": 4,
+);
+
+$ord-tutti: (
+    "altro": 4,
+    "animazione": 1,
+    "corsi": 2,
+    "lezioni": 3,
+);
+
 @font-face {
 	font-family: 'Gisha';
 	src: url('/fonts/gisha.ttf');
@@ -379,7 +409,6 @@ img.people {
         }
 
         .activity-group.altro {
-            order: 99;
             flex-grow: 2;
             margin-top: 15px;
         }
@@ -412,38 +441,31 @@ img.people {
             float: left;
             margin: 10px;
         }
+    }
 
-        .activity-group.altro {
-            order: 99;
+    .activity-group {
+        @each $name, $color in $col-scuola {
+            &.#{$name}, &.#{$name}:hover { background-color: $color; }
         }
-    }
+        @each $name, $color in $col-tutti {
+            &.#{$name}, &.#{$name}:hover { background-color: $color; }
+        }
 
-    .activity-group.percorsi { background-color: #FC0; }
-    .activity-group.percorsi:hover { background-color: #FC0; }
+        h2 {
+            margin: 10px;
+            text-align: center;
+        }
 
-    .activity-group.animazione { background-color: #5DF; }
-    .activity-group.animazione:hover { background-color: #5DF; }
+        img {
+            display: block;
+            margin: 5px auto;
+            background-color: white;
+        }
 
-    .activity-group.incontri { background-color: #9F5; }
-    .activity-group.incontri:hover { background-color: #9F5; }
-
-    .activity-group.altro { background-color: #F40; }
-    .activity-group.altro:hover { background-color: #F40; }
-
-    .activity-group h2 {
-        margin: 10px;
-        text-align: center;
-    }
-
-    .activity-group img {
-        display: block;
-        margin: 5px auto;
-        background-color: white;
-    }
-
-    .activity-group .description {
-        display: block;
-        margin: 10px;
+        .description {
+            display: block;
+            margin: 10px;
+        }
     }
 
     .hsplit {
@@ -491,10 +513,6 @@ img.people {
         .activity-group:nth-of-type(even) img {
             left: auto;
             right: -10px;
-        }
-
-        .activity-group.altro {
-            order: 99;
         }
     }
 }
@@ -673,10 +691,25 @@ p.slogan {
 	opacity: 1.0;
 }
 
-.percorsi:hover { background-color: #FC0; }
-.animazione:hover { background-color: #5DF; }
-.incontri:hover { background-color: #9F5; }
-.altro:hover { background-color: #F40; }
+// Sfondi dei link in home page, TODO metterli in un elemento padre
+@each $name, $color in $col-scuola {
+    img.#{$name}:hover { background-color: $color; }
+}
+@each $name, $color in $col-tutti {
+    .#{$name}:hover { background-color: $color; }
+}
+
+// Ordine degli elementi negli elenchi
+@each $name, $order in $ord-scuola {
+    .ord-#{$name} {
+        order: $order;
+    }
+}
+@each $name, $order in $ord-tutti {
+    .ord-#{$name} {
+        order: $order;
+    }
+}
 
 .popup {
 	display: none;

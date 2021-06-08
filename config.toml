@@ -14,17 +14,85 @@ highlight_code = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# Non toccare queste 
+# Fare attenzione, hanno implicazioni sulla struttura del sito e sulle directory
+# in templates
 taxonomies = [
     # Per le pagine che sono offerte alle scuole
     { name = "scuole" },
     # Per le pagine che sono offerte ai privati
-    { name = "privati" },
+    { name = "tutti" },
     # Per le pagine che vengono messe su volantino/i
     { name = "volantino" },
 ]
 
+# Metadati, titoli e descrizioni, liberamente modificabili
 [extra]
-    [extra.taxonomies.volantino.privati]
+    # Ordine delle pagine
+	[extra.taxonomies.ordine]
+    scuole = ["infanzia", "primaria", "primogrado", "secondogrado"]
+    tutti = ["animazione", "corsi", "lezioni", "altro"]
+
+    # Titoli e descrizioni per la sezione scuole
+	[extra.taxonomies.scuole.infanzia]
+    posizione = 1
+	name = "Scuola dell'Infanzia"
+	description = """
+        Blah
+    """
+
+	[extra.taxonomies.scuole.primaria]
+    posizione = 2
+	name = "Scuola Primaria"
+	description = """
+        Blah
+    """
+
+	[extra.taxonomies.scuole.primogrado]
+    posizione = 3
+	name = "Scuola Secondaria di I grado"
+	description = """
+        Blah
+    """
+
+	[extra.taxonomies.scuole.secondogrado]
+    posizione = 4
+	name = "Scuola Secondaria di II grado"
+	description = """
+        Blah
+    """
+
+    # Titoli e descrizioni per la sezione per tutti
+	[extra.taxonomies.tutti.animazione]
+    posizione = 2
+	name = "Animazione matematica"
+	description = """
+        Blah
+    """
+
+	[extra.taxonomies.tutti.corsi]
+    posizione = 2
+	name = "Corsi di studio"
+	description = """
+        Blah
+    """
+
+	[extra.taxonomies.tutti.lezioni]
+    posizione = 2
+	name = "Lezioni private"
+	description = """
+        Blah
+    """
+
+	[extra.taxonomies.tutti.altro]
+    posizione = 2
+	name = "#math"
+	description = """
+        Blah
+    """
+
+    # Header per il volantino
+    [extra.taxonomies.volantino.tutti]
     header = { text = "Roba Privati" }
 
     [extra.taxonomies.volantino.primarie]
@@ -33,35 +101,3 @@ taxonomies = [
     [extra.taxonomies.volantino.superiori]
     header = { text = "Roba superiori" }
 
-    # Roba vecchia
-	[extra.taxonomies.activity.animazione]
-	name = "Animazione Matematica"
-	description = """
-        Occasioni per giocare e divertirsi,
-        rivolte a tutti: dai più piccoli al pubblico adulto,
-        per affrontare la matematica da un nuovo punto di vista.
-    """
-
-	[extra.taxonomies.activity.incontri]
-	name = "Inconti con la matematica"
-	description = """
-        Conferenze informali, rivolte agli studenti della scuola
-        secondaria e al grande pubblico per fornire spunti,
-        approfondimenti e curiosità.
-    """
-
-	[extra.taxonomies.activity.percorsi]
-	name = "Percorsi per le scuole"
-	description = """
-        Laboratori dedicati alle classi scuola dell’infanzia,
-        primaria e secondaria per approfondire argomenti del
-        programma scolastico (ma non solo!) coinvolgendo tutti gli alunni.
-    """
-
-	[extra.taxonomies.activity.altro]
-	name = "#math"
-	description = """
-        Alcune delle nostre iniziative per contribuire alla
-        diffusione della matematica nel mondo (reale e virtuale)
-        con divertimento e simpatia.
-    """

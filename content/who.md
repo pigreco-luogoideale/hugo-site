@@ -79,7 +79,7 @@ Laureando in Matematica presso l'Università di Milano, collaboro con PiGreco sv
 <img src="/images/people/ale.jpg" class="people trigger opaque" />
 <h4 style="margin: 5px;">Alessandro Re</h4>
 <div class="balloon hidden">
-Dottorando in Informatica presso l'Università di Lisbona, ho realizzato il sito di PiGreco e mi occupo della sua gestione.
+Informatico multiruolo, ho realizzato il sito di PiGreco e mi occupo della sua gestione.
 </div>
 </div>
 </div>

@@ -3,7 +3,7 @@
 {% block content %}
 <section class="contContainer">
 	<div class="content activities">
-        {% set term_data = config.extra.taxonomies.scuole[term.slug] %}
+        {% set term_data = config.extra.taxonomies.tutti[term.slug] %}
 		<h2>{{ term_data.name }}</h2>
         {% for page in term.pages %}
 		<a href="{{ page.permalink }}" class="activity">

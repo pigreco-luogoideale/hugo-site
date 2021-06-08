@@ -12,43 +12,24 @@
 	<div>
 		<h2>Le nostre proposte per le scuole</h2>
 		<div class="vsplit4">
-			<a class="vblock" href="/activity/percorsi" id="link_act_percorsi">
-				<img class="rounded squared130 percorsi" src="/images/img_att_kid.png">
-				<h3>Percorsi per le scuole</h3>
+            {% for key, value in config.extra.taxonomies.scuole %}
+            {# l'ordine viene determinato da ord-XXXX, che è definito nel sass #}
+            <a class="vblock ord-{{ key }}" href="/scuole/{{ key }}" id="link_act_{{ key }}">
+                <img class="rounded squared130 {{ key }}" src="/images/img_scuole_{{ key }}.png">
+                <h3>{{ value.name }}</h3>
 			</a>
-			<a class="vblock" href="/activity/animazione" id="link_act_animazione">
-				<img class="rounded squared130 animazione" src="/images/img_att_hat.png">
-				<h3>Animazione matematica</h3>
-			</a>
-			<a class="vblock" href="/activity/incontri" id="link_act_incontri">
-				<img class="rounded squared130 incontri" src="/images/img_att_pi.png">
-				<h3>Incontri con la matematica</h3>
-			</a>
-			<a class="vblock" href="/activity/altro" id="link_act_math">
-				<img class="rounded squared130 altro" src="/images/img_att_world.png">
-				<h3>#Math</h3>
-			</a>
+            {% endfor %}
 		</div>
 	</div>
 	<div>
-		<h2>Le nostre proposte per i privati</h2>
-		<div class="vsplit4 opalink">
-			<a class="vblock" href="/who" id="link_home_who">
-				<img class="rounded" src="/images/pigrechine.jpg">
-				<h3>Chi siamo</h3>
+		<h2>Le nostre proposte per tutti</h2>
+		<div class="vsplit4">
+            {% for key, value in config.extra.taxonomies.tutti %}
+            <a class="vblock ord-{{ key }}" href="/tutti/{{ key }}" id="link_act_{{ key }}">
+                <img class="rounded squared130 {{ key }}" src="/images/img_tutti_{{ key }}.png">
+                <h3>{{ value.name }}</h3>
 			</a>
-			<a class="vblock" href="/newsletter" id="link_home_contacts">
-				<img class="rounded" src="/images/newsletter.jpg">
-				<h3>Newsletter</h3>
-			</a>
-			<a class="vblock" href="/news" id="link_home_news">
-				<img class="rounded" src="/images/news.jpg">
-				<h3>Archivio News</h3>
-			</a>
-			<a class="vblock" href="http://www.facebook.com/pigreco.luogoideale" target="_blank" id="link_home_facebook">
-				<img class="rounded" src="/images/facebook.png">
-				<h3>Facebook</h3>
-			</a>
+            {% endfor %}
 		</div>
 	</div>
 

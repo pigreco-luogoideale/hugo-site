@@ -8,7 +8,6 @@ template = "activity/page.html"
 date = 2020-01-01
 
 [taxonomies]
-scuole = ["incontri"]
 volantino = ["superiori"]
 
 [extra]

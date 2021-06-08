@@ -31,6 +31,7 @@ Le cose importanti da sapere sono:
    render di quel contenuto;
  - `title`, `description`, `data` e `weight` vanno nella sezione principale,
    all'inizio dell'header, _prima_ di `[extra]`;
+ - `weight` è usato, in alcuni casi, per determinare l'ordine delle pagine;
  - nella sotto-sezione `[extra]` dell'header, ci possono andare altre
    informazioni che verranno usate dal `template`;
  - nella cartella `contents` ci vanno solo file `.md` ed eventuali assets;
@@ -38,6 +39,9 @@ Le cose importanti da sapere sono:
    pagine o dalle sezioni in `contents`;
  - nella cartella `static` ci vanno gli altri file (css, immagini, etc) che
    verranno copiati sul sito (in `/`) senza essere toccati in altro modo;
+ - gli stili del sito non è in `static/css`, ma in `sass/css` e sono scritti in
+   un linguaggio "css arricchito" (che ad esempio supporta le variabili), che
+   poi viene trasformato in css;
  - i file `_index.md` indicano che la cartella che li contiene è una _sezione_,
    ovvero che conterrà altre pagine;
  - i file `index.md` indicano che nella cartella che li contiene vi è una pagina
@@ -48,12 +52,29 @@ Le cose importanti da sapere sono:
    anche il codice HTML, bisogna però prestare attenzione a:
    1. non lasciare spazi all'inizio della riga;
    2. lasciare una linea vuota tra il codice HTML e il codice Markdown.
+ - tutte le attività vengono messe in `contents/activities`, poi ognuna di esse
+   può essere messa in una sottocategoria (e.g. scuola infanzia) usando le
+   `taxonomies`: una tassonomia è un gruppo di termini, un termine è un tag che
+   viene applicato alle pagine, una pagina viene messa in tutte le sezioni
+   relative alle tassonomie+termini che appaiono nell'header;
+ - le informazioni relative alle singole tassonomie non possono essere inserite
+   nelle pagine del sito, quindi non vanno in `contents`, ma sono invece messe
+   all'interno del file `config.toml`: lì vanno messe, ad esempio, le tassonomie
+   valide (scuola, tutti e volantino) e i dati relativi alle tassonomie ed i
+   termini, ad esempio la descrizione delle varie sezioni.
 
 ## Volantino
 
-Il volantino è anch'esso generato automaticamente, ma in modo particolare: una
-parte specifica del sito viene compilata e si producono delle pagine HTML che
-poi vengono automaticamente trasformate in PDF.
+Il volantino è anch'esso generato automaticamente e usa anch'esso le taxonomies,
+ma è un po' particolare perché c'è una sezione del sito, `contents/volantino`,
+in cui ci sono le pagine "extra". Un volantino viene dall'unione delle pagine
+"extra" e dalle pagine con la tassonomia volantino.
+L'ordine delle pagine viene determinato dal `weight` specificato nell'header.
+Il volantino viene prodotto in HTML e poi viene trasformato automaticamente in
+PDF e copiato nella directory `static/volantini`.
+
+Attenzione che la trasformazione da HTML a PDF non è banale e le cose potrebbero
+apparire diverse tra le due versioni.
 
 Il codice per fare ciò è nel file `flier.sh`. Per modificarlo, è necessario
 seguire i seguenti passi:
