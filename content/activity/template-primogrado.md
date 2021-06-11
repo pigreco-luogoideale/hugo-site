@@ -2,13 +2,12 @@
 title = "Titolo dell'attività"
 description = "Descrizione nell'elenco"
 
-# Questa è una singola pagina di attività, lasciare così: è il template
-# che viene usato per visualizzare la singola pagina
+# Questa è una singola pagina di attività, lasciare così
 template = "activity/page.html"
 
 [taxonomies]
 # Sezioni del sito dove mettere la pagina, da scegliere tra una o più di queste
-scuole = ["infanzia"]
+scuole = ["primogrado"]
 tutti = ["animazione", "corsi", "lezioni", "altro"]
 volantino = ["primociclo"]
 
@@ -23,12 +22,8 @@ alt = "Caselle disegnate a gesso sull'asfalto e dei dadi"
 # 200-299 per primaria
 # 300-399 per primo grado
 # 400-499 per secondo grado
-weight = 100
-# Qui si possono customizzare il titolo e lo stile della pagina, entrambi opzionali.
-# Se il text non viene impostato, verrà usato il valore header.text in config.toml
-# Lo style invece è la classe nella .page-header in sass/css/volantino-screen.scss
-header = { text = "Scuola dell'infanzia", style = "infanzia" }
-# Questo valore, opzionale (default è false) indica se mettere l'icona "anche online"
+weight = 300
+header = { text = "Scuola secondaria I grado" }
 online = true
 
 [extra.volantino.meta]
@@ -39,12 +34,12 @@ ico-rimborso = ["Rimborso?", "E euro per ogni C cicli"]
 # ico-modalita = ["Modalita", "Valore 3"]
 +++
 
-<h2 class="ico ico-infanzia-domanda">Domanda</h2>
+<h2 class="ico ico-primogrado-problema">Problema</h2>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-<h2 class="ico ico-infanzia-risposta">Risposta</h2>
+<h2 class="ico ico-primogrado-soluzione">Soluzione</h2>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna

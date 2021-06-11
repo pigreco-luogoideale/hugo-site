@@ -31,6 +31,30 @@ $arancione-pli: #ff6933; //#ff4400;
         }
     }
 
+    // Elenco icone usabili nel volantino
+    .ico-test-1::before { background-image: url(/images/icons/test-1.png); }
+    .ico-test-2::before { background-image: url(/images/icons/test-2.png); }
+    .ico-test-3::before { background-image: url(/images/icons/test-3.png); }
+
+    // Simboli generali
+    .ico-durata::before { background-image: url(/images/icone/durata.png); }
+    .ico-rimborso::before { background-image: url(/images/icone/rimborso.png); }
+    .ico-modalita::before { background-image: url(/images/icone/modalita.png); }
+    .ico-generali::before { background-image: url(/images/icone/generali.png); }
+    .ico-contatti::before { background-image: url(/images/icone/contatti.png); }
+    .ico-online::before { background-image: url(/images/icone/online.png); }
+
+    // Simboli per le varie pagine
+    .ico-infanzia-domanda::before { background-image: url(/images/icone/infanzia-domanda.png); }
+    .ico-infanzia-risposta::before { background-image: url(/images/icone/infanzia-risposta.png); }
+    .ico-primaria-esercizio::before { background-image: url(/images/icone/primaria-esercizio.png); }
+    .ico-primaria-svolgimento:before { background-image: url(/images/icone/primaria-svolgimento.png); }
+    .ico-primogrado-problema:before { background-image: url(/images/icone/primogrado-problema.png); }
+    .ico-primogrado-soluzione:before { background-image: url(/images/icone/primogrado-soluzione.png); }
+    .ico-secondogrado-teorema:before { background-image: url(/images/icone/secondogrado-teorema.png); }
+    .ico-secondogrado-dimostrazione:before { background-image: url(/images/icone/secondogrado-dimostrazione.png); }
+
+    // Cose random per test, si potranno buttare dopo o usare nel sito
     .ico-logo::before { background-image: url(/images/logo.png); }
     .ico-basketball::before { background-image: url(/images/icons/010-basketball.png); }
     .ico-blackboard::before { background-image: url(/images/icons/016-blackboard.png); }
@@ -40,6 +64,7 @@ $arancione-pli: #ff6933; //#ff4400;
     .ico-think::before { background-image: url(/images/icons/001-think.png); }
 
     div.page-meta {
+        width: 100%;
         ul {
             //border: 1px solid red;
             margin: 0cm;
@@ -53,12 +78,12 @@ $arancione-pli: #ff6933; //#ff4400;
                 grid-template-columns: 3.5cm 8cm;
 
                 span, strong {
-                    margin-left: 0.8cm;
+                    margin-left: 1cm;
                     height: 1cm;
                     &::before {
                         content: "";
-                        width: 0.7cm;
-                        height: 0.7cm;
+                        width: 0.8cm;
+                        height: 0.8cm;
                         background-size: contain;
                         background-repeat: no-repeat;
                         font-weight: bold;
@@ -75,6 +100,27 @@ $arancione-pli: #ff6933; //#ff4400;
         }
     }
 
+    .page-content {
+        .extra-symbol {
+            position: absolute;
+            bottom: 0cm;
+            right: 0cm;
+            width: 3.5cm;
+            height: 2cm;
+            img {
+                width: 1.5cm;
+                position: absolute;
+                left: 0cm;
+                bottom: 0cm;
+            }
+            div {
+                position: absolute;
+                left: 1.5cm;
+                bottom: 0.1cm;
+            }
+        }
+    }
+
     .page-header {
         position: absolute;
         width: 100%;
@@ -87,9 +133,9 @@ $arancione-pli: #ff6933; //#ff4400;
 
         font-family: serif;
 
-        &.bluette {
-            background-color: blue;
-        }
+	// Elenco dei colori per i vari tipi di volantino
+        &.infanzia { background-color: green; }
+        &.primaria { background-color: pink; }
 
         span {
             //border: 1px solid green;
@@ -152,7 +198,7 @@ $arancione-pli: #ff6933; //#ff4400;
 
                 &.right {
                     float: right;
-                    margin: -0.5cm 0.5cm 0.25cm 1.0cm;
+                    margin: 0.5cm 0.5cm 0.25cm 1.0cm;
                     width: 5cm;
                 }
 
@@ -197,8 +243,6 @@ $arancione-pli: #ff6933; //#ff4400;
             }
 
             img {
-                float: left;
-
                 &.right {
                     float: right;
                     margin: -0.5cm 0.5cm 0.25cm 1.0cm;
@@ -224,34 +268,12 @@ $arancione-pli: #ff6933; //#ff4400;
                 margin: 1.25cm 1.45cm;
                 margin-right: -$lr-margin;
                 border-bottom: 0.1cm solid $arancione-pli;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0cm;
-                    width: 1.2cm;
-                    height: 2cm;
-                    background-image: url(/images/logo.png);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                }
             }
 
             > h2 {
                 color: black;
                 margin: 1cm 0cm 0cm 1.45cm;
-                //border: 1px solid black;
                 text-transform: uppercase;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0cm;
-                    width: 1.2cm;
-                    height: 2cm;
-                    margin-top: -0.22cm;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                }
             }
 
             ul {

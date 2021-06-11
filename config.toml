@@ -29,7 +29,7 @@ taxonomies = [
 # Metadati, titoli e descrizioni, liberamente modificabili
 [extra]
     # Ordine delle pagine
-	[extra.taxonomies.ordine]
+    [extra.taxonomies.ordine]
     scuole = ["infanzia", "primaria", "primogrado", "secondogrado"]
     tutti = ["animazione", "corsi", "lezioni", "altro"]
 
@@ -63,7 +63,7 @@ taxonomies = [
     """
 
     # Titoli e descrizioni per la sezione per tutti
-	[extra.taxonomies.tutti.animazione]
+    [extra.taxonomies.tutti.animazione]
     posizione = 2
 	name = "Animazione matematica"
 	description = """
@@ -92,12 +92,8 @@ taxonomies = [
     """
 
     # Header per il volantino
-    [extra.taxonomies.volantino.tutti]
-    header = { text = "Roba Privati" }
+    [extra.taxonomies.volantino.primociclo]
+    header = { text = "Primo Ciclo" }
 
-    [extra.taxonomies.volantino.primarie]
-    header = { text = "Roba primarie" }
-
-    [extra.taxonomies.volantino.superiori]
-    header = { text = "Roba superiori" }
-
+    [extra.taxonomies.volantino.secondociclo]
+    header = { text = "Secondo Ciclo" }

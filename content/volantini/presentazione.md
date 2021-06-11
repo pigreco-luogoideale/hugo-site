@@ -5,10 +5,8 @@ description = "Pagina di copertina del volantino delle superiori"
 # Questa è una singola pagina di attività
 template = "activity/page.html"
 
-date = 2020-01-01
-
 [taxonomies]
-volantino = ["superiori"]
+volantino = ["primociclo", "secondociclo"]
 
 [extra]
 thumb = "/images/activities/due_passi.jpg"

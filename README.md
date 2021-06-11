@@ -87,8 +87,8 @@ seguire i seguenti passi:
 4. Aprire `volantino-dev.pdf` con un programma che lo ricarichi automaticamente
    in caso di modifiche, così da rendere più veloce vedere cosa è cambiato,
    (ad esempio con [SumatraPDF](https://www.sumatrapdfreader.org) o evince).
-5. Se possibile, eseguire il passo 3 in automatico (e.g. con watchman)
+5. Se possibile, eseguire il passo 3 in automatico (e.g. con watchexec)
 
 Con nix si può usare ad esempio:
 
-    $ nix-shell -p python38Packages.{cairosvg,weasyprint} watchman zola
+    $ nix-shell -p python38Packages.weasyprint watchexec zola --run "zola serve"

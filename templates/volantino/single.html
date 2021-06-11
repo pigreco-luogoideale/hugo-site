@@ -14,22 +14,23 @@
                 {{ page.content | safe }}
             {% else %}
                 <section class="page standard">
+		    {% if page.extra.volantino.header.style %}
+		        {% set header_class = page.extra.volantino.header.style %}
+		    {% else %}
+			{% set header_class = term.name %}
+		    {% endif %}
                     {% if page.extra.volantino.header.text %}
-                        <div class="page-header {{ term.name }}">
+                        <div class="page-header {{ header_class }}">
                             <span>{{ page.extra.volantino.header.text }}</span>
                         </div>
                     {% else %}
-                        <div class="page-header {{ term.name }}">
+                        <div class="page-header {{ header_class }}">
                             <span>{{ config.extra.taxonomies[taxonomy.name][term.name].header.text }}</span>
                         </div>
                     {% endif %}
 
                     <div class="page-content">
-                        {% if page.extra.title_logo_left %}
-                            <h1><img src="{{ get_url(path=page.extra.title_logo_left) }}" />{{ page.title }}</h1>
-                        {% else %}
-                            <h1>{{ page.title }}</h1>
-                        {% endif %}
+                        <h1>{{ page.title }}</h1>
 
                         <img class="page-image" src="{{ page.extra.image }}" />
 
@@ -41,6 +42,12 @@
                                     <li><strong class="{{ meta_key }}">{{ meta_value.0 }}</strong><span>{{ meta_value.1 }}</span></li>
                                 {% endfor %}
                             </ul>
+                            {% if page.extra.volantino.online %}
+                            <div class="extra-symbol">
+                                <img src="/images/icone/online.png" alt="Icona online" />
+                                <div>Anche online!</div>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="page-footer"><div class="page-number">

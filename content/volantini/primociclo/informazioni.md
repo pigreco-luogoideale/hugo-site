@@ -8,7 +8,7 @@ template = "activity/page.html"
 date = 2020-01-01
 
 [taxonomies]
-volantino = ["superiori"]
+volantino = ["primociclo"]
 
 [extra]
 thumb = "/images/activities/due_passi.jpg"
@@ -23,7 +23,7 @@ raw = true
 <section class="page info">
 <div class="page-header"><span>Informazioni</span></div>
 <div class="page-content">
-<h1 class="ico ico-basketball">Informazioni generali</h1>
+<h1 class="ico ico-generali">Informazioni generali</h1>
 
 - Tutte le attività sono pensate per essere svolte (anche) in uno
   spazio chiuso, escluse Matematica al parco e Safari Matematico che
@@ -37,7 +37,7 @@ raw = true
 
 - I rimborsi indicati non comprendono IVA ed eventuali spese di viaggio.
 
-<h1 class="ico ico-think">Contatti</h1>
+<h1 class="ico ico-contatti">Contatti</h1>
 <div class="page-meta">
 
 - **Mail:** pigreco@luogoideale.org
@@ -47,4 +47,5 @@ raw = true
 - **Instagram:** pigrecoluogoideale
 
 </div>
+<div class="page-footer"><div class="page-number"><span>3</span></div></div>
 </section>
