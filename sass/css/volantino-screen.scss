@@ -66,20 +66,25 @@ $arancione-pli: #ff6933; //#ff4400;
     div.page-meta {
         width: 100%;
         ul {
-            //border: 1px solid red;
-            margin: 0cm;
+            // Display table works on website and weasyprint
+            display: table;
+            border-spacing: 0.5cm 0.5cm;
+            // We are abusing border spacing and margin to create some space
+            // for ::before icon
+            margin-left: 0.5cm;
             padding: 0cm;
 
-            display: grid;
-
             li {
+                border: 1px solid blue;
                 list-style: none;
-                display: grid;
-                grid-template-columns: 3.5cm 8cm;
+                display: table-row;
+                //display: grid;
+                //grid-template-columns: 3.5cm 8cm;
 
                 span, strong {
-                    margin-left: 1cm;
-                    height: 1cm;
+                    display: table-cell;
+                    //margin-left: 1cm;
+                    //height: 1cm;
                     &::before {
                         content: "";
                         width: 0.8cm;
