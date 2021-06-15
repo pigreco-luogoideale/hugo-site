@@ -89,6 +89,25 @@ seguire i seguenti passi:
    (ad esempio con [SumatraPDF](https://www.sumatrapdfreader.org) o evince).
 5. Se possibile, eseguire il passo 3 in automatico (e.g. con watchexec)
 
-Con nix si può usare ad esempio:
+## Sviluppo
 
-    $ nix-shell -p python38Packages.weasyprint watchexec zola --run "zola serve"
+Con nix si può usare ad esempio il seguente comando per avviare un server in locale:
+
+    $ nix-shell -p zola --run "zola serve"
+
+Oppure, per generare la versione definitiva da caricare:
+
+    $ nix-shell -p zola --run "zola build"
+
+Per il volantino, un bug in zola 0.13 impedisce di compilare correttamente i CSS
+a causa del mime type errato mandato da zola serve. Si può usare zola 0.12.2.
+
+    $ URL=https://github.com/NixOS/nixpkgs/archive/559cf76fa3642106d9f23c9e845baf4d354be682.tar.gz
+    $ nix-shell -p zola -I nixpkgs=$URL --run "zola serve"
+
+In un'altra shell, si può avviare watchexec che ricompila il PDF in automatico
+usando weasyprint, aspettando 1 secondo prima di farlo per permettere a zola serve
+di fare il rebuild:
+
+    $ CMD="watchexec -d 1000 -e scss,md,html -- weasyprint http://localhost:1111/volantino/primociclo/ volantino-dev.pdf"
+    $ nix-shell -p python38Packages.weasyprint watchexec --run "$CMD"
