@@ -38,15 +38,13 @@ learning-by-doing siano il modo più efficace per acquisire gli strumenti
 per la comprensione dei concetti matematici.
 
 L'associazione è nata nel giugno 2014 e nei suoi anni di attività ha
-realizzato tutte queste proposte in collaborazione con scuole,
+collaborato con scuole,
 Comuni e altre associazioni presenti sul territorio dell'hinterland
-milanese o del Comune di Milano.
+milanese e del Comune di Milano.
 
 <img src="/immaginivolantino/image5547.jpg" alt="Foto di bambini che incollano forme sulla carta" class="left">
 
-Le attività proposte sono state raggruppate a seconda della fascia d'età
-a cui sono rivolte. Le attività dedicate solo alle scuole sono segnalate
-nei dettagli a fondo pagina.
+
 
 </div>
 <div class="page-footer"><div class="page-number"><span>2</span></div></div>

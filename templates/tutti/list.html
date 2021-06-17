@@ -10,7 +10,7 @@
                     <h2>{{ term_data.name }}</h2>
                     <img src="/images/activity/{{ term.slug }}.png" alt="Copertina della sezione {{ term_data.name }}">
                     <div class="description">
-                        <p>{{ term_data.description }}</p>
+                        <p>{{ term_data.description | safe }}</p>
                     </div>
                 </a>
             {% endfor %}

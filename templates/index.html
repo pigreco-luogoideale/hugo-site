@@ -14,8 +14,9 @@
 		<div class="vsplit4">
             {% for key, value in config.extra.taxonomies.scuole %}
             {# l'ordine viene determinato da ord-XXXX, che è definito nel sass #}
+            {# FIXME l'ordine nelle liste è invece definito da config.extra.taxonomies.XXXX #}
             <a class="vblock ord-{{ key }}" href="/scuole/{{ key }}" id="link_act_{{ key }}">
-                <img class="rounded squared130 {{ key }}" src="/images/img_scuole_{{ key }}.png">
+                <img class="rounded squared130 {{ key }}" src="/images/activity/{{ key }}_home.png">
                 <h3>{{ value.name }}</h3>
 			</a>
             {% endfor %}
@@ -26,7 +27,7 @@
 		<div class="vsplit4">
             {% for key, value in config.extra.taxonomies.tutti %}
             <a class="vblock ord-{{ key }}" href="/tutti/{{ key }}" id="link_act_{{ key }}">
-                <img class="rounded squared130 {{ key }}" src="/images/img_tutti_{{ key }}.png">
+                <img class="rounded squared130 {{ key }}" src="/images/activity/{{ key }}_home.png">
                 <h3>{{ value.name }}</h3>
 			</a>
             {% endfor %}
@@ -36,7 +37,12 @@
 	<div class="colorlink">
         <hr/>
 		<p class="slogan">Lasciatevi contagiare dalla matematica!</p>
-        <p style="text-align: center; font-size: 20px">fa-mail | fa-facebook | fa-instagram</p>
+        <p style="text-align: center; font-size: 20px">
+        <a href= "mailto:pigreco@luogoideale.org">Mail</a> |
+        <a href="http://www.facebook.com/pigreco.luogoideale", target="blank">Facebook</a> |
+        <a href="http://instagram.com/pigrecoluogoideale", target="blank">Instagram</a> 
+          
+        </p>
 	</div>
 </div>
 </section>

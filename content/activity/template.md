@@ -8,9 +8,9 @@ template = "activity/page.html"
 
 [taxonomies]
 # Sezioni del sito dove mettere la pagina, da scegliere tra una o più di queste
-scuole = ["infanzia"]
-tutti = ["animazione", "corsi", "lezioni", "altro"]
-volantino = ["primociclo"]
+#scuole = ["infanzia"]
+#tutti = ["animazione", "corsi", "lezioni", "altro"]
+#volantino = ["primociclo"]
 
 [extra]
 thumb = "/images/activities/matematica_al_parco.jpg"
@@ -41,8 +41,7 @@ ico-rimborso = ["Rimborso?", "E euro per ogni C cicli"]
 
 <h2 class="ico ico-infanzia-domanda">Domanda</h2>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Cosa sta succedendo?.
 
 <h2 class="ico ico-infanzia-risposta">Risposta</h2>
 

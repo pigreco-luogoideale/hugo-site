@@ -1,16 +1,16 @@
 // Definizione dei colori
 $col-scuola: (
-    "infanzia": #FC0,
-    "primaria": #5DF,
-    "primogrado": #9F5,
+    "infanzia": #FF4,
+    "primaria": #FC0,
+    "primogrado": #F90,
     "secondogrado": #F40,
 );
 
 $col-tutti: (
-    "altro": #F40,
-    "animazione": #9F5,
-    "corsi": #5DF,
-    "lezioni": #FC0,
+    "altro": #9F5,
+    "animazione": #5DF,
+    "corsi": #06F,
+    "lezioni": #0D3,
 );
 
 // Definizione dell'ordine negli elenchi
@@ -247,7 +247,18 @@ section {
 }
 
 .contContainer {
-	background-color: #fafafa;
+	background-color: white;
+
+    h1.large-centered {
+      font-family: "Amatic SC", sans-serif;
+      text-align: center;
+      font-size: 180%;
+      margin-top: 0;
+    }
+
+    h1 { font-family: 'Amatic SC', sans-serif; }
+    h2 { font-family: 'Amatic SC', sans-serif; font-size: 160%;}
+    /*h3 { font-family: '', cursive; }*/
 }
 
 .content {
@@ -257,10 +268,6 @@ section {
 
 .hidden { display: none; }
 .shown { display: block; }
-
-.contContainer h1 { font-family: 'Amatic SC', sans-serif; }
-.contContainer h2 { font-family: 'Amatic SC', sans-serif; font-size: 160%;}
-/*			.contContainer h3 { font-family: '', cursive; }*/
 
 /****** News ******/
 
@@ -632,9 +639,6 @@ section {
 	background-color: white;
 }
 
-.contContainer {
-	background-color: white;
-}
 
 .newstyle h2 {
 	border-top: 1px solid #333;
@@ -811,4 +815,26 @@ p.slogan {
 .logo-description>div {
 	order: 2;
 	width: 30%;
+}
+
+// concorso estivo
+
+.co-es-lab-laboratorio {
+    img { 
+      width: 200px;
+      }
+      
+    &.image-right img {
+      float: right;
+      margin-left: 1em;
+    }
+
+    &.image-left img {
+      float: left;
+      margin-right: 1em;
+    }
+
+    h3 {
+      clear: both;
+    }
 }

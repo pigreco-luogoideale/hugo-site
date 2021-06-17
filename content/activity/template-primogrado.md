@@ -7,9 +7,9 @@ template = "activity/page.html"
 
 [taxonomies]
 # Sezioni del sito dove mettere la pagina, da scegliere tra una o più di queste
-scuole = ["primogrado"]
-tutti = ["animazione", "corsi", "lezioni", "altro"]
-volantino = ["primociclo"]
+#scuole = ["primogrado"]
+#tutti = ["animazione", "corsi", "lezioni", "altro"]
+#volantino = ["primociclo"]
 
 [extra]
 thumb = "/images/activities/matematica_al_parco.jpg"

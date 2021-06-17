@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<section class="contContainer">
+		<div class="content colorlink">
+			<img src="{{ page.extra.image }}" alt="{{ page.extra.alt }}" style="  float: right; margin: 20px; width: 300px;"/>
+            {{ page.content | safe }}
+		</div>
+	</section>
+{% endblock content %}
