@@ -2,15 +2,15 @@
 $col-scuola: (
     "infanzia": #FF4,
     "primaria": #FC0,
-    "primogrado": #F90,
-    "secondogrado": #F40,
+    "primogrado": #F2290A,
+    "secondogrado": #F01641,
 );
 
 $col-tutti: (
     "altro": #9F5,
     "animazione": #5DF,
-    "corsi": #06F,
-    "lezioni": #0D3,
+    "corsi": #47F36F,
+    "lezioni": #4EE8B7,
 );
 
 // Definizione dell'ordine negli elenchi
@@ -22,10 +22,10 @@ $ord-scuola: (
 );
 
 $ord-tutti: (
-    "altro": 4,
     "animazione": 1,
-    "corsi": 2,
-    "lezioni": 3,
+    "lezioni": 2,
+    "corsi": 3,
+    "altro": 4,
 );
 
 @font-face {
@@ -489,24 +489,76 @@ img.people {
             min-height: 120px;
         }
 
-        .activity-group:nth-of-type(odd) h2 {
-            padding-right: 120px;
-        }
-        .activity-group:nth-of-type(even) h2 {
-            padding-left: 120px;
-        }
-
         .activity-group:hover { opacity: 0.9; }
 
+        .activity-group {
+            @each $name, $order in $ord-scuola {
+                &.#{$name} {
+                    @if $order % 2 != 0 {
+                        border-top-left-radius: 60px; // hide the corner
+                        padding-left: 120px;
+                        h2 {
+                            padding-right: 120px;
+                        }
+                    }
+                    @else {
+                        border-top-right-radius: 60px; // hide the corner
+                        padding-right: 120px;
+                        h2 {
+                            padding-left: 120px;
+                        }
+                        img {
+                            left: auto;
+                            right: -10px;
+                        }
+                    }
+                }
+            }
+            @each $name, $order in $ord-tutti {
+                &.#{$name} {
+                    @if $order % 2 != 0 {
+                        border-top-left-radius: 60px; // hide the corner
+                        padding-left: 120px;
+                        h2 {
+                            padding-right: 120px;
+                        }
+                    }
+                    @else {
+                        border-top-right-radius: 60px; // hide the corner
+                        padding-right: 120px;
+                        h2 {
+                            padding-left: 120px;
+                        }
+                        img {
+                            left: auto;
+                            right: -10px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /*
         .activity-group:nth-of-type(odd) {
-            border-top-left-radius: 60px; /* hide the corner */
+            border-top-left-radius: 60px; // hide the corner
             padding-left: 120px;
+            h2 {
+                padding-right: 120px;
+            }
         }
 
         .activity-group:nth-of-type(even) {
-            border-top-right-radius: 60px; /* hide the corner */
+            border-top-right-radius: 60px; // hide the corner
             padding-right: 120px;
+            h2 {
+                padding-left: 120px;
+            }
+            img {
+                left: auto;
+                right: -10px;
+            }
         }
+        */
 
         .activity-group img {
             position: absolute;
@@ -515,11 +567,6 @@ img.people {
             width: 120px;
             border-radius: 50%;
             background-color: white;
-        }
-
-        .activity-group:nth-of-type(even) img {
-            left: auto;
-            right: -10px;
         }
     }
 }
@@ -700,7 +747,7 @@ p.slogan {
     img.#{$name}:hover { background-color: $color; }
 }
 @each $name, $color in $col-tutti {
-    .#{$name}:hover { background-color: $color; }
+    img.#{$name}:hover { background-color: $color; }
 }
 
 // Ordine degli elementi negli elenchi

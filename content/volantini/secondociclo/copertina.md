@@ -6,7 +6,7 @@ description = "Pagina di copertina del volantino delle superiori"
 template = "activity/page.html"
 
 [taxonomies]
-volantino = ["primociclo", "secondociclo"]
+volantino = [ "secondociclo"]
 
 [extra]
 thumb = "/images/activities/due_passi.jpg"
@@ -20,7 +20,7 @@ raw = true
 +++
 
 <section class="page front-cover">
-<h1>Attività<br/>2021-2022</h1>
+<h1>Attività<br/>2021-2022 <br/> Secondo ciclo </h1>
 <img src="/images/logo.png">
 <h2>Associazione<br>PiGreco - il Luogo Ideale</h2>
 <h3>www.luogoideale.org</h3>

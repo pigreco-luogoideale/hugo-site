@@ -30,7 +30,7 @@ online = true
 # ico-XXXX indica l'icona da mettere a sinistra, tra quelle in sass/css/volantino-screen.scss
 # Devono essere tutte diverse 
 ico-durata = ["Durata?", "2 incontri da 2 ore ciascuno"]
-ico-rimborso = ["Rimborso?", "XX euro a percorso"]
+ico-rimborso = ["Rimborso?", "200 euro a percorso"]
 # ico-modalita = ["Modalita", "Valore 3"]
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = "Volantinone"
-description = "Pagina di copertina del volantino delle superiori"
+description = "Pagina di informazioni del volatino del secondo ciclo"
 
 # Questa è una singola pagina di attività
 template = "activity/page.html"
@@ -21,7 +21,7 @@ raw = true
 +++
 
 <section class="page info">
-<div class="page-header"><span>Informazioni</span></div>
+<div class="page-header"><span>Per le scuole del secondo ciclo</span></div>
 <div class="page-content">
 <h1 class="ico ico-generali">Informazioni generali</h1>
 

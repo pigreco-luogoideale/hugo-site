@@ -35,7 +35,7 @@ header = { text = "Scuola dell'infanzia", style = "infanzia" }
 # ico-XXXX indica l'icona da mettere a sinistra, tra quelle in sass/css/volantino-screen.scss
 # Devono essere tutte diverse 
 ico-durata = ["Durata?", "1 incontro di 2 ore"]
-ico-rimborso = ["Rimborso?", "120 euro a incontro"]
+ico-rimborso = ["Rimborso?", "150 euro a incontro"]
 # ico-modalita = ["Modalita", "Valore 3"]
 +++
 

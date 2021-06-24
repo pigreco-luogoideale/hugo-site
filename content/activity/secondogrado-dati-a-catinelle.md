@@ -22,7 +22,7 @@ alt = "Una cartina del mondo con evidenziate alcune città e i collegamenti tra 
 # 200-299 per primaria
 # 300-399 per primo grado
 # 400-499 per secondo grado
-weight = 440
+weight = 450
 header = { text = "Scuola secondaria II grado" }
 online = true
 
@@ -30,7 +30,7 @@ online = true
 # ico-XXXX indica l'icona da mettere a sinistra, tra quelle in sass/css/volantino-screen.scss
 # Devono essere tutte diverse 
 ico-durata = ["Durata?", "1 incontro di 2 ore"]
-ico-rimborso = ["Rimborso?", "XX euro a incontro"]
+ico-rimborso = ["Rimborso?", "120 euro a incontro"]
 # ico-modalita = ["Modalita", "Valore 3"]
 +++
 

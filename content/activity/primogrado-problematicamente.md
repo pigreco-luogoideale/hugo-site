@@ -30,7 +30,7 @@ header = { text = "Scuola secondaria I grado" }
 # ico-XXXX indica l'icona da mettere a sinistra, tra quelle in sass/css/volantino-screen.scss
 # Devono essere tutte diverse 
 ico-durata = ["Durata?", "3 incontri da 2 ore ciascuno"]
-ico-rimborso = ["Rimborso?", "XX euro a percorso"]
+ico-rimborso = ["Rimborso?", "250 euro a percorso"]
 # ico-modalita = ["Modalita", "Valore 3"]
 +++
 

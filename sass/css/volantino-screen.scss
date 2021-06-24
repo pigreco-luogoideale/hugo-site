@@ -27,7 +27,7 @@ $arancione-pli: #ff6933; //#ff4400;
             height: 2cm;
             background-size: contain;
             background-repeat: no-repeat;
-            transform: translate(0cm, -25%);
+            transform: translate(0cm, -15%);
         }
     }
 
@@ -116,12 +116,12 @@ $arancione-pli: #ff6933; //#ff4400;
                 width: 1.5cm;
                 position: absolute;
                 left: 0cm;
-                bottom: 0cm;
+                bottom: 1cm;
             }
             div {
                 position: absolute;
                 left: 1.5cm;
-                bottom: 0.1cm;
+                bottom: 1.1cm;
             }
         }
     }
@@ -197,9 +197,15 @@ $arancione-pli: #ff6933; //#ff4400;
             p {
                 margin-top: 1cm;
             }
+            
+            li {
+                img {
+                       height: 0.8cm;
+                }
+            }
 
             img {
-                float: left;
+                //float: left;
 
                 &.right {
                     float: right;
@@ -273,11 +279,13 @@ $arancione-pli: #ff6933; //#ff4400;
                 margin: 1.25cm 1.45cm;
                 margin-right: -$lr-margin;
                 border-bottom: 0.1cm solid $arancione-pli;
+                font-size: 0.8cm;
             }
 
             > h2 {
                 color: black;
                 margin: 1cm 0cm 0cm 1.45cm;
+                font-size: 0.6cm;
                 text-transform: uppercase;
             }
 
