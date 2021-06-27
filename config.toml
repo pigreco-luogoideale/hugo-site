@@ -73,14 +73,16 @@ taxonomies = [
 	[extra.taxonomies.tutti.corsi]
     posizione = 2
 	name = "Corsi di studio"
+	disabilitato = true
 	description = """
-        <i> IN ARRIVO PROSSIMAMENTE</i>:
-        La possibilità di consolidare le proprie conoscenze, accquisirne di nuove, confrontarsi con i coetanei e prepararsi per affrontare esami, verifiche e problemi quotidiani.
+        <i>IN ARRIVO PROSSIMAMENTE</i>
     """
+        # La possibilità di consolidare le proprie conoscenze, accquisirne di nuove, confrontarsi con i coetanei e prepararsi per affrontare esami, verifiche e problemi quotidiani.
 
 	[extra.taxonomies.tutti.lezioni]
     posizione = 2
 	name = "Lezioni private"
+	disabilitato = true
 	description = """
          <i>IN ARRIVO PROSSIMAMENTE</i>
     """

@@ -23,7 +23,7 @@ alt = "Il tentativo di risolvere un porblema con le cannucce."
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 230
-header = { text = "Scuola primaria" }
+header = { text = "Scuola primaria", style = "primaria" }
 #online = true
 
 [extra.volantino.meta]

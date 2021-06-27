@@ -23,7 +23,7 @@ alt = "Alcuni fogli con gli indovinelli del gioco e una stella costruita con dei
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 355
-header = { text = "Scuola secondaria I grado" }
+header = { text = "Scuola secondaria I grado", style = "primogrado" }
 #online = true
 
 [extra.volantino.meta]

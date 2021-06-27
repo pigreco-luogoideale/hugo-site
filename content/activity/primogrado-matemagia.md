@@ -23,7 +23,7 @@ alt = "Un bambino con in mano alcune carte davanti ad un bambino con il cappello
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 370
-header = { text = "Scuola secondaria I grado" }
+header = { text = "Scuola secondaria I grado", style = "primogrado" }
 online = true
 
 [extra.volantino.meta]

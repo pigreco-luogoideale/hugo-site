@@ -23,7 +23,7 @@ alt = "Una cartina del mondo con evidenziate alcune città e i collegamenti tra 
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 450
-header = { text = "Scuola secondaria II grado" }
+header = { text = "Scuola secondaria II grado", style = "secondogrado" }
 online = true
 
 [extra.volantino.meta]

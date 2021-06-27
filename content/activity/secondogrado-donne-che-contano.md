@@ -23,7 +23,7 @@ alt = "Alcune Barbie con quaderni e libri di matematica in mano."
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 440
-header = { text = "Scuola secondaria II grado" }
+header = { text = "Scuola secondaria II grado", style = "secondogrado" }
 online = true
 
 [extra.volantino.meta]

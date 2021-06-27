@@ -1,5 +1,5 @@
 +++
-title = "La storia dei mognomi e dei polignomi"
+title = "La storia dei mognomi e polignomi"
 description = "Come fu che le tribù dei mognomi si unirono a formare i polignomi?"
 
 # Questa è una singola pagina di attività, lasciare così: è il template

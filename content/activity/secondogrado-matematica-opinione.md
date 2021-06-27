@@ -23,7 +23,7 @@ alt = "Alcune pagine di giornali e riviste con dati e grafici"
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 420
-header = { text = "Scuola secondaria II grado" }
+header = { text = "Scuola secondaria II grado", style = "secondogrado" }
 online = true
 
 [extra.volantino.meta]

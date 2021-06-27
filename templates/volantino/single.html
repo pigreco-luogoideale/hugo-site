@@ -6,23 +6,30 @@
         <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/volantino-print.css") | safe }}" media="print" />
     </head>
     <body>
-        <h1>Volantino {{ term.name }}</h1>
-
         {# itera tutte le pagine con tassonomia volantino #}
         {% for page in term.pages | sort(attribute="extra.volantino.weight") %}
             {% if page.extra.volantino.raw %}
                 {{ page.content | safe }}
             {% else %}
                 <section class="page standard">
-		    {% if page.extra.volantino.header.style %}
-		        {% set header_class = page.extra.volantino.header.style %}
-		    {% else %}
-			{% set header_class = term.name %}
-		    {% endif %}
-                    {% if page.extra.volantino.header.text %}
+                    {# determina lo stile dell'header #}
+                    {% if page.extra.volantino.header[term.name].style %}
+                        {% set header_class = page.extra.volantino.header[term.name].style %}
+                    {% elif page.extra.volantino.header.style %}
+                        {% set header_class = page.extra.volantino.header.style %}
+                    {% else %}
+                        {% set header_class = term.name %}
+                    {% endif %}
+                    {# se nella pagina c'é un header[ciclo].text viene usato quello #}
+                    {% if page.extra.volantino.header[term.name].text %}
+                        <div class="page-header {{ header_class }}">
+                            <span>{{ page.extra.volantino.header[term.name].text }}</span>
+                        </div>
+                    {% elif page.extra.volantino.header.text %}
                         <div class="page-header {{ header_class }}">
                             <span>{{ page.extra.volantino.header.text }}</span>
                         </div>
+                    {# altrimenti usa il titolo generico a seconda del volantino #}
                     {% else %}
                         <div class="page-header {{ header_class }}">
                             <span>{{ config.extra.taxonomies[taxonomy.name][term.name].header.text }}</span>
@@ -30,7 +37,7 @@
                     {% endif %}
 
                     <div class="page-content">
-                        <h1>{{ page.title }}</h1>
+                        <h1 class="ico ico-logo">{{ page.title }}</h1>
 
                         <img class="page-image" src="{{ page.extra.image }}" />
 
@@ -50,7 +57,7 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div class="page-footer"><div class="page-number">
+                    <div class="page-footer"><div class="page-number {{ header_class }}">
                         <span>{{ loop.index }}</span>
                     </div></div>
                 </section>

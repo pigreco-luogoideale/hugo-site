@@ -23,7 +23,7 @@ alt = "Una scacchiera e i pezzi per giocare."
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 430
-header = { text = "Scuola secondaria II grado" }
+header = { text = "Scuola secondaria II grado", style = "secondogrado" }
 online = true
 
 [extra.volantino.meta]

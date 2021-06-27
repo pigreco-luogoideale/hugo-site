@@ -27,7 +27,12 @@ weight = 100
 # Qui si possono customizzare il titolo e lo stile della pagina, entrambi opzionali.
 # Se il text non viene impostato, verrà usato il valore header.text in config.toml
 # Lo style invece è la classe nella .page-header in sass/css/volantino-screen.scss
-header = { text = "Scuola dell'infanzia", style = "infanzia" }
+[extra.volantino.header]
+# Siccome questa pagina può apparire su più volantini, le impostazioni sono da definire
+# per ogni volantino in cui può apparire.
+# primociclo = { text = "Scuola dell'infanzia", style = "infanzia" }
+# secondociclo = { text = "Scuole superiori", style = "secondogrado" }
+
 # Questo valore, opzionale (default è false) indica se mettere l'icona "anche online"
 online = true
 

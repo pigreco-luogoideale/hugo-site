@@ -23,7 +23,7 @@ alt = "Figure natalizie davanti a degli specchi per studiare le simmetrie."
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 260
-header = { text = "Scuola primaria" }
+header = { text = "Scuola primaria", style = "primaria" }
 online = true
 
 [extra.volantino.meta]

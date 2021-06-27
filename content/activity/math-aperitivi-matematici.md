@@ -7,7 +7,6 @@ template = "activity/page-noscuole.html"
 [taxonomies]
 tutti= ["altro"]
 
-
 [extra]
 thumb = "/images/news/spritz_matematico_mate_opinione.jpg"
 image = "/images/news/spritz_matematico_mate_opinione.jpg"

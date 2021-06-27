@@ -23,7 +23,7 @@ alt = "Un disegno con simboli e numeri."
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 320
-header = { text = "Scuola secondaria I grado" }
+header = { text = "Scuola secondaria I grado", style = "primogrado" }
 #online = true
 
 [extra.volantino.meta]

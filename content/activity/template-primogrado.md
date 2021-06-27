@@ -23,8 +23,9 @@ alt = "Caselle disegnate a gesso sull'asfalto e dei dadi"
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 300
-header = { text = "Scuola secondaria I grado" }
 online = true
+[extra.volantino.header]
+primociclo = { text = "Scuola secondaria I grado" }
 
 [extra.volantino.meta]
 # ico-XXXX indica l'icona da mettere a sinistra, tra quelle in sass/css/volantino-screen.scss

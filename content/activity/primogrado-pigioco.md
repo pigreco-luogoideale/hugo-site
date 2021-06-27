@@ -23,7 +23,11 @@ alt = "Il materiale per realizzare il pigioco"
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 580
-header = { text = "Scuola secondaria I grado" }
+
+[extra.volantino.header]
+primociclo = { text = "Scuola secondaria I grado", style = "primogrado" }
+secondociclo = { text = "Scuola secondaria II grado", style = "secondogrado" }
+
 online = true
 
 [extra.volantino.meta]

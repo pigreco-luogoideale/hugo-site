@@ -1,32 +1,4 @@
-// Definizione dei colori
-$col-scuola: (
-    "infanzia": #FF4,
-    "primaria": #FC0,
-    "primogrado": #F2290A,
-    "secondogrado": #F01641,
-);
-
-$col-tutti: (
-    "altro": #9F5,
-    "animazione": #5DF,
-    "corsi": #47F36F,
-    "lezioni": #4EE8B7,
-);
-
-// Definizione dell'ordine negli elenchi
-$ord-scuola: (
-    "infanzia": 1,
-    "primaria": 2,
-    "primogrado": 3,
-    "secondogrado": 4,
-);
-
-$ord-tutti: (
-    "animazione": 1,
-    "lezioni": 2,
-    "corsi": 3,
-    "altro": 4,
-);
+@import "colori.scss";
 
 @font-face {
 	font-family: 'Gisha';

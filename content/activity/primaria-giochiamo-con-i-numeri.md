@@ -8,7 +8,6 @@ template = "activity/page.html"
 [taxonomies]
 # Sezioni del sito dove mettere la pagina, da scegliere tra una o più di queste
 scuole = ["primaria"]
-#tutti = ["animazione", "corsi", "lezioni", "altro"]
 volantino = ["primociclo"]
 
 [extra]
@@ -23,7 +22,7 @@ alt = "Un cartelone e i punteggi delle squadre."
 # 300-399 per primo grado
 # 400-499 per secondo grado
 weight = 210
-header = { text = "Scuola primaria" }
+header = { text = "Scuola primaria", style = "primaria" }
 #online = true
 
 [extra.volantino.meta]
