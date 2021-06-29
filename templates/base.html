@@ -3,16 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<title>PiGreco - il Luogo Ideale</title>
-		<link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+        <link href="{{ get_url(path="/images/favicon.ico") | safe }}" rel="icon" type="image/x-icon" />
 		<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Poiret+One|Lobster|Maven+Pro:700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="/css/pigreco.css">
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="/css/pigreco.css") | safe }}">
 		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="/js/pigreco.js"></script>
+        <script src="{{ get_url(path="/js/pigreco.js") | safe }}"></script>
 		<!-- For the gallery (requires jquery) -->
-		<script src="/js/galleria/galleria-1.4.5.min.js"></script>
+        <script src="{{ get_url(path="/js/galleria/galleria-1.4.5.min.js") | safe }}"></script>
 
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,7 +26,7 @@
 
 		<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 		<script type="text/javascript">
-            window.cookieconsent_options = {"message":"Questo sito utilizza dei cookie per finalità statistiche.","dismiss":"Ho capito!","learnMore":"Più info","link":"{{ get_url(path="@/info_cookie.md")}}","theme":"dark-top"};
+            window.cookieconsent_options = {"message":"Questo sito utilizza dei cookie per finalità statistiche.","dismiss":"Ho capito!","learnMore":"Più info","link":"{{ get_url(path="@info_cookie.md") | safe }}","theme":"dark-top"};
 		</script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
 		<!-- End Cookie Consent plugin -->
@@ -40,16 +40,16 @@
 				</div>
 			</div>
 			<div id="logo">
-				<a href="/"><img src="/images/logo.png" alt="PiGreco - il Luogo Ideale"/></a>
+                <a href="{{ get_url(path="/") | safe }}"><img src="{{ get_url(path="/images/logo.png") | safe }}" alt="PiGreco - il Luogo Ideale"/></a>
 			</div>
 			<!-- Menu -->
 			<div id="menu" class="horizontal">
 				<ul>
-					<li><a href="/news" id="link_news">News</a></li>
-					<li><a href="/who" id="link_who">Chi siamo</a></li>
-					<li><a href="/scuole" id="link_activity">Per le scuole</a></li>
-					<li><a href="/tutti" id="link_activity">Per tutti</a></li>
-					<li><a href="/contacts" id="link_contacts">Contatti</a></li>
+                    <li><a href="{{ get_url(path="/news") | safe }}" id="link_news">News</a></li>
+					<li><a href="{{ get_url(path="/who") | safe }}" id="link_who">Chi siamo</a></li>
+					<li><a href="{{ get_url(path="/scuole") | safe }}" id="link_activity">Per le scuole</a></li>
+					<li><a href="{{ get_url(path="/tutti") | safe }}" id="link_activity">Per tutti</a></li>
+					<li><a href="{{ get_url(path="/contacts") | safe }}" id="link_contacts">Contatti</a></li>
 				</ul>
 			</div>
 		</section>

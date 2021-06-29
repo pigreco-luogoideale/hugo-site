@@ -2,12 +2,13 @@
 title = "Aperitivi Matematici"
 description = "La matematica fuori dalle aule e dentro ai bar, da gustare in orario aperitivo"
 
-template = "activity/page-noscuole.html"
+template = "activity/page.html"
 
 [taxonomies]
-tutti= ["altro"]
+tutti = ["altro"]
 
 [extra]
+no_scarica_volantino = true
 thumb = "/images/news/spritz_matematico_mate_opinione.jpg"
 image = "/images/news/spritz_matematico_mate_opinione.jpg"
 alt = "Volantino del primo aperitivo matematico, la matematica è un'opinione"

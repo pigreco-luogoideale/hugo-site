@@ -15,8 +15,8 @@
             {% for key, value in config.extra.taxonomies.scuole %}
             {# l'ordine viene determinato da ord-XXXX, che è definito nel sass #}
             {# FIXME l'ordine nelle liste è invece definito da config.extra.taxonomies.XXXX #}
-            <a class="vblock ord-{{ key }}" href="/scuole/{{ key }}" id="link_act_{{ key }}">
-                <img class="rounded squared130 {{ key }}" src="/images/activity/{{ key }}_home.png">
+            <a class="vblock ord-{{ key }}" href="{{ get_url(path="/scuole/" ~ key) | safe }}" id="link_act_{{ key }}">
+                <img class="rounded squared130 {{ key }}" src="{{ get_url(path="/images/activity/" ~ key ~ "_home.png") | safe }}">
                 <h3>{{ value.name }}</h3>
 			</a>
             {% endfor %}
@@ -26,8 +26,8 @@
 		<h2>Le nostre proposte per tutti</h2>
 		<div class="vsplit4">
             {% for key, value in config.extra.taxonomies.tutti %}
-            <a class="vblock ord-{{ key }}" href="/tutti/{{ key }}" id="link_act_{{ key }}">
-                <img class="rounded squared130 {{ key }}" src="/images/activity/{{ key }}_home.png">
+            <a class="vblock ord-{{ key }}" href="{{ get_url(path="/tutti/" ~ key) | safe }}" id="link_act_{{ key }}">
+                <img class="rounded squared130 {{ key }}" src="{{ get_url(path="/images/activity/" ~ key ~ "_home.png") | safe }}">
                 <h3>{{ value.name }}</h3>
 			</a>
             {% endfor %}

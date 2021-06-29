@@ -4,13 +4,14 @@ description = "Uno stand colorato e interattivo rivolto a grandi e piccini, per 
 
 # Questa è una singola pagina di attività, lasciare così: è il template
 # che viene usato per visualizzare la singola pagina
-template = "activity/page-noscuole.html"
+template = "activity/page.html"
 
 [taxonomies]
 # Sezioni del sito dove mettere la pagina
 tutti = ["animazione"]
 
 [extra]
+no_scarica_volantino = true
 thumb = "/images/activities/matematica-asporto.jpg"
 image = "/images/activities/matematica-asporto.jpg"
 alt = "Caselle disegnate a gesso sull'asfalto e dei dadi"

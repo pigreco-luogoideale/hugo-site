@@ -39,7 +39,7 @@
                     <div class="page-content">
                         <h1 class="ico ico-logo">{{ page.title }}</h1>
 
-                        <img class="page-image" src="{{ page.extra.image }}" />
+                        <img class="page-image" src="{{ get_url(path=page.extra.image) | safe }}" />
 
                         <p>{{ page.content | safe }}</p>
 
@@ -51,7 +51,7 @@
                             </ul>
                             {% if page.extra.volantino.online %}
                             <div class="extra-symbol">
-                                <img src="/images/icone/online.png" alt="Icona online" />
+                                <img src="{{ get_url(path="/images/icone/online.png") | safe }}" alt="Icona online" />
                                 <div>Anche online!</div>
                             </div>
                             {% endif %}

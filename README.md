@@ -105,9 +105,16 @@ a causa del mime type errato mandato da zola serve. Si può usare zola 0.12.2.
     $ URL=https://github.com/NixOS/nixpkgs/archive/559cf76fa3642106d9f23c9e845baf4d354be682.tar.gz
     $ nix-shell -p zola -I nixpkgs=$URL --run "zola serve"
 
-In un'altra shell, si può avviare watchexec che ricompila il PDF in automatico
-usando weasyprint, aspettando 1 secondo prima di farlo per permettere a zola serve
-di fare il rebuild:
+Per generare i volantini:
+
+    $ nix-shell -p python38Packages.weasyprint
+    % weasyprint http://localhost:1111/volantino/primociclo/ static/volantini/volantino_primociclo.pdf
+    % weasyprint http://localhost:1111/volantino/secondociclo/ static/volantini/volantino_secondociclo.pdf
+
+Per lo sviluppo dei volantini invece, n un'altra shell, si può avviare watchexec
+che ricompila il PDF in automatico usando weasyprint, aspettando 1 secondo prima
+di farlo per permettere a zola serve di fare il rebuild:
 
     $ CMD="watchexec -d 1000 -e scss,md,html -- weasyprint http://localhost:1111/volantino/primociclo/ volantino-dev.pdf"
     $ nix-shell -p python38Packages.weasyprint watchexec --run "$CMD"
+

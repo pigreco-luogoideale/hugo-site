@@ -1,15 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<section class="contContainer">
-		<div class="content activity colorlink">
-			<h1>{{ page.title }}</h1>
-            {% if "image" in page.extra %}<img src="{{ page.extra.image }}" alt="{{ page.extra.alt }}"/>{% endif %}
+<!-- activity/page -->
+<section class="contContainer">
+    <div class="content activity colorlink">
+        <h1>{{ page.title }}</h1>
+        {% if "image" in page.extra %}<img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.extra.alt }}"/>{% endif %}
 
-			{{ page.content | safe }}
+        {{ page.content | safe }}
 
-            <p>Per maggiori dettagli, scarica la nostra offerta per  <a href="/volantini/volantino_primociclo.pdf" target="_blank">le scuole del primo ciclo</a> e per <a href="/volantini/volantino_secondociclo.pdf" target="_blank"> la scuola secondaria di secondo grado</a>
-            o scrivici a <a href="mailto:pigreco@luogoideale.org" target="_blank">pigreco@luogoideale.org</a>.</p>
-		</div>
-	</section>
+        {% if not page.extra.no_scarica_volantino %}
+        <p>Per maggiori dettagli, scarica la nostra offerta per
+        <a href="{{ get_url(path="/volantini/volantino_primociclo.pdf") | safe }}" target="_blank">le scuole del primo ciclo</a>
+        e per
+        <a href="{{ get_url(path="/volantini/volantino_secondociclo.pdf") | safe }}" target="_blank"> la scuola secondaria di secondo grado</a>
+        o scrivici a
+        <a href="mailto:pigreco@luogoideale.org" target="_blank">pigreco@luogoideale.org</a>.</p>
+        {% endif %}
+    </div>
+</section>
 {% endblock content %}

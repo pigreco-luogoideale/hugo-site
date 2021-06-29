@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- tutti/list -->
 <section id="activity" class="contContainer">
 	<div class="content activities">
 		<div class="hsplit">
             {% for term in terms %}
             {% set term_data = config.extra.taxonomies.tutti[term.slug] %}
-	    <a href="{% if term_data.disabilitato %}#{% else %}{{ term.permalink }}{% endif %}" class="activity-group ord-{{ term.slug }} {{ term.slug }}">
+            <a href="{% if term_data.disabilitato %}#{% else %}{{ term.permalink }}{% endif %}" class="activity-group ord-{{ term.slug }} {{ term.slug }}">
                     <h2>{{ term_data.name }}</h2>
-                    <img src="/images/activity/{{ term.slug }}.png" alt="Copertina della sezione {{ term_data.name }}">
+                    <img src="{{ get_url(path="/images/activity/" ~ term.slug) | safe }}.png" alt="Copertina della sezione {{ term_data.name }}">
                     <div class="description">
                         <p>{{ term_data.description | safe }}</p>
                     </div>

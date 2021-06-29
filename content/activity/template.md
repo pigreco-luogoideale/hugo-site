@@ -13,6 +13,9 @@ template = "activity/page.html"
 #volantino = ["primociclo"]
 
 [extra]
+# Se questa voce è impostata, a fondo pagina NON apparirà il link per scaricare i volantini
+# (questo perché il default è false: se manca la voce, il link appare)
+# no_scarica_volantino = true
 thumb = "/images/activities/matematica_al_parco.jpg"
 image = "/images/activities/matematica_al_parco.jpg"
 alt = "Caselle disegnate a gesso sull'asfalto e dei dadi"

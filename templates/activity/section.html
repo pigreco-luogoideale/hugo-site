@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- activity/section -->
 <section id="activity" class="contContainer">
 	<div class="content activities">
         {% if section.content %}<div>{{ section.content | safe }}</div>{% endif %}
@@ -18,5 +19,4 @@
 		</div>
 	</div>
 </section>
-
 {% endblock content %}

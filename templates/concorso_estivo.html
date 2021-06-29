@@ -3,7 +3,7 @@
 {% block content %}
 	<section class="contContainer">
 		<div class="content colorlink">
-			<img src="{{ page.extra.image }}" alt="{{ page.extra.alt }}" style="  float: right; margin: 20px; width: 300px;"/>
+			<img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.extra.alt }}" style="float: right; margin: 20px; width: 300px;"/>
             {{ page.content | safe }}
 		</div>
 	</section>
