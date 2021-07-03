@@ -18,10 +18,8 @@ gallery = "/images/cttms"
 +++
 Per quali motivi dovremmo amare la matematica? Ce ne sono moltissimi!
 
-Abbiamo creato un [generatore di meme](/giochi/memegen.php), dove ognuno può dire per quale
+Abbiamo creato un generatore di meme, dove ognuno poteva dire per quale
 motivo dovremmo stare dal "lato della matematica".
-
-Puoi scrivere la tua motivazione e condividerla con gli amici (non dimenticare di taggarci).
 
 In questa galleria le creazioni più divertenti!
 
