@@ -1,3 +1,111 @@
-baseURL = "http://pigreco.luogoideale.org/"
-languageCode = "it-IT"
-title = "PiGreco - il Luogo Ideale"
+# The URL the site will be built for
+base_url = "http://pigreco.luogoideale.org/beta/zola-taxonomies/"
+
+# The language of this website
+default_language = "it"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# Non toccare queste 
+# Fare attenzione, hanno implicazioni sulla struttura del sito e sulle directory
+# in templates
+taxonomies = [
+    # Per le pagine che sono offerte alle scuole
+    { name = "scuole" },
+    # Per le pagine che sono offerte ai privati
+    { name = "tutti" },
+    # Per le pagine che vengono messe su volantino/i
+    { name = "volantino" },
+]
+
+# Metadati, titoli e descrizioni, liberamente modificabili
+[extra]
+    # Volantini da produrre automaticamente
+    [extra.weasyprint.volantino-primogrado]
+    url = "http://127.0.0.1:1111/volantino/primociclo"
+    out = "/static/volantini/volantino_2021_primociclo.pdf"
+
+    [extra.weasyprint.volantino-secondogrado]
+    url = "http://127.0.0.1:1111/volantino/secondociclo"
+    out = "/static/volantini/volantino_2021_secondociclo.pdf"
+
+    # Ordine delle pagine
+    [extra.taxonomies.ordine]
+    scuole = ["infanzia", "primaria", "primogrado", "secondogrado"]
+    tutti = ["animazione", "corsi", "lezioni", "altro"]
+
+    # Titoli e descrizioni per la sezione scuole
+	[extra.taxonomies.scuole.infanzia]
+    posizione = 1
+	name = "Scuola dell'Infanzia"
+	description = """
+        Non si è mai troppo piccoli per fare matematica! Percorsi, laboratori e racconti per coinvolgere i bambini nella scoperta di numeri e forme.
+    """
+
+	[extra.taxonomies.scuole.primaria]
+    posizione = 2
+	name = "Scuola Primaria"
+	description = """
+        Giochi per consolidare le abilità numeriche e geometriche, attività per imparare la matematica anche in contesti diversi: usando il corpo, leggendo una storia...
+    """
+
+	[extra.taxonomies.scuole.primogrado]
+    posizione = 3
+	name = "Scuola Secondaria di I grado"
+	description = """
+        Occasioni di approfondimento e confronto sulle conoscenze acquisite durante le lezioni a scuola e momenti ludici per rinforzare le proprie competenze, divertendosi con i compagni.
+    """
+
+	[extra.taxonomies.scuole.secondogrado]
+    posizione = 4
+	name = "Scuola Secondaria di II grado"
+	description = """
+        Conferenze interattive, sfide a squadre, lavori di gruppo per riflettere sulla matematica, sulla sua storia e sulle sue applicazioni nella realtà che ci circonda.
+    """
+
+    # Titoli e descrizioni per la sezione per tutti
+    [extra.taxonomies.tutti.animazione]
+    posizione = 2
+	name = "Animazione matematica"
+	description = """
+        Occasioni per giocare e divertirsi rivolte a tutti: dai più piccoli al pubblico adulto, per vedere la matematica da un nuovo punto di vista. 
+    """
+
+	[extra.taxonomies.tutti.corsi]
+    posizione = 2
+	name = "Corsi di studio"
+	disabilitato = true
+	description = """
+        <i>IN ARRIVO PROSSIMAMENTE</i>
+    """
+        # La possibilità di consolidare le proprie conoscenze, accquisirne di nuove, confrontarsi con i coetanei e prepararsi per affrontare esami, verifiche e problemi quotidiani.
+
+	[extra.taxonomies.tutti.lezioni]
+    posizione = 2
+	name = "Lezioni private"
+	disabilitato = true
+	description = """
+         <i>IN ARRIVO PROSSIMAMENTE</i>
+    """
+
+	[extra.taxonomies.tutti.altro]
+    posizione = 2
+	name = "#math"
+	description = """
+        Alcune delle nostre iniziative per contribuire alla diffusione della matematica nel mondo (reale e virtuale) con divertimento e simpatia.
+    """
+
+    # Header per il volantino
+    [extra.taxonomies.volantino.primociclo]
+    header = { text = "Primo Ciclo" }
+
+    [extra.taxonomies.volantino.secondociclo]
+    header = { text = "Secondo Ciclo" }

@@ -1,4 +1,0 @@
----
-title: Trequattordici
-type: newsletter
----

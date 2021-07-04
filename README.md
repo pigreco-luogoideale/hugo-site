@@ -1,36 +1,120 @@
 # Il sito di PiGreco
 
-Tutto nel sito è pubblico e viene messo su Github.
+Questi sono i codici sorgenti per il sito di
+[PiGreco - il Luogo Ideale](https://pigreco.luogoideale.org).
 
-Si fa push sul repo, dove si può modificare il contenuto.
+Quando questo codice viene cambiato, esso viene compilato in automatico e
+caricato sul server per essere reso pubblico. Il risultato della compilazione è
+il codice HTML, CSS e tutti i contenuti che compongono il sito vero e proprio.
 
-Per pubblicarlo, per ora è necessario fare pull, eseguire hugo e copiarlo sul
-server FTP.
+Se ci fossero degli errori o dei problemi, la compilazione non avrà successo e
+il sito attualmente online non verrà toccato. Gli errori di compilazione sono
+disponibili in un'area privata su GitHub.
 
-## Caricamento e backup locale
+## Zola
 
-Per caricarlo sul server, si può usare [rclone](https://rclone.org/), che è uno
-strumento molto comodo per copiare i file da e verso il server ftp.
+La generazione del sito viene fatta in automatico usando
+[Zola](https://www.getzola.org), che prende i "contenuti del sito"
+(e.g. i testi, titoli, etc) e li impagina usando dei "template".
 
-Dopo aver installato `rclone`, va configurato usando `rclone config` con i
-parametri di connessione al server. Una volta fatto, è possibile fare una copia
-di sicurezza di ciò che è on-line attualmente (backup):
+Tendenzialmente, i contenuti vanno nella directory "contents", mentre in
+"templates" vengono messe delle pagine HTML parziali che rappresentano i
+"modelli di pagina". Zola non fa altro che prendere i contenuti, formattarli
+(trasformando il Markdown in HTML) e riempiendo i modelli mettendoci
+i contenuti (in HTML).
 
-    rclone copy -v luogoideale:/htdocs ./backup-directory
+Le cose importanti da sapere sono:
 
-Quando si desidera caricare il sito attuale, bisogna andare nella root del
-repository [hugo](https://github.com/pigreco-luogoideale/hugo-site), lanciare
-il comando `hugo` per compilare il sito, e caricare la directory `public` che
-viene generata usando:
+ - ogni pagina di contenuto inizia con un _header_ delimitato da `+++`;
+ - all'inizio dell'header (nella sezione principale), ci si può trovare una voce
+   `template`, che indica quale HTML usare (tra quelli in `templates/`) per il 
+   render di quel contenuto;
+ - `title`, `description`, `data` e `weight` vanno nella sezione principale,
+   all'inizio dell'header, _prima_ di `[extra]`;
+ - `weight` è usato, in alcuni casi, per determinare l'ordine delle pagine;
+ - nella sotto-sezione `[extra]` dell'header, ci possono andare altre
+   informazioni che verranno usate dal `template`;
+ - nella cartella `contents` ci vanno solo file `.md` ed eventuali assets;
+ - nella cartella `templates` ci vanno solo pagine HTML che vengono usate dalle
+   pagine o dalle sezioni in `contents`;
+ - nella cartella `static` ci vanno gli altri file (css, immagini, etc) che
+   verranno copiati sul sito (in `/`) senza essere toccati in altro modo;
+ - gli stili del sito non è in `static/css`, ma in `sass/css` e sono scritti in
+   un linguaggio "css arricchito" (che ad esempio supporta le variabili), che
+   poi viene trasformato in css;
+ - i file `_index.md` indicano che la cartella che li contiene è una _sezione_,
+   ovvero che conterrà altre pagine;
+ - i file `index.md` indicano che nella cartella che li contiene vi è una pagina
+   e, assieme a quel file, possono essere messi degli assets (immagini, font,
+   pdf o altro) nella stessa cartella a cui quella pagina farà riferimento,
+   anziché essere messi in `static`;
+ - nei contenuti delle pagine, anche se sono markdown (`.md`) ci può andare
+   anche il codice HTML, bisogna però prestare attenzione a:
+   1. non lasciare spazi all'inizio della riga;
+   2. lasciare una linea vuota tra il codice HTML e il codice Markdown.
+ - tutte le attività vengono messe in `contents/activities`, poi ognuna di esse
+   può essere messa in una sottocategoria (e.g. scuola infanzia) usando le
+   `taxonomies`: una tassonomia è un gruppo di termini, un termine è un tag che
+   viene applicato alle pagine, una pagina viene messa in tutte le sezioni
+   relative alle tassonomie+termini che appaiono nell'header;
+ - le informazioni relative alle singole tassonomie non possono essere inserite
+   nelle pagine del sito, quindi non vanno in `contents`, ma sono invece messe
+   all'interno del file `config.toml`: lì vanno messe, ad esempio, le tassonomie
+   valide (scuola, tutti e volantino) e i dati relativi alle tassonomie ed i
+   termini, ad esempio la descrizione delle varie sezioni.
 
-    rclone copy -v hugo-site/public/ luogoideale:/htdocs/
+## Volantino
 
-I file che non sono stati modificati dovrebbero rimanere come sono attualmente.
+Il volantino è anch'esso generato automaticamente e usa anch'esso le taxonomies,
+ma è un po' particolare perché c'è una sezione del sito, `contents/volantino`,
+in cui ci sono le pagine "extra". Un volantino viene dall'unione delle pagine
+"extra" e dalle pagine con la tassonomia volantino.
+L'ordine delle pagine viene determinato dal `weight` specificato nell'header.
+Il volantino viene prodotto in HTML e poi viene trasformato automaticamente in
+PDF e copiato nella directory `static/volantini`.
 
+Attenzione che la trasformazione da HTML a PDF non è banale e le cose potrebbero
+apparire diverse tra le due versioni.
 
-## TODO
+Il codice per fare ciò è nel file `flier.sh`. Per modificarlo, è necessario
+seguire i seguenti passi:
 
- - [ ] Avere un sistema di deploy automatico, tipo [questo](https://gomakethings.com/automating-the-deployment-of-your-static-site-with-hugo-and-github/).
- - [ ] Paginazione delle news
- - [ ] Display migliore dell'archivio newsletter
- - [ ] Mappa del sito
+1. Installare `zola` e `weasyprint` (weasyprint.org)
+2. Eseguire `zola serve`, che dovrebbe rendere il sito disponibile all'indirizzo
+   http://127.0.0.1:1111
+3. Trasformare la pagina del volantino in un PDF con
+   `weasyprint http://127.0.0.1:1111/volantino volantino-dev.pdf`
+4. Aprire `volantino-dev.pdf` con un programma che lo ricarichi automaticamente
+   in caso di modifiche, così da rendere più veloce vedere cosa è cambiato,
+   (ad esempio con [SumatraPDF](https://www.sumatrapdfreader.org) o evince).
+5. Se possibile, eseguire il passo 3 in automatico (e.g. con watchexec)
+
+## Sviluppo
+
+Con nix si può usare ad esempio il seguente comando per avviare un server in locale:
+
+    $ nix-shell -p zola --run "zola serve"
+
+Oppure, per generare la versione definitiva da caricare:
+
+    $ nix-shell -p zola --run "zola build"
+
+Per il volantino, un bug in zola 0.13 impedisce di compilare correttamente i CSS
+a causa del mime type errato mandato da zola serve. Si può usare zola 0.12.2.
+
+    $ URL=https://github.com/NixOS/nixpkgs/archive/559cf76fa3642106d9f23c9e845baf4d354be682.tar.gz
+    $ nix-shell -p zola -I nixpkgs=$URL --run "zola serve"
+
+Per generare i volantini:
+
+    $ nix-shell -p python38Packages.weasyprint
+    % weasyprint http://localhost:1111/volantino/primociclo/ static/volantini/volantino_primociclo.pdf
+    % weasyprint http://localhost:1111/volantino/secondociclo/ static/volantini/volantino_secondociclo.pdf
+
+Per lo sviluppo dei volantini invece, n un'altra shell, si può avviare watchexec
+che ricompila il PDF in automatico usando weasyprint, aspettando 1 secondo prima
+di farlo per permettere a zola serve di fare il rebuild:
+
+    $ CMD="watchexec -d 1000 -e scss,md,html -- weasyprint http://localhost:1111/volantino/primociclo/ volantino-dev.pdf"
+    $ nix-shell -p python38Packages.weasyprint watchexec --run "$CMD"
+

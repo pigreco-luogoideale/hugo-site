@@ -1,1 +1,4 @@
 ErrorDocument 404 /404.html
+
+Redirect /concorso_estivo http://pigreco.luogoideale.org/concorso-estivo
+Redirect /concorso_estivo_laboratori http://pigreco.luogoideale.org/concorso-estivo-laboratori

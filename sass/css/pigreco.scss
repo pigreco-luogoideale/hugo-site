@@ -1,0 +1,859 @@
+@import "colori.scss";
+
+@font-face {
+	font-family: 'Gisha';
+	src: url('/fonts/gisha.ttf');
+}
+
+* {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.larger-text {
+	font-size: 130%;
+}
+
+.theorem {
+	border: 2px solid orange;
+	border-radius: 8px;
+	padding: 7px;
+}
+
+.theorem.short {
+	width: 50%;
+}
+
+div.theorem {
+	background-color: #FAEEDC;
+	border: 1px solid orange;
+	border-radius: 4px;
+	margin: 10px;
+}
+
+div.theorem h2 {
+	margin-top: 0px;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover { color: #333; }
+a:visited { color: #003; }
+
+.colorlink a { color: #E70 }
+.colorlink a:hover { color: #E70; text-decoration: underline; }
+.colorlink a:visited { color: #A50; }
+
+span.colorlink { color: #E70; text-decoration: underline; }
+
+/********************* HEADER *************************/
+@media not screen and (max-width: 560px) {
+	#header {
+	}
+
+	#header #banner {
+		background: url(/images/banners/giochi2.jpg) bottom;
+		height: 200px;
+		position: relative;
+	}
+
+	#header #banner div {
+		background-color: rgba(0, 0, 0, 0.4);
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		position: absolute;
+		bottom: 0px;
+		text-align: right;
+		left: 5px;
+		right: 5px;
+		margin: 0px;
+	}
+
+	#header #banner div h1 {
+		color: white;
+		font-size: 40px;
+		margin: 10px;
+		margin-right: 20px;
+		padding-left: 100px;
+		font-family: 'Gisha', sans-serif;
+	}
+
+	#header #logo {
+		position: absolute;
+		top: 140px;
+		left: 15px;
+	}
+
+	#header #logo img {
+		width: 100px;
+	}
+
+	/** All the menu stiles **/
+	#header #menu {
+		position: relative;
+		height: 80px;
+		left: 120px;
+		width: 600px;
+		top: 20px;
+	}
+
+	#header #menu ul {
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#header #menu ul li {
+		float: left;
+		text-align: center;
+		font-size: 130%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.5);
+		background: url(/images/bullet.png) no-repeat left top;
+		padding: 2px;
+		padding-left: 35px;
+		padding-top: 7px;
+		list-style: none;
+		margin: 2px 7px;
+	/*
+
+		padding: 1px;
+		background-color: yellow;
+		width: 1%;
+		height: 100%;
+		*/
+	}
+
+	#header #menu ul li:hover {
+		background: url(/images/selbullet.png) no-repeat left top;
+		background-color: #eeeeee;
+		border-radius: 5px;
+	}
+
+	#header #social * {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#header #social {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background: rgba(255, 255, 255, 0.5);
+		padding: 5px;
+	}
+
+	#header #social img {
+		width: 20px;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	#header {
+		background-color: green;
+	}
+
+	#header #banner {
+		background: url(images/banners/giochi2.jpg) bottom;
+		height: 200px;
+		position: relative;
+	}
+	#header #logo {
+		position: absolute;
+		left: 10px;
+		top: 10px;
+	}
+	#header #logo img {
+		width: 50px;
+	}
+	#header #menu {
+		position: absolute;
+		left: 10px;
+		top: 60px;
+	}
+	#menu li {
+		background-color: white;
+	}
+}
+
+/**** Vertical menù ** /
+#header #menu.vertical {
+	width: 200px;
+	margin: 100px 0px 0px auto;
+}
+
+#header #menu.vertical ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+#header #menu.vertical li {
+	text-align: right;
+	background-image: -moz-linear-gradient(center right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	background-image: -webkit-gradient(linear, 25% 0%, 0% 0%, from(rgb(255, 255, 255)), to(rgb(255, 255, 255)));
+}
+
+#header #menu.vertical li:hover {
+	color: white;
+	background-image: -moz-linear-gradient(center right, rgba(255, 93, 0, 1) 0%, rgba(255, 93, 0, 0) 100%);
+	background-image: -webkit-gradient(linear, 25% 0%, 0% 0%, from(rgb(255, 93, 0)), to(rgb(255, 93, 0)));
+}
+*/
+
+#footer {
+	font-family: sans-serif;
+	font-size: 65%;
+	text-align: center;
+	color: #555;
+}
+
+section {
+	margin: 0px auto;
+	max-width: 800px;
+	position: relative;
+	border: 1px solid white;
+}
+
+.contContainer {
+	background-color: white;
+
+    h1.large-centered {
+      font-family: "Amatic SC", sans-serif;
+      text-align: center;
+      font-size: 180%;
+      margin-top: 0;
+    }
+
+    h1 { font-family: 'Amatic SC', sans-serif; }
+    h2 { font-family: 'Amatic SC', sans-serif; font-size: 160%;}
+    /*h3 { font-family: '', cursive; }*/
+}
+
+.content {
+	padding: 10px;
+	margin: 2px;
+}
+
+.hidden { display: none; }
+.shown { display: block; }
+
+/****** News ******/
+
+.news {
+	clear: both;
+	border-top: 1px solid #333;
+	position: relative;
+}
+
+.news:last-child {
+	border: none;
+}
+
+.news .datetime {
+	position: absolute;
+	top: 35px;
+	right: 250px;
+	font-size: 85%;
+}
+
+.news h2 {
+	margin: 0px;
+}
+
+.news p:nth-of-type(1) {
+	margin: 20px;
+	float: right;
+}
+
+.news img:nth-of-type(1) {
+	width: 200px;
+}
+
+/********* Balloons *******/
+
+img.people {
+	width: 100%;
+	margin: 0px;
+}
+
+.balloonbox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.ballooner3, .ballooner4 {
+	display: inline-block;
+	width: 20%;
+}
+
+.hoverballoon {
+	position: absolute;
+	text-align: left;
+	margin-top: 10px;
+	left: 100px;
+	right: 100px;
+	padding: 10px;
+	background: white;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 2px solid #F26522;
+}
+
+.ballooner4 .balloon {
+	width: 225%;
+}
+
+.ballooner3 .balloon {
+	width: 150%;
+}
+
+.balloon {
+	position: relative;
+	text-align: justify;
+	margin-top: 10px;
+}
+
+.ballooner4:nth-child(3) .balloon { left: -125%; }
+.ballooner4:nth-child(4) .balloon { left: -125%; }
+
+.ballooner3:nth-child(1) .balloon { }
+.ballooner3:nth-child(2) .balloon { left: -25%; }
+.ballooner3:nth-child(3) .balloon { left: -50%; }
+
+.hoverballoon {
+	display: none;
+}
+
+.balloonarrow {
+	position: relative;
+	top: -16px;
+	left: 50px; /* increments 150 */
+	border-style: solid;
+	border-width: 0px 10px 20px 10px;
+	border-color: #F26522 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+}
+
+.filledbg {
+	color: white;
+	background: #F26522;
+}
+
+.activities {
+    text-align: justify;
+
+    .activity {
+        display: inline-block;
+        width: 386.5px;
+    }
+
+    img {
+        width: 180px;
+    }
+    .activity .description {
+        display: inline-block;
+        width: 180px;
+        vertical-align: top;
+        background: white;
+        padding: 10px;
+    }
+
+    .activity .description h1 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin: 0px;
+        padding: 0px;
+        font-size: 18px;
+    }
+
+    .vsplit {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        .activity-group {
+            flex-basis: 32%;
+            opacity: 0.7;
+        }
+
+        .activity-group:hover {
+            opacity: 0.9;
+        }
+
+        .activity-group.altro {
+            flex-grow: 2;
+            margin-top: 15px;
+        }
+
+        .activity-group.altro img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .fsplit {
+        margin-top: 15px;
+    }
+
+    .qsplit {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .activity-group {
+            flex-basis: 49%;
+            opacity: 0.7;
+            margin-top: 15px;
+        }
+
+        .activity-group:hover { opacity: 0.9; }
+
+        .activity-group img {
+            float: left;
+            margin: 10px;
+        }
+    }
+
+    .activity-group {
+        @each $name, $color in $col-scuola {
+            &.#{$name}, &.#{$name}:hover { background-color: $color; }
+        }
+        @each $name, $color in $col-tutti {
+            &.#{$name}, &.#{$name}:hover { background-color: $color; }
+        }
+
+        h2 {
+            margin: 10px;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 5px auto;
+            background-color: white;
+        }
+
+        .description {
+            display: block;
+            margin: 10px;
+        }
+    }
+
+    .hsplit {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+
+        .activity-group {
+            flex-basis: 75%;
+            opacity: 0.7;
+            margin-top: 15px;
+            position: relative;
+            min-height: 120px;
+        }
+
+        .activity-group:hover { opacity: 0.9; }
+
+        .activity-group {
+            @each $name, $order in $ord-scuola {
+                &.#{$name} {
+                    @if $order % 2 != 0 {
+                        border-top-left-radius: 60px; // hide the corner
+                        padding-left: 120px;
+                        h2 {
+                            padding-right: 120px;
+                        }
+                    }
+                    @else {
+                        border-top-right-radius: 60px; // hide the corner
+                        padding-right: 120px;
+                        h2 {
+                            padding-left: 120px;
+                        }
+                        img {
+                            left: auto;
+                            right: -10px;
+                        }
+                    }
+                }
+            }
+            @each $name, $order in $ord-tutti {
+                &.#{$name} {
+                    @if $order % 2 != 0 {
+                        border-top-left-radius: 60px; // hide the corner
+                        padding-left: 120px;
+                        h2 {
+                            padding-right: 120px;
+                        }
+                    }
+                    @else {
+                        border-top-right-radius: 60px; // hide the corner
+                        padding-right: 120px;
+                        h2 {
+                            padding-left: 120px;
+                        }
+                        img {
+                            left: auto;
+                            right: -10px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /*
+        .activity-group:nth-of-type(odd) {
+            border-top-left-radius: 60px; // hide the corner
+            padding-left: 120px;
+            h2 {
+                padding-right: 120px;
+            }
+        }
+
+        .activity-group:nth-of-type(even) {
+            border-top-right-radius: 60px; // hide the corner
+            padding-right: 120px;
+            h2 {
+                padding-left: 120px;
+            }
+            img {
+                left: auto;
+                right: -10px;
+            }
+        }
+        */
+
+        .activity-group img {
+            position: absolute;
+            left: -10px;
+            top: -20px;
+            width: 120px;
+            border-radius: 50%;
+            background-color: white;
+        }
+    }
+}
+
+.activity ul {
+	display: block;
+	padding: 0px;
+}
+
+.activity ul > li {
+	margin: 10px;
+	padding: 0px;
+	margin-left: 25px;
+	list-style: none;
+}
+
+.activity ul.list > li {
+	display: block;
+	background: white;
+	height: 120px;
+	width: 65%;
+	position: relative;
+}
+
+.activity ul.list > li > img {
+	width: 120px;
+	height: 120px;
+	position: absolute;
+}
+
+.activity ul > li > h1 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 120%;
+	margin: 0px;
+}
+
+.activity ul.list > li > h1 {
+	position: absolute;
+	left: 130px;
+	top: 10px;
+}
+
+.activity ul > li > p {
+	padding-left: 10px;
+}
+
+.activity ul.list > li > p {
+	position: absolute;
+	left: 130px;
+	right: 10px;
+	padding: 0px;
+	top: 3EM;
+	margin: 0px;
+}
+
+h2.inline-header {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+img.opaque {
+	opacity: 0.6;
+}
+
+.content.activity > img {
+	float: right;
+	margin: 20px;
+	width: 200px;
+}
+
+.content.activities .activity {
+	opacity: 0.6;
+}
+
+.content.activities .activity:hover {
+	opacity: 1.0;
+}
+
+.activity h2 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 110%;
+	margin: 0px;
+	margin-top: 10px;
+}
+
+.activity .pindent p {
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.navPrev {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	text-decoration: underline;
+}
+
+.navNext {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	text-decoration: underline;
+}
+
+.galleria {
+	width: 100%;
+	height: 400px;
+	background-color: #eee;
+}
+
+body {
+	background-image: url(/images/pattern.png);
+	background-attachment: fixed;
+	background-color: #eee;
+}
+
+section {
+	background-color: white;
+}
+
+
+.newstyle h2 {
+	border-top: 1px solid #333;
+}
+
+img {
+	border-radius: 5%;
+}
+
+img.squared130 {
+	object-fit: cover;
+	object-position: 0px 0px;
+	height: 130px;
+}
+
+p.slogan {
+	font-size: 130%;
+	text-align:center;
+	font-weight: bold;
+	margin: 2px 5px;
+}
+
+.vblock img {
+	display: block;
+	margin: 0px auto;
+	width: 130px;
+	background-color: #CCC;
+}
+
+.vblock .orange img:hover {
+	background-color: #ffcc00;
+}
+
+.vblock h3 {
+	text-align: center;
+}
+
+.vsplit4 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+    width: 100%;
+}
+
+.vsplit4 .vblock {
+	flex-basis: 20%;
+}
+
+.opalink > a > img {
+	opacity: 0.6;
+}
+
+.opalink > a:hover > img {
+	opacity: 1.0;
+}
+
+// Sfondi dei link in home page, TODO metterli in un elemento padre
+@each $name, $color in $col-scuola {
+    img.#{$name}:hover { background-color: $color; }
+}
+@each $name, $color in $col-tutti {
+    img.#{$name}:hover { background-color: $color; }
+}
+
+// Ordine degli elementi negli elenchi
+@each $name, $order in $ord-scuola {
+    .ord-#{$name} {
+        order: $order;
+    }
+}
+@each $name, $order in $ord-tutti {
+    .ord-#{$name} {
+        order: $order;
+    }
+}
+
+.popup {
+	display: none;
+	border: 2px solid orange;
+}
+
+.popup>a:first-of-type {
+	color: red;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.popup>img {
+	margin: 10px auto;
+	display: block;
+}
+.popup>h4 {
+	text-align: center;
+}
+
+.popup>p {
+	margin: 20px;
+}
+
+.popup:target {
+	display: block;
+	position: fixed;
+	width: 700px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #eee;
+}
+
+.expander {
+	position: fixed;
+	display: none;
+}
+
+.expander+div {
+	max-height: 0px;
+	overflow: hidden;
+}
+
+.expander:target+div {
+	max-height: 200px;
+	transition: max-height 1s;
+}
+
+.full-logo {
+	width: 200px;
+	text-align: center;
+	font-size: 150%;
+}
+
+.full-logo * {
+	font-family: 'Gisha'
+}
+
+.full-logo img {
+	width: 60%;
+	min-width: 60%;
+}
+
+.full-logo div::first-line {
+	font-size: 180%;
+}
+
+.logo-description {
+	background-image: url(/images/arrows.svg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	margin: 10px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+}
+
+.logo-description span, .logo-description p {
+	position: relative;
+}
+
+.logo-description p:nth-of-type(1) {
+	order: 1;
+	width: 30%;
+}
+
+.logo-description p:nth-of-type(2) {
+	order: 3;
+	width: 30%;
+}
+
+.logo-description p:nth-of-type(3) {
+	order: 4;
+	width: 100%;
+}
+
+.logo-description>div {
+	order: 2;
+	width: 30%;
+}
+
+// concorso estivo
+
+.co-es-lab-laboratorio {
+    img { 
+      width: 200px;
+      }
+      
+    &.image-right img {
+      float: right;
+      margin-left: 1em;
+    }
+
+    &.image-left img {
+      float: left;
+      margin-right: 1em;
+    }
+
+    h3 {
+      clear: both;
+    }
+}

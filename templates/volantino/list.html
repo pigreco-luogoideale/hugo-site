@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contContainer">
+    <div class="content colorlink">
+        <h1>Elenco dei volantini disponibili</h1>
+        <ul>
+            {% for term in terms %}
+            <li><a href="{{ term.permalink }}">{{ term.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock content %}

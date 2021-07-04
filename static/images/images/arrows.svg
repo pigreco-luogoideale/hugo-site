@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="-350 -200 700 290" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<marker orient="auto" refY="0" refX="0" id="Arrow2Lend" style="overflow:visible">
+			<path style="fill:black;stroke:none;" d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z" transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+		</marker>
+	</defs>
+	<path style="stroke:black;fill:none;stroke-width:1.2;marker-end:url(#Arrow2Lend)" d="m -75,0 c -52,-12 -10,-90 -65,-120" />
+	<path style="stroke:black;fill:none;stroke-width:1.2;marker-end:url(#Arrow2Lend)" d="m -20,40 c -40,20 -100,-10 -150,20" />
+	<path style="stroke:black;fill:none;stroke-width:1.2;marker-end:url(#Arrow2Lend)" d="m 70,0 c 52,-12 -10,-90 40,-160" />
+</svg>

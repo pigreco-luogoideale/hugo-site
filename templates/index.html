@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contContainer">
+<div class="content newstyle">
+	<div>
+		PiGreco è un'associazione culturale il cui scopo è diffondere la
+		passione per la matematica. Le nostre attività si rivolgono ad
+		appassionati di matematica, semplici curiosi, ma anche (e soprattutto)
+		ai diffidenti, a cui la matematica non è mai piaciuta.
+	</div>
+	<div>
+		<h2>Le nostre proposte per le scuole</h2>
+		<div class="vsplit4">
+            {% for key, value in config.extra.taxonomies.scuole %}
+            {# l'ordine viene determinato da ord-XXXX, che è definito nel sass #}
+            {# FIXME l'ordine nelle liste è invece definito da config.extra.taxonomies.XXXX #}
+            <a class="vblock ord-{{ key }}" href="{{ get_url(path="/scuole/" ~ key) | safe }}" id="link_act_{{ key }}">
+                <img class="rounded squared130 {{ key }}" src="{{ get_url(path="/images/activity/" ~ key ~ "_home.png") | safe }}">
+                <h3>{{ value.name }}</h3>
+			</a>
+            {% endfor %}
+		</div>
+	</div>
+	<div>
+		<h2>Le nostre proposte per tutti</h2>
+		<div class="vsplit4">
+            {% for key, value in config.extra.taxonomies.tutti %}
+            <a class="vblock ord-{{ key }}" href="{{ get_url(path="/tutti/" ~ key) | safe }}" id="link_act_{{ key }}">
+                <img class="rounded squared130 {{ key }}" src="{{ get_url(path="/images/activity/" ~ key ~ "_home.png") | safe }}">
+                <h3>{{ value.name }}</h3>
+			</a>
+            {% endfor %}
+		</div>
+	</div>
+
+	<div class="colorlink">
+        <hr/>
+		<p class="slogan">Lasciatevi contagiare dalla matematica!</p>
+        <p style="text-align: center; font-size: 20px">
+        <a href= "mailto:pigreco@luogoideale.org">Mail</a> |
+        <a href="http://www.facebook.com/pigreco.luogoideale", target="blank">Facebook</a> |
+        <a href="http://instagram.com/pigrecoluogoideale", target="blank">Instagram</a> 
+          
+        </p>
+	</div>
+</div>
+</section>
+{% endblock content %}
