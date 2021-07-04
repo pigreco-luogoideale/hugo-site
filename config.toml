@@ -34,7 +34,7 @@ taxonomies = [
     out = "/static/volantini/volantino_2021_primociclo.pdf"
 
     [extra.weasyprint.volantino-secondogrado]
-    url = "http://127.0.0.1:1111/volantino/secondogrado"
+    url = "http://127.0.0.1:1111/volantino/secondociclo"
     out = "/static/volantini/volantino_2021_secondociclo.pdf"
 
     # Ordine delle pagine
