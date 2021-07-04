@@ -1,4 +1,6 @@
 +++
+# Togliere questo quando si vuole pubblicare la pagina
+draft = true
 title = "Titolo dell'attività"
 description = "Descrizione nell'elenco"
 
