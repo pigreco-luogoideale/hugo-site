@@ -47,28 +47,36 @@ taxonomies = [
     posizione = 1
 	name = "Scuola dell'Infanzia"
 	description = """
-        Non si è mai troppo piccoli per fare matematica! Percorsi, laboratori e racconti per coinvolgere i bambini nella scoperta di numeri e forme.
+        Non si è mai troppo piccoli per fare matematica!
+        Percorsi, laboratori e racconti per coinvolgere
+        i bambini nella scoperta di numeri e forme.
     """
 
 	[extra.taxonomies.scuole.primaria]
     posizione = 2
 	name = "Scuola Primaria"
 	description = """
-        Giochi per consolidare le abilità numeriche e geometriche, attività per imparare la matematica anche in contesti diversi: usando il corpo, leggendo una storia...
+        Giochi per consolidare le abilità numeriche e geometriche,
+        attività per imparare la matematica anche in contesti diversi:
+        usando il corpo, leggendo una storia...
     """
 
 	[extra.taxonomies.scuole.primogrado]
     posizione = 3
 	name = "Scuola Secondaria di I grado"
 	description = """
-        Occasioni di approfondimento e confronto sulle conoscenze acquisite durante le lezioni a scuola e momenti ludici per rinforzare le proprie competenze, divertendosi con i compagni.
+        Occasioni di approfondimento e confronto sulle conoscenze
+        acquisite durante le lezioni a scuola e momenti ludici
+        per rinforzare le proprie competenze, divertendosi con i compagni.
     """
 
 	[extra.taxonomies.scuole.secondogrado]
     posizione = 4
 	name = "Scuola Secondaria di II grado"
 	description = """
-        Conferenze interattive, sfide a squadre, lavori di gruppo per riflettere sulla matematica, sulla sua storia e sulle sue applicazioni nella realtà che ci circonda.
+        Conferenze interattive, sfide a squadre, lavori di gruppo
+        per riflettere sulla matematica, sulla sua storia e
+        sulle sue applicazioni nella realtà che ci circonda.
     """
 
     # Titoli e descrizioni per la sezione per tutti
@@ -76,7 +84,9 @@ taxonomies = [
     posizione = 2
 	name = "Animazione matematica"
 	description = """
-        Occasioni per giocare e divertirsi rivolte a tutti: dai più piccoli al pubblico adulto, per vedere la matematica da un nuovo punto di vista. 
+        Occasioni per giocare e divertirsi rivolte a tutti:
+        dai più piccoli al pubblico adulto, per vedere la
+        matematica da un nuovo punto di vista. 
     """
 
 	[extra.taxonomies.tutti.corsi]
@@ -86,7 +96,9 @@ taxonomies = [
 	description = """
         <i>IN ARRIVO PROSSIMAMENTE</i>
     """
-        # La possibilità di consolidare le proprie conoscenze, accquisirne di nuove, confrontarsi con i coetanei e prepararsi per affrontare esami, verifiche e problemi quotidiani.
+        # La possibilità di consolidare le proprie conoscenze,
+        # accquisirne di nuove, confrontarsi con i coetanei e
+        # prepararsi per affrontare esami, verifiche e problemi quotidiani.
 
 	[extra.taxonomies.tutti.lezioni]
     posizione = 2
@@ -100,7 +112,9 @@ taxonomies = [
     posizione = 2
 	name = "#math"
 	description = """
-        Alcune delle nostre iniziative per contribuire alla diffusione della matematica nel mondo (reale e virtuale) con divertimento e simpatia.
+        Alcune delle nostre iniziative per contribuire alla
+        diffusione della matematica nel mondo (reale e virtuale)
+        con divertimento e simpatia.
     """
 
     # Header per il volantino
