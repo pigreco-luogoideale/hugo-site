@@ -1,6 +1,4 @@
 +++
-# Togliere questo quando si vuole pubblicare la pagina
-draft = true
 title = "Prossimamente"
 description = "Questa è solo una bozza"
 
