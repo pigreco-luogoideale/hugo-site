@@ -48,114 +48,8 @@ a:visited { color: #003; }
 span.colorlink { color: #E70; text-decoration: underline; }
 
 /********************* HEADER *************************/
-@media not screen and (max-width: 560px) {
-	#header {
-	}
-
-	#header #banner {
-		background: url(/images/banners/giochi2.jpg) bottom;
-		height: 200px;
-		position: relative;
-	}
-
-	#header #banner div {
-		background-color: rgba(0, 0, 0, 0.4);
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-		position: absolute;
-		bottom: 0px;
-		text-align: right;
-		left: 5px;
-		right: 5px;
-		margin: 0px;
-	}
-
-	#header #banner div h1 {
-		color: white;
-		font-size: 40px;
-		margin: 10px;
-		margin-right: 20px;
-		padding-left: 100px;
-		font-family: 'Gisha', sans-serif;
-	}
-
-	#header #logo {
-		position: absolute;
-		top: 140px;
-		left: 15px;
-	}
-
-	#header #logo img {
-		width: 100px;
-	}
-
-	/** All the menu stiles **/
-	#header #menu {
-		position: relative;
-		height: 80px;
-		left: 120px;
-		width: 600px;
-		top: 20px;
-	}
-
-	#header #menu ul {
-		position: absolute;
-		left: 0px;
-		right: 0px;
-		margin: 0px;
-		padding: 0px;
-	}
-
-	#header #menu ul li {
-		float: left;
-		text-align: center;
-		font-size: 130%;
-		height: 100%;
-		background-color: rgba(255, 255, 255, 0.5);
-		background: url(/images/bullet.png) no-repeat left top;
-		padding: 2px;
-		padding-left: 35px;
-		padding-top: 7px;
-		list-style: none;
-		margin: 2px 7px;
-	/*
-
-		padding: 1px;
-		background-color: yellow;
-		width: 1%;
-		height: 100%;
-		*/
-	}
-
-	#header #menu ul li:hover {
-		background: url(/images/selbullet.png) no-repeat left top;
-		background-color: #eeeeee;
-		border-radius: 5px;
-	}
-
-	#header #social * {
-		margin: 0px;
-		padding: 0px;
-	}
-
-	#header #social {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		background: rgba(255, 255, 255, 0.5);
-		padding: 5px;
-	}
-
-	#header #social img {
-		width: 20px;
-	}
-}
-
+/*
 @media only screen and (max-width: 560px) {
-	#header {
-		background-color: green;
-	}
-
 	#header #banner {
 		background: url(images/banners/giochi2.jpg) bottom;
 		height: 200px;
@@ -176,6 +70,82 @@ span.colorlink { color: #E70; text-decoration: underline; }
 	}
 	#menu li {
 		background-color: white;
+	}
+}
+*/
+
+#header {
+    #banner {
+        background: url(/images/banners/giochi2.jpg) bottom;
+        height: 200px;
+        position: relative;
+
+        div {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            position: absolute;
+            bottom: 0px;
+            text-align: right;
+            left: 5px;
+            right: 5px;
+            margin: 0px;
+
+            h1 {
+                color: white;
+                font-size: 40px;
+                margin: 10px;
+                margin-right: 20px;
+                padding-left: 100px;
+                font-family: 'Gisha', sans-serif;
+            }
+        }
+    }
+
+	#logo {
+		position: absolute;
+		top: 140px;
+		left: 15px;
+        img {
+            width: 100px;
+        }
+	}
+
+	#menu {
+		position: relative;
+		height: 80px;
+		left: 120px;
+		width: 600px;
+		top: 20px;
+        ul {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            margin: 0px;
+            padding: 0px;
+            li {
+                float: left;
+                text-align: center;
+                font-size: 130%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.5);
+                background: url(/images/bullet.png) no-repeat left top;
+                padding: 2px;
+                padding-left: 35px;
+                padding-top: 7px;
+                list-style: none;
+                margin: 2px 7px;
+                // padding: 1px;
+                // background-color: yellow;
+                // width: 1%;
+                // height: 100%;
+            }
+            li:hover {
+                background: url(/images/selbullet.png) no-repeat left top;
+                background-color: #eeeeee;
+                border-radius: 5px;
+            }
+        }
 	}
 }
 
