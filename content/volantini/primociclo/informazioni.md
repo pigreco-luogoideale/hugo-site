@@ -21,7 +21,7 @@ raw = true
 +++
 
 <section class="page info">
-<div class="page-header"><span>Per le scuole del primo ciclo</span></div>
+<div class="page-header"><span>Per l'infanzia e il primo ciclo</span></div>
 <div class="page-content">
 <h1 class="ico ico-generali">Informazioni generali</h1>
 
