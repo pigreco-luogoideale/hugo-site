@@ -31,11 +31,11 @@ raw = true
   
 - Le attività per la scuola primaria e per la scuola secondaria di I grado che possono essere svolte (anche) a distanza sono indicate dal simbolo ![/images/icone/online.png](/images/icone/online.png) all'interno della pagina di descrizione.
 
-- Le attività nelle scuole sono pensate per classi di circa 25 studenti,
-  ad eccezione di quelle per la fascia 3-5 anni, che sono pensate per
+- Le attività per la scuola primaria e per la scuola secondaria di I grado sono pensate per singole classi,
+  le attività per la scuola dell'infanzia sono pensate per
   gruppi di massimo 15 bambini.
 
-- Tutte le attività possono essere adattate per venire incontro alle esigenze.
+- Tutte le attività possono essere adattate per venire incontro alle esigenze degli insegnanti.
 
 - I rimborsi indicati non comprendono IVA ed eventuali spese di viaggio.
 
