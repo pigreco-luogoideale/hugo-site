@@ -27,9 +27,9 @@ raw = true
 
 - Tutte le attività sono pensate per essere svolte (anche) online.
 
-- Le attività nelle scuole sono pensate per classi di circa 25 studenti.
+- Ogni attività è pensata per essere svolta con una singola classe.
 
-- Tutte le attività possono essere adattate per venire incontro alle esigenze.
+- Tutte le attività possono essere adattate per venire incontro alle esigenze degli insegnanti.
 
 - I rimborsi indicati non comprendono IVA ed eventuali spese di viaggio.
 
