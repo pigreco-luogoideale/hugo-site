@@ -39,9 +39,9 @@ Far giocare e divertire i bambini, consolidando le loro conoscenze numeriche.
 
 <h2 class="ico ico-primaria-svolgimento">Svolgimento</h2>
 
-In questo percorso di tre incontri verranno proposti alcuni giochi incentrati sulle abilità geometriche per aiutare i bambini a consolidare quanto già affrontato con i propri insegnanti. 
+In questo percorso di tre incontri verranno proposti alcuni giochi incentrati sulle abilità numeriche per aiutare i bambini a consolidare quanto già affrontato con i propri insegnanti. 
 
-I bambini avranno occasione di allenarsi nel riconoscimento e nella costruzione di figure geometriche piane e solide, di indagare le proprietà geometriche delle figure, facendo anche confronti qualitativi e quantitativi attraverso ragionamenti, stime e misurazioni. 
+I bambini avranno occasione di allenare le capacità di calcolo mentale, mettersi alla prova con stime numeriche e computazionali, utilizzare i numeri in diversi contesti, riflettendo sul loro significato e sulle proprietà di numeri naturali, decimali e negativi.
 
 L’attività è differenziata nelle diverse classi e viene personalizzata in base alle esigenze del docente, adeguandola agli argomenti già affrontati dagli allievi. 
 
