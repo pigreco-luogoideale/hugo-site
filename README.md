@@ -27,7 +27,7 @@ Le cose importanti da sapere sono:
 
  - ogni pagina di contenuto inizia con un _header_ delimitato da `+++`;
  - all'inizio dell'header (nella sezione principale), ci si può trovare una voce
-   `template`, che indica quale HTML usare (tra quelli in `templates/`) per il 
+   `template`, che indica quale HTML usare (tra quelli in `templates/`) per il
    render di quel contenuto;
  - `title`, `description`, `data` e `weight` vanno nella sezione principale,
    all'inizio dell'header, _prima_ di `[extra]`;
@@ -76,8 +76,7 @@ PDF e copiato nella directory `static/volantini`.
 Attenzione che la trasformazione da HTML a PDF non è banale e le cose potrebbero
 apparire diverse tra le due versioni.
 
-Il codice per fare ciò è nel file `flier.sh`. Per modificarlo, è necessario
-seguire i seguenti passi:
+Per modificare il volantino è necessario seguire i seguenti passi:
 
 1. Installare `zola` e `weasyprint` (weasyprint.org)
 2. Eseguire `zola serve`, che dovrebbe rendere il sito disponibile all'indirizzo
@@ -100,21 +99,20 @@ Oppure, per generare la versione definitiva da caricare:
     $ nix-shell -p zola --run "zola build"
 
 Per il volantino, un bug in zola 0.13 impedisce di compilare correttamente i CSS
-a causa del mime type errato mandato da zola serve. Si può usare zola 0.12.2.
+a causa del mime type errato mandato da zola serve. Si può usare zola 0.15 o 0.12.2.
 
     $ URL=https://github.com/NixOS/nixpkgs/archive/559cf76fa3642106d9f23c9e845baf4d354be682.tar.gz
     $ nix-shell -p zola -I nixpkgs=$URL --run "zola serve"
 
 Per generare i volantini:
 
-    $ nix-shell -p python38Packages.weasyprint
+    $ nix-shell -p python39Packages.weasyprint
     % weasyprint http://localhost:1111/volantino/primociclo/ static/volantini/volantino_primociclo.pdf
     % weasyprint http://localhost:1111/volantino/secondociclo/ static/volantini/volantino_secondociclo.pdf
 
-Per lo sviluppo dei volantini invece, n un'altra shell, si può avviare watchexec
+Per lo sviluppo dei volantini invece, in un'altra shell, si può avviare watchexec
 che ricompila il PDF in automatico usando weasyprint, aspettando 1 secondo prima
 di farlo per permettere a zola serve di fare il rebuild:
 
     $ CMD="watchexec -d 1000 -e scss,md,html -- weasyprint http://localhost:1111/volantino/primociclo/ volantino-dev.pdf"
-    $ nix-shell -p python38Packages.weasyprint watchexec --run "$CMD"
-
+    $ nix-shell -p python39Packages.weasyprint watchexec --run "$CMD"

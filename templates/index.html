@@ -26,7 +26,7 @@
 		<h2>Le nostre proposte per tutti</h2>
 		<div class="vsplit4">
             {% for key, value in config.extra.taxonomies.tutti %}
-                <a class="vblock ord-{{ key }}" href="{% if value.disabilitato %}#{% else %}{{ get_url(path="/tutti/" ~ key) | safe }}{% endif %}" id="link_act_{{ key }}">
+            <a class="vblock ord-{{ key }}" href="{% if value.redirect %}{{ value.redirect }}{% else %}{{ get_url(path="/tutti/" ~ key) | safe }}{% endif %}" id="link_act_{{ key }}">
                 <img class="rounded squared130 {{ key }}" src="{{ get_url(path="/images/activity/" ~ key ~ "_home.png") | safe }}">
                 <h3>{{ value.name }}</h3>
 			</a>
@@ -40,8 +40,8 @@
         <p style="text-align: center; font-size: 20px">
         <a href= "mailto:pigreco@luogoideale.org">Mail</a> |
         <a href="http://www.facebook.com/pigreco.luogoideale", target="blank">Facebook</a> |
-        <a href="http://instagram.com/pigrecoluogoideale", target="blank">Instagram</a> 
-          
+        <a href="http://instagram.com/pigrecoluogoideale", target="blank">Instagram</a>
+
         </p>
 	</div>
 </div>

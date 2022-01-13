@@ -14,7 +14,7 @@ highlight_code = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-# Non toccare queste 
+# Non toccare queste
 # Fare attenzione, hanno implicazioni sulla struttura del sito e sulle directory
 # in templates
 taxonomies = [
@@ -86,13 +86,13 @@ taxonomies = [
 	description = """
         Occasioni per giocare e divertirsi rivolte a tutti:
         dai più piccoli al pubblico adulto, per vedere la
-        matematica da un nuovo punto di vista. 
+        matematica da un nuovo punto di vista.
     """
 
 	[extra.taxonomies.tutti.corsi]
     posizione = 2
 	name = "Corsi di studio"
-	disabilitato = true
+	redirect = "#"
 	description = """
         <i>IN ARRIVO PROSSIMAMENTE</i>
     """
@@ -103,7 +103,7 @@ taxonomies = [
 	[extra.taxonomies.tutti.lezioni]
     posizione = 2
 	name = "Lezioni private"
-	disabilitato = true
+    redirect = "/foobar"
 	description = """
          <i>IN ARRIVO PROSSIMAMENTE</i>
     """
