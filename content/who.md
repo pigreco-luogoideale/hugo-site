@@ -26,7 +26,7 @@ cercando di rendere la matematica divertente e coinvolgente per tutti!
 <img src="/images/people/giulia.jpg" class="people trigger" />
 <h4 style="margin: 5px;">Giulia Bernardi</h4>
 <div class="balloon shown">
-Ideatrice e fondatrice di PiGreco, portatrice sana di idee e di entusiasmo. Voglio diffondere la matematica nel mondo e spero che la burocrazia italiana non mi fermi.
+Ideatrice e fondatrice di PiGreco, portatrice sana di idee e di entusiasmo. 
 Dopo la laurea in Matematica in Bicocca, ho conseguito il dottorato al Politecnico di Milano nell’ambito della teoria dei giochi, avvicinandomi poi alla didattica della matematica.
 <br/>Scrivimi a <a href="mailto:giulia@luogoideale.org">giulia@luogoideale.org</a>
 </div>
