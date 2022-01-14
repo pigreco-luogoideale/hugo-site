@@ -6,7 +6,7 @@ template = "page.html"
 
 [extra]
 #thumb = "/images/activities/lezioni_1.jpg"
-#image = "/images/activities/lezioni_1.jpg"
+#image = "/images/activities/lezioni_2.jpg"
 #alt = "Tavoli e sedie nella sede di PiGreco"
 +++
 
