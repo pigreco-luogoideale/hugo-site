@@ -12,7 +12,7 @@ template = "page.html"
 
 ## Lezioni private
 
-<img src="/images/activities/lezioni_2.jpg" style="float: right; margin: 20px; width: 250px;">
+<img src="/images/activities/lezioni_1.jpg" style="float: right; margin: 20px; width: 250px;">
 
 Lo scopo delle nostre lezioni private è aiutare gli studenti a colmare eventuali lacune pregresse, ma soprattutto sviluppare o potenziare un metodo di studio specifico per la matematica, per acquisire sempre più autonomia nella propria carriera scolastica.
 Le lezioni sono tenute dai tutor della nostra associazione, formati sia dal punto di vista disciplinare che didattico.
@@ -29,7 +29,7 @@ In presenza: presso la nostra sede operativa in [via IV Novembre 37 a Vimodrone]
 A distanza: online tramite videochiamata.
 
 
-<img src="/images/activities/lezioni_1.jpg" style="float: left; margin: 20px; width: 250px;">
+<img src="/images/activities/lezioni_2.jpg" style="float: left; margin: 20px; width: 250px;">
 
 ### Quando?
 Gli incontri si svolgono il pomeriggio in settimana e il sabato mattina. Il calendario viene stabilito tra il tutor e lo studente coinvolto.
