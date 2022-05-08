@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 	<head>
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -41,10 +41,13 @@
 				</div>
 			</div>
 			<div id="logo">
-                <a href="{{ get_url(path="/") | safe }}"><img src="{{ get_url(path="/images/logo.png") | safe }}" alt="PiGreco - il Luogo Ideale"/></a>
+                <a href="{{ get_url(path="/") | safe }}"><img src="{{ get_url(path="/images/logo.png") | safe }}"
+                    alt="Logo dell'associazione: una puntina arancione con al centro una P greca."/></a>
 			</div>
 			<!-- Menu -->
-			<div id="menu" class="horizontal">
+			<nav id="menu" class="horizontal">
+                <input type="checkbox" id="menu_toggle" />
+                <label for="menu_toggle" class="menu-burger">Menu &#9776;</label>
 				<ul>
                     <li><a href="{{ get_url(path="/news") | safe }}" id="link_news">News</a></li>
 					<li><a href="{{ get_url(path="/who") | safe }}" id="link_who">Chi siamo</a></li>
