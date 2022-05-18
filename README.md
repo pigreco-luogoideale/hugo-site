@@ -90,6 +90,17 @@ Per modificare il volantino è necessario seguire i seguenti passi:
 
 ## Sviluppo
 
+### Su Windows
+
+1. Usa l'app di github per scaricare il repository
+2. Scaricare zola e metterlo nella stessa directory del sito
+3. Lanciare zola serve dal terminale (comando ..\zola serve )
+4. Aprire su un browser all'indirizzo http://127.0.0.1:1111 l'anteprima del sito
+5. Fare le modifiche, aggiungendo o modificando file nelle cartelle del pc. L'anteprima si aggiorna automaticamente.
+6. Quando è tutto OK fare push dall'app github per caricare le modifiche online
+
+### Su Linux
+
 Con nix si può usare ad esempio il seguente comando per avviare un server in locale:
 
     $ nix-shell -p zola --run "zola serve"
