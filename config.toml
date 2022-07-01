@@ -31,11 +31,11 @@ taxonomies = [
     # Volantini da produrre automaticamente
     [extra.weasyprint.volantino-primogrado]
     url = "http://127.0.0.1:1111/volantino/primociclo"
-    out = "/static/volantini/volantino_2021_primociclo.pdf"
+    out = "/static/volantini/volantino_2022_primociclo.pdf"
 
     [extra.weasyprint.volantino-secondogrado]
     url = "http://127.0.0.1:1111/volantino/secondociclo"
-    out = "/static/volantini/volantino_2021_secondociclo.pdf"
+    out = "/static/volantini/volantino_2022_secondociclo.pdf"
 
     # Ordine delle pagine
     [extra.taxonomies.ordine]
@@ -105,7 +105,7 @@ taxonomies = [
 	name = "Lezioni private"
     redirect = "/activity/lezioni"
 	description = """
-         Lezioni personalizzate con i nostri tutor per 
+         Lezioni personalizzate con i nostri tutor per
          colmare eventuali lacune e ricevere sostegno per sviluppare un metodo di studio efficace e specifico per la matematica.
     """
 
