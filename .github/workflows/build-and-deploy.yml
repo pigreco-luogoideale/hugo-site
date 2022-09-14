@@ -7,9 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     container: akiross/zola-build-and-rclone:latest
     steps:
+      # Using checkout@v1 here since v2 and v3 won't work.
+      # See github actions issue #334.
       - name: Checkout branch to build
         uses: actions/checkout@v1
-      - run: sh -c "cat /etc/*release | grep ^ID"
       - name: Build PDF with weasyprint
         shell: python
         run: |
@@ -65,4 +66,4 @@ jobs:
       - name: Check rclone config
         run: rclone listremotes --config="rclone.conf"
       - name: Update to FTP
-        run: rclone sync --dry-run --config="rclone.conf" -v public luogoideale:/htdocs/
+        run: rclone sync --config="rclone.conf" -v public luogoideale:/htdocs/
