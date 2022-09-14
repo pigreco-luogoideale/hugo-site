@@ -1,0 +1,67 @@
+name: Build with zola and deploy on FTP
+on:
+  push:
+    branches: [ master ]
+jobs:
+  Build-and-Upload:
+    runs-on: ubuntu-latest
+    container: akiross/zola-build-and-rclone:latest
+    steps:
+      - name: Checkout branch to build
+        uses: actions/checkout@v3
+      - name: Build PDF with weasyprint
+        shell: python
+        run: |
+          import toml
+          import subprocess
+
+          from pathlib import Path
+          from weasyprint import HTML
+
+          repo_dir = Path.cwd()
+          with Path("config.toml").open() as conf:
+            site_conf = toml.load(conf)
+            pdf_targets = site_conf.get("extra", {}).get("weasyprint", {})
+            if pdf_targets:
+              child = subprocess.Popen(
+                ["zola", "serve"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+              )
+              for line in child.stdout:
+                if b"127.0.0.1:1111" in line:
+                  print("zola server up and running")
+                  break
+              try:
+                for name, info in pdf_targets.items():
+                  url = info.get("url")
+                  out = info.get("out")
+                  if not url or not out:
+                    print(f"PDF target {name} is missing url or out in config")
+                    exit(1)
+                  pdf_path = f"{repo_dir}/{out}"
+                  print(f"Creating PDF '{name}' for {url} at {pdf_path}")
+                  HTML(url).write_pdf(pdf_path)
+                  if not Path(pdf_path).is_file():
+                    print(f"Unable to print {pdf_path} from PDF target {name}")
+                    exit(2)
+                  print("PDFs created successfully!")
+              except Exception as ex:
+                print(f"Exception occurred while printing PDF\n{ex}")
+                exit(3)
+              finally:
+                child.terminate()
+                child.wait()
+      - name: Build zola website
+        run: zola build
+      - name: Create the config file
+        run: |
+          printenv RCLONE_CONF > rclone.conf
+        env:
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+      - name: What's in here
+        run: tree -L 2
+      - name: Check rclone config
+        run: rclone listremotes --config="rclone.conf"
+      - name: Update to FTP
+        run: rclone sync --dry-run --config="rclone.conf" -v public luogoideale:/htdocs/

@@ -9,7 +9,7 @@ il codice HTML, CSS e tutti i contenuti che compongono il sito vero e proprio.
 
 Se ci fossero degli errori o dei problemi, la compilazione non avrà successo e
 il sito attualmente online non verrà toccato. Gli errori di compilazione sono
-disponibili nell'apposito canale di reportistica.
+disponibili nella sezione apposita di GitHub.
 
 ## Zola
 
