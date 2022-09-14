@@ -8,7 +8,7 @@ jobs:
     container: akiross/zola-build-and-rclone:latest
     steps:
       - name: Checkout branch to build
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
       - run: sh -c "cat /etc/*release | grep ^ID"
       - name: Build PDF with weasyprint
         shell: python
