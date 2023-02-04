@@ -9,12 +9,12 @@ template = "activity/page.html"
 [taxonomies]
 # Sezioni del sito dove mettere la pagina, da scegliere tra una o più di queste
 #scuole = ["infanzia"]
-tutti = ["corsi", "lezioni"]
+tutti = ["formazione", "lezioni"]
 #volantino = ["primociclo"]
 
 [extra]
-thumb = "/images/old/news.jpg"
-image = "/images/old/news.jpg"
+thumb = "/images/activities/formazione-primaria.jpg"
+image = "/images/activities/formazione-primaria.jpg"
 alt = "Caselle disegnate a gesso sull'asfalto e dei dadi"
 +++
 
