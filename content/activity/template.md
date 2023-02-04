@@ -51,7 +51,7 @@ ico-rimborso = ["Rimborso?", "E euro per ogni C cicli"]
 
 <h2 class="ico ico-infanzia-domanda">Domanda</h2>
 
-Cosa sta succedendo?.
+Cosa sta succedendo?
 
 <h2 class="ico ico-infanzia-risposta">Risposta</h2>
 
