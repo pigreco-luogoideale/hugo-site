@@ -40,7 +40,7 @@ taxonomies = [
     # Ordine delle pagine
     [extra.taxonomies.ordine]
     scuole = ["infanzia", "primaria", "primogrado", "secondogrado"]
-    tutti = ["animazione", "corsi", "lezioni", "altro"]
+    tutti = ["animazione", "formazione", "lezioni", "altro"]
 
     # Titoli e descrizioni per la sezione scuole
 	[extra.taxonomies.scuole.infanzia]
@@ -89,12 +89,12 @@ taxonomies = [
         matematica da un nuovo punto di vista.
     """
 
-	[extra.taxonomies.tutti.corsi]
+	[extra.taxonomies.tutti.formazione]
     posizione = 2
-	name = "Corsi di studio"
-	redirect = "#"
+	name = "Formazione"
+	#redirect = "/activity/formazione"
 	description = """
-        <i>IN ARRIVO PROSSIMAMENTE</i>
+        Le nostre proposte di formazione per educatori e insegnanti in cerca di nuove idee, spunti e materiali per innovare la loro didattica.
     """
         # La possibilità di consolidare le proprie conoscenze,
         # accquisirne di nuove, confrontarsi con i coetanei e

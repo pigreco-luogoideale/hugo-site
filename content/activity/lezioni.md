@@ -32,14 +32,14 @@ Presso la nostra sede operativa in [via IV Novembre 37 a Vimodrone](https://goo.
 <img src="/images/activities/lezioni_2.jpg" style="float: left; margin: 20px; width: 250px;">
 
 ### Quando?
-Gli incontri si svolgono il pomeriggio in settimana e il sabato mattina. Il calendario viene stabilito tra il tutor e lo studente coinvolto.
+Gli incontri si svolgono il pomeriggio in settimana. Il calendario viene stabilito tra il tutor e lo studente coinvolto.
 
 ### Costi e contatti
 Costo all’ora per studenti della scuola secondaria di I grado: 25 euro.  
 Costo all’ora per studenti della scuola secondaria di II grado: 25 euro.  
 Costo all’ora per studenti universitari: dai 35 euro.  
 
-I costi indicati valgono sia per lezioni in presenza che per lezioni online.
+
 Il pagamento avviene mensilmente, dopo un conteggio delle ore effettivamente svolte.
 Annualmente viene aggiunto un costo di 10 euro per l’iscrizione all’associazione.
 

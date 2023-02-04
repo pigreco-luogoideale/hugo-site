@@ -1,6 +1,6 @@
 +++
-title = "Prossimamente"
-description = "Questa è solo una bozza"
+title = "Mettiamoci in gioco!"
+description = "Corso dedicato alle docenti della scuola primaria che vogliono sperimentare un approccio ludico."
 
 # Questa è una singola pagina di attività, lasciare così: è il template
 # che viene usato per visualizzare la singola pagina
@@ -9,16 +9,16 @@ template = "activity/page.html"
 [taxonomies]
 # Sezioni del sito dove mettere la pagina, da scegliere tra una o più di queste
 #scuole = ["infanzia"]
-#tutti = ["formazione", "lezioni"]
+tutti = ["formazione", "lezioni"]
 #volantino = ["primociclo"]
 
 [extra]
-thumb = "/images/old/news.jpg"
-image = "/images/old/news.jpg"
+thumb = "/images/activities/formazione-primaria.jpg"
+image = "/images/activities/formazione-primaria.jpg"
 alt = "Caselle disegnate a gesso sull'asfalto e dei dadi"
 +++
 
-<h2 class="ico ico-infanzia-domanda">Problema>/h2>
+<h2 class="ico ico-infanzia-domanda">Problema</h2>
 
 Cosa sta succedendo?.
 
