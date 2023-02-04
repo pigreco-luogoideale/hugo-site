@@ -14,8 +14,8 @@ tutti = ["formazione"]
 
 [extra]
 no_scarica_volantino = true
-thumb = "/images/old/news.jpg"
-image = "/images/old/news.jpg"
+thumb = "/images/activities/formazione-sanoma.jpg"
+image = "/images/activities/formazione-sanoma.jpg"
 alt = "Caselle disegnate a gesso sull'asfalto e dei dadi"
 +++
 

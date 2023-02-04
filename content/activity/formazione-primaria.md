@@ -13,35 +13,24 @@ tutti = ["formazione", "lezioni"]
 #volantino = ["primociclo"]
 
 [extra]
+no_scarica_volantino = true
 thumb = "/images/activities/formazione-primaria.jpg"
 image = "/images/activities/formazione-primaria.jpg"
-alt = "Caselle disegnate a gesso sull'asfalto e dei dadi"
+alt = "Un docente durante il corso di formazione"
 +++
 
-<h2 class="ico ico-infanzia-domanda">Problema</h2>
+Lo scopo di questo corso di formazione è quello di riflettere insieme ai docenti
+su quali siano le problematiche che emergono nell’insegnamento della matematica,
+per poter condividere pratiche d’aula e suggerimenti, così da migliorare
+il rapporto dei propri alunni con questa materia, con un’attenzione particolare
+alla motivazione e allo sviluppo di un atteggiamento positivo nei confronti di
+questa materia. 
 
-Cosa sta succedendo?.
+L’obiettivo è fornire ai docenti, oltre a strumenti
+teorici e ad alcuni esempi di esperienze pratiche, anche idee e strumenti
+per costruire nuove proposte didattiche da sperimentare immediatamente nelle
+classi con una particolare attenzione ad un approccio ludico.
 
-<h2 class="ico ico-infanzia-risposta">Soluzione</h2>
+Il corso è strutturato in quattro incontri, per un totale di 10 ore di formazione.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore magna
-aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit
-esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia
-deserunt mollit anim id est laborum.
-
- - # Foo
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-   sed do eiusmod tempor incididunt ut labore et dolore magna
-   aliqua.
- - # Bar
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-   sed do eiusmod tempor incididunt ut labore et dolore magna
-   aliqua.
- - # Baz
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-   sed do eiusmod tempor incididunt ut labore et dolore magna
-   aliqua.
+Per avere maggiori informazioni o richiedere un preventivo, scrivete una mail a <pigreco@luogoideale.org>.
