@@ -103,10 +103,12 @@ Per modificare il volantino è necessario seguire i seguenti passi:
 
 Con nix si può usare ad esempio il seguente comando per avviare un server in locale:
 
+    $ nix run . -- serve
     $ nix-shell -p zola --run "zola serve"
 
 Oppure, per generare la versione definitiva da caricare:
 
+    $ nix run . -- build
     $ nix-shell -p zola --run "zola build"
 
 Per il volantino, un bug in zola 0.13 impedisce di compilare correttamente i CSS
