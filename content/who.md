@@ -20,7 +20,7 @@ cercando di rendere la matematica divertente e coinvolgente per tutti!
 </div>
 
 <div>
-<h2>Le fondatrici</h2>
+<h2> </h2>
 <div class="balloonbox">
 <div class="ballooner4">
 <img src="/images/people/giulia.jpg" class="people trigger" />
@@ -41,29 +41,61 @@ Ideatrice e fondatrice di PiGreco. Sono laureata in Matematica, ho lavorato nell
 </div>
 </div>
 
-<div class="ballooner4">
-<img src="/images/people/giuliam.jpg" class="people trigger opaque" />
-<h4 style="margin: 5px;">Giulia Mandelli</h4>
-<div class="balloon hidden">
-Laureata in scienze dell'educazione, all'Università di Milano Bicocca. Lavoro come educatrice in una scuola dell'infanzia, ma per PiGreco svolgo il ruolo della tuttofare e spesso sono la mano che disegna e colora ogni cosa... Per riuscire a rendere la matematica ancora più accattivante!
-<br/>Scrivimi a <a href="mailto:giulia.m@luogoideale.org">giulia.m@luogoideale.org</a>
-</div>
-</div>
 
-<div class="ballooner4">
-<img src="/images/people/benedetta.jpg" class="people trigger opaque" />
-<h4 style="margin: 5px;">Benedetta De Pieri</h4>
-<div class="balloon hidden">
-Dopo la laurea in filosofia ho conseguito il dottorato in Innovazione Sociale presso la Caledonian University di Glasgow. Aiuto PiGreco nel settore della raccolta fondi
-e nell'unire la cultura scientifica a quella umanistica.
-<br/>Scrivimi a <a href="mailto:benedetta@luogoideale.org">benedetta@luogoideale.org</a>
-</div>
-</div>
+
 </div>
 </div>
 <div>
+
+
 <h2>I collaboratori</h2>
 <div class="balloonbox">
+
+<div class="ballooner3">
+<img src="/images/people/ale.jpg" class="people trigger opaque" />
+<h4 style="margin: 5px;">Alessandro Re</h4>
+<div class="balloon hidden">
+Informatico multiruolo, ho sposato la causa di PiGreco realizzando il sito, occupandomi della sua gestione e intervenendo quando serve supporto.
+</div>
+</div>
+
+<div class="ballooner3">
+<img src="/images/people/benedetta.jpg" class="people trigger opaque" />
+<h4 style="margin: 5px;">Benedetta De Pieri</h4>
+<div class="balloon hidden">
+Grazie alla laurea in filosofia e al dottorato in Innovazione Sociale, aiuto PiGreco nella raccolta fondi e nell'unire la cultura scientifica a quella umanistica.
+</div>
+</div>
+
+<div class="ballooner3">
+<img src="/images/people/elisa_maestroni.jpeg" class="people trigger opaque" />
+<h4 style="margin: 5px;">Elisa Maestroni</h4>
+<div class="balloon hidden">
+Educatrice alla scuola dell'infanzia, mi occupo di portare la matematica anche ai più piccoli sperimentando con loro attraverso il gioco e la fantasia. 
+</div>
+</div>
+
+
+<div class="ballooner3">
+<img src="/images/people/giulia_cesari.jpg" class="people trigger opaque" />
+<h4 style="margin: 5px;">Giulia Cesari</h4>
+<div class="balloon hidden">
+Matematica, aiuto gli studenti a riappacificarsi con questa materia condividendo la mia esperienza e le mie passioni.
+</div>
+</div>
+
+<br>
+
+<div class="ballooner3">
+<img src="/images/people/giuliam.jpg" class="people trigger opaque" />
+<h4 style="margin: 5px;">Giulia Mandelli</h4>
+<div class="balloon hidden">
+Maestra nella scuola dell'infanzia, in PiGreco sono spesso la mano che colora ogni cosa... Per rendere la matematica ancora più accattivante!
+</div>
+</div>
+
+
+
 <div class="ballooner3">
 <img src="/images/people/irene.jpg" class="people trigger opaque" />
 <h4 style="margin: 5px;">Irene Nava</h4>
@@ -73,20 +105,23 @@ Laureata in Scienze dell’Architettura, ho aiutato PiGreco con i miei disegni e
 </div>
 
 <div class="ballooner3">
-<img src="/images/people/maurizio.jpg" class="people trigger opaque" />
-<h4 style="margin: 5px;">Maurizio Giaffredo</h4>
+<img src="/images/people/marta_manzari.jpg" class="people trigger opaque" />
+<h4 style="margin: 5px;">Marta Manzari</h4>
 <div class="balloon hidden">
-Laureando in Matematica presso l'Università di Milano, collaboro con PiGreco svolgendo laboratori e conferenze.
+Studente di informatica e amante della matematica tanto che quando non la sto studiando per l'università, mi piace aiutare gli altri a studiarla e superare le difficoltà.
 </div>
 </div>
 
 <div class="ballooner3">
-<img src="/images/people/ale.jpg" class="people trigger opaque" />
-<h4 style="margin: 5px;">Alessandro Re</h4>
+<img src="/images/people/maurizio.jpg" class="people trigger opaque" />
+<h4 style="margin: 5px;">Maurizio Giaffredo</h4>
 <div class="balloon hidden">
-Informatico multiruolo, ho realizzato il sito di PiGreco e mi occupo della sua gestione.
+Laureando in Matematica presso l'Università di Milano, insegnante e divulgatore, ho collaborato con PiGreco svolgendo laboratori e conferenze.
 </div>
 </div>
+
+
+
 </div>
 </div>
 </div>
