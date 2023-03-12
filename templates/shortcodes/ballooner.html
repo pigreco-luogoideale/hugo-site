@@ -1,0 +1,8 @@
+<div class="ballooner{{ row }}">
+  <img
+    src="{{ img }}"
+    class="people {% if trigger %}trigger{% endif %} {% if opaque %}opaque{% endif %}"
+  />
+  <h4 style="margin: 5px">{{ name }}</h4>
+  <div class="balloon {{ visibility }}">{{ body | safe }}</div>
+</div>
