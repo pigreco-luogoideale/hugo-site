@@ -53,7 +53,7 @@ Educatrice alla scuola dell'infanzia, mi occupo di portare la matematica anche a
 {% end %}
 
 {% ballooner(name="Giulia Cesari", row=4, opaque=true, trigger=true, visibility="hidden") %}
-Matematica, aiuto gli studenti a riappacificarsi con questa materia condividendo la mia esperienza e le mie passioni.
+Con una laurea e un dottorato in matematica, aiuto gli studenti a riappacificarsi con questa materia condividendo la mia esperienza e le mie passioni.
 {% end %}
 </div>
 
@@ -63,7 +63,7 @@ Maestra nella scuola dell'infanzia, in PiGreco sono spesso la mano che colora og
 {% end %}
 
 {% ballooner(name="Irene Nava", row=4, opaque=true, trigger=true, visibility="hidden") %}
-Laureata in Scienze dell’Architettura, ho aiutato PiGreco con i miei disegni e la mia fantasia.
+Tra architettura, illustrazione e falegnameria mi piace concretizzare la creatività, ho aiutato PiGreco con i miei disegni e nei laboratori alla scuola primaria.
 {% end %}
 
 {% ballooner(name="Marta Manzari", row=4, opaque=true, trigger=true, visibility="hidden") %}
