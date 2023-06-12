@@ -9,7 +9,7 @@ template = "activity/page.html"
 [taxonomies]
 # Sezioni del sito dove mettere la pagina, da scegliere tra una o più di queste
 #scuole = ["infanzia"]
-tutti = ["formazione", "lezioni"]
+tutti = ["formazione"]
 #volantino = ["primociclo"]
 
 [extra]

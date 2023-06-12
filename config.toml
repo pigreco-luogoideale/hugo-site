@@ -102,10 +102,10 @@ taxonomies = [
 
 	[extra.taxonomies.tutti.lezioni]
     posizione = 2
-	name = "Lezioni private"
-    redirect = "/activity/lezioni"
+	name = "Lezioni"
+    #redirect = "/activity/lezioni"
 	description = """
-         Lezioni personalizzate con i nostri tutor per
+         Lezioni da soli o in piccoli gruppi sotto la superivisione dei nostri tutor per
          colmare eventuali lacune e ricevere sostegno per sviluppare un metodo di studio efficace e specifico per la matematica.
     """
 
