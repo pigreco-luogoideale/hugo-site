@@ -106,7 +106,7 @@ taxonomies = [
     #redirect = "/activity/lezioni"
 	description = """
          Lezioni da soli o in piccoli gruppi sotto la superivisione dei nostri tutor per
-         colmare eventuali lacune e ricevere sostegno per sviluppare un metodo di studio efficace e specifico per la matematica.
+         colmare eventuali lacune e per sviluppare un metodo di studio efficace e specifico per la matematica.
     """
 
 	[extra.taxonomies.tutti.altro]
