@@ -1,6 +1,6 @@
 +++
-title = "La storia del MateBosco"
-description = "Cosa scopriranno i bambini esplorando il MateBosco?"
+title = "La storia del NataleTangram  "
+description = "Come si può usare il tangram per creare un'atmosfera natalizia?"
 
 # Questa è una singola pagina di attività, lasciare così: è il template
 # che viene usato per visualizzare la singola pagina
@@ -13,9 +13,9 @@ tutti = ["animazione"]
 volantino = ["primociclo"]
 
 [extra]
-thumb = "/images/activities/infanzia-matebosco.jpg"
-image = "/images/activities/infanzia-matebosco.jpg"
-alt = "Le ombre dei personaggi del matebosco formati da cerchi, quadrati, triangoli e rettangoli."
+thumb = "/images/activities/infanzia-natale.jpg"
+image = "/images/activities/infanzia-natale.jpg"
+alt = "Le ombre di un cubo, un cilindro, un prisma triangolare appoggiato su un cubo."
 
 [extra.volantino]
 # Usare un peso da 100 a 1000 per le pagine di contenuto (<100 e >1000 sono per le info)
@@ -23,7 +23,7 @@ alt = "Le ombre dei personaggi del matebosco formati da cerchi, quadrati, triang
 # 200-299 per primaria
 # 300-399 per primo grado
 # 400-499 per secondo grado
-weight = 150
+weight = 121
 # Qui si possono customizzare il titolo e lo stile della pagina, entrambi opzionali.
 # Se il text non viene impostato, verrà usato il valore header.text in config.toml
 # Lo style invece è la classe nella .page-header in sass/css/volantino-screen.scss
@@ -41,11 +41,10 @@ ico-rimborso = ["Rimborso?", "150 euro a incontro"]
 
 <h2 class="ico ico-infanzia-domanda">Domanda</h2>
 
-Cosa scopriranno i bambini esplorando il MateBosco? 
+Come si può usare il tangram per creare un'atmosfera natalizia?
 
 <h2 class="ico ico-infanzia-risposta">Risposta</h2>
 
-Il MateBosco è un posto molto speciale dove la matematica si nasconde ovunque! In questa storia accompagneremo i personaggi del MateBosco nelle loro avventure matematiche scoprendo
-le proprietà dei numeri e delle forme geometriche. 
-
-Dopo aver ascoltato la storia, verranno proposti dei giochi geometrici e ogni bambino avrà l'occasione di creare il suo personaggio del MateBosco. 
+Utilizzando il gioco del tangram racconteremo una storia di amicizia e condivisione, ambientata durante il periodo delle feste invernali.  
+Dopo aver ascoltato il racconto e aver visto il tangram trasformarsi in diversi personaggi e oggetti protagonisti della storia, 
+i bambini potranno provare a risolvere semplici puzzle geometrici e a utilizzare il tangram e la loro fantasia per creare nuovi disegni.

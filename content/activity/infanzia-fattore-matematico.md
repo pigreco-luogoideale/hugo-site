@@ -1,6 +1,6 @@
 +++
 title = "Il fattore matematico"
-description = "Come iniziare ad effettuare i primi conteggi e misurazioni?"
+description = "Come iniziare a confrontare quantità e effettuare i primi conteggi? "
 
 # Questa è una singola pagina di attività, lasciare così: è il template
 # che viene usato per visualizzare la singola pagina
@@ -40,8 +40,9 @@ ico-rimborso = ["Rimborso?", "100 euro a percorso"]
 
 <h2 class="ico ico-infanzia-domanda">Domanda</h2>
 
-Come iniziare ad effettuare i primi conteggi e misurazioni? 
+Come iniziare a confrontare quantità e effettuare i primi conteggi? 
 
 <h2 class="ico ico-infanzia-risposta">Risposta</h2>
 
-Immaginando di trovarsi in una fattoria verranno proposti giochi sul confronto di quantità e di grandezze: i numeri verranno utilizzati non solo per contare gli oggetti, ma anche per effettuare semplici attività di misura, a partire da alcuni percorsi e semplici forme geometriche piane. 
+Immaginando di trovarsi in una speciale fattoria dove vengono allevate forme geometriche verranno proposti alcuni giochi di classificazione e di confronto di quantità.
+I bambini avranno l'occasione di confrontarsi con i compagni per per risolvere semplici problemi di natura numerica e spaziale e potranno liberare la loro creatività giocando con le forme geometriche.

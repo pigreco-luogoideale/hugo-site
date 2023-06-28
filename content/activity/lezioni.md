@@ -30,7 +30,6 @@ Per ogni anno scolastico il costo di iscrizione al servizio è di 10 euro.
 Costo all’ora per studenti della scuola secondaria di I e II grado: 25 euro.    
 Costo all’ora per studenti universitari: dai 35 euro.    
 Il pagamento avviene mensilmente, tramite bonifico, dopo il conteggio delle ore effettivamente svolte. 
-Gli appuntamenti che vengono cancellati con meno di 24 ore di preavviso vengono conteggiati nel totale mensile anche se la lezione non è stata effettuata.
-
+Le prenotazioni che vengono cancellate con meno di 24 ore di preavviso, vengono conteggiate ugualmente nel totale mensile.
 
 Per avere maggiori informazioni o per prendere appuntamento, scrivete una mail a <pigreco@luogoideale.org> indicando un recapito telefonico. 
