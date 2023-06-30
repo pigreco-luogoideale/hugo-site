@@ -1,6 +1,6 @@
 +++
-title = "Giochiamo con i problemi"
-description = "Far giocare e divertire i bambini, consolidando le loro abilità nella risoluzione dei problemi. "
+title = "Giochiamo con gli INVALSI"
+description = "Far giocare e divertire i bambini, prendendo spunto da alcuni quesiti delle prove standardizzate. "
 
 # Questa è una singola pagina di attività, lasciare così
 template = "activity/page.html"
@@ -8,13 +8,12 @@ template = "activity/page.html"
 [taxonomies]
 # Sezioni del sito dove mettere la pagina, da scegliere tra una o più di queste
 scuole = ["primaria"]
-#tutti = ["animazione", "corsi", "lezioni", "altro"]
 volantino = ["primociclo"]
 
 [extra]
-thumb = "/images/activities/primaria-problemi.jpg"
-image = "/images/activities/primaria-problemi.jpg"
-alt = "Il tentativo di risolvere un porblema con le cannucce."
+thumb = "/images/activities/primaria-invalsi.jpg"
+image = "/images/activities/primaria-invalsi.jpg"
+alt = "Un bambino confronta alcune soluzioni di un problema."
 
 [extra.volantino]
 # Usare un peso da 100 a 1000 per le pagine di contenuto (<100 e >1000 sono per le info)
@@ -22,7 +21,7 @@ alt = "Il tentativo di risolvere un porblema con le cannucce."
 # 200-299 per primaria
 # 300-399 per primo grado
 # 400-499 per secondo grado
-weight = 230
+weight = 220
 header = { text = "Scuola primaria", style = "primaria" }
 #online = true
 
@@ -36,13 +35,13 @@ ico-rimborso = ["Rimborso?", "240 euro a percorso"]
 
 <h2 class="ico ico-primaria-esercizio">Esercizio</h2>
 
-Far giocare e divertire i bambini, consolidando le loro abilità nella risoluzione dei problemi.  
+Far giocare e divertire i bambini, prendendo spunto da alcuni quesiti delle prove standardizzate. 
 
 <h2 class="ico ico-primaria-svolgimento">Svolgimento</h2>
 
-In questo percorso di tre incontri verranno proposti alcune attività incentrate sulle capacità di risoluzione dei problemi per aiutare i bambini a consolidare quanto già affrontato con i propri insegnanti. 
+In questo percorso di tre incontri verranno proposti alcuni giochi incentrati sui contenuti matematici presenti nelle prove INVALSI, per aiutare i bambini a consolidare quanto già affrontato con i propri insegnanti.  
+Ogni incontro sarà dedicato ad un ambito diverso: numeri; spazio e figure; relazioni, dati e previsioni.  
 
-Saranno realizzate attività sia di problem solving che di problem posing, incentivando i bambini a focalizzarsi più sul processo di risoluzione che sul risultato, valorizzando l’importanza della comprensione del testo, oltre che il confronto e la discussione tra pari. 
 
 L’attività è differenziata nelle diverse classi e viene personalizzata in base alle esigenze del docente, adeguandola agli argomenti già affrontati dagli allievi. 
 

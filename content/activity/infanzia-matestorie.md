@@ -22,7 +22,7 @@ alt = "Uno scaffale con libri per bambini dedicati alla matematica."
 # 200-299 per primaria
 # 300-399 per primo grado
 # 400-499 per secondo grado
-weight = 107
+weight = 112
 # Qui si possono customizzare il titolo e lo stile della pagina, entrambi opzionali.
 # Se il text non viene impostato, verrà usato il valore header.text in config.toml
 # Lo style invece è la classe nella .page-header in sass/css/volantino-screen.scss
@@ -33,8 +33,8 @@ header = { text = "Scuola dell'infanzia", style = "infanzia" }
 [extra.volantino.meta]
 # ico-XXXX indica l'icona da mettere a sinistra, tra quelle in sass/css/volantino-screen.scss
 # Devono essere tutte diverse 
-ico-durata = ["Durata?", "1 incontro di 2 ore"]
-ico-rimborso = ["Rimborso?", "80 euro "]
+ico-durata = ["Durata?", "3 incontri da 1 ora ciascuno"]
+ico-rimborso = ["Rimborso?", "120 euro "]
 # ico-modalita = ["Modalita", "Valore 3"]
 +++
 

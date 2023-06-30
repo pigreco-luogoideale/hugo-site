@@ -23,7 +23,7 @@ alt = "Le ombre di un cubo, un cilindro, un prisma triangolare appoggiato su un 
 # 200-299 per primaria
 # 300-399 per primo grado
 # 400-499 per secondo grado
-weight = 121
+weight = 160
 # Qui si possono customizzare il titolo e lo stile della pagina, entrambi opzionali.
 # Se il text non viene impostato, verrà usato il valore header.text in config.toml
 # Lo style invece è la classe nella .page-header in sass/css/volantino-screen.scss
