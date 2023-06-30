@@ -21,7 +21,7 @@ alt = "Un bambino confronta alcune soluzioni di un problema."
 # 200-299 per primaria
 # 300-399 per primo grado
 # 400-499 per secondo grado
-weight = 220
+weight = 240
 header = { text = "Scuola primaria", style = "primaria" }
 #online = true
 
