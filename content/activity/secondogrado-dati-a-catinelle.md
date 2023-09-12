@@ -40,6 +40,20 @@ Saper leggere e interpretare dati è una competenza sempre più importante.
 
 <h2 class="ico ico-secondogrado-dimostrazione">Dimostrazione</h2>
 
-In questo laboratorio, organizzato come un gioco a squadre, aiuteremo due giovani programmatori, Sara e Andrea, a soddisfare le esigenze dei loro clienti. 
+Ogni giorno, in ogni istante, in qualsiasi luogo siamo circondati da dispositivi
+che raccolgono dati di tipo diverso: geolocalizzazioni, velocità, tempi di percorrenza,
+numero di guasti, accessi, pagamenti elettronici. Ma che fine fanno tutte
+queste informazioni? Spesso sono le aziende a raccoglierle per poter conoscere
+meglio i consumatori, migliorare i loro servizi e perfezionare i loro prodotti.
+Per poter utilizzare queste informazioni, però, non è solo sufficiente raccogliere
+i dati, ma bisogna riuscire anche a visualizzarli in modo efficace e funzionale
+per poterli interpretare correttamente e trovare risposte alle domande che ci
+stiamo ponendo. Qual è la visualizzazione migliore? Dipende dal tipo di dati
+e dagli obiettivi. 
 
-Sara e Andrea sono sommersi di dati, che dovranno visualizzare, interpretare e presentare nella forma migliore per rispondere alle richieste che hanno ricevuto. Per aiutarli dovremo immergerci anche noi in questa pioggia di dati, capirne la natura, orientarci tra diagrammi a barre, tabelle, cartine, grafici cartesiani, ideogrammi… per trovare la rappresentazione più appropriata che permette di ottenere le risposte corrette! 
+In questo laboratorio, dopo aver presentato la problematica
+della data visualization, gli studenti dovranno ricoprire il ruolo di giovani programmatori
+alle prese con un cliente di cui soddisfare le esigenze. Lavorando a
+gruppi, dovranno immergersi in una pioggia di dati, capirne la natura, orientarsi
+tra diagrammi a barre, tabelle, cartine, grafici cartesiani, ideogrammi. . . alla
+ricerca della rappresentazione migliore e di risposte!
