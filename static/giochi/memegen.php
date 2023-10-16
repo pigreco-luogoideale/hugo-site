@@ -30,14 +30,14 @@ function imageQuery($hashStr) {
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link href="https://pigreco.luogoideale.org/images/favicon.ico" rel="icon" type="image/x-icon" />
+		<link href="https://www.luogoideale.org/images/favicon.ico" rel="icon" type="image/x-icon" />
 		<meta property="og:image" content="https://wow.luogoideale.org/sss/memegen/meme.png<?php if (isset($_GET['id'])) { echo imageQuery($_GET['id']); } ?>" />
 		<title>Come To The Math Side - PiGreco - il Luogo Ideale</title>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One|Lobster|Maven+Pro:700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
-		<link href="https://pigreco.luogoideale.org/pigreco.css" rel="stylesheet" type="text/css" >
+		<link href="https://www.luogoideale.org/pigreco.css" rel="stylesheet" type="text/css" >
 		<link href='fonts.css' rel='stylesheet' type='text/css' />
 		<link href='memegen/memegen.css' rel='stylesheet' type='text/css' />
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -65,21 +65,21 @@ function imageQuery($hashStr) {
 				</div>
 			</div>
 			<div id="logo">
-				<a href="https://pigreco.luogoideale.org/#home"><img src="https://pigreco.luogoideale.org/images/logo.png" alt="PiGreco - il Luogo Ideale"/></a>
+				<a href="https://www.luogoideale.org/#home"><img src="https://www.luogoideale.org/images/logo.png" alt="PiGreco - il Luogo Ideale"/></a>
 			</div>
 			<!-- Menu -->
 			<div id="menu" class="horizontal">
 				<ul>
-					<li><a href="https://pigreco.luogoideale.org/#news">News</a></li>
-					<li><a href="https://pigreco.luogoideale.org/#who">Chi siamo</a></li>
-					<li><a href="https://pigreco.luogoideale.org/#activity">Attività</a></li>
-					<li><a href="https://pigreco.luogoideale.org/#contacts">Contatti</a></li>
+					<li><a href="https://www.luogoideale.org/#news">News</a></li>
+					<li><a href="https://www.luogoideale.org/#who">Chi siamo</a></li>
+					<li><a href="https://www.luogoideale.org/#activity">Attività</a></li>
+					<li><a href="https://www.luogoideale.org/#contacts">Contatti</a></li>
 				</ul>
 			</div>
 			<!-- Social links -->
 			<div id="social">
-				<a href="https://www.facebook.com/pigreco.luogoideale"><img src="https://pigreco.luogoideale.org/images/social/facebook.png" alt="Seguici su facebook" /></a>
-				<a href="https://www.twitter.com/Pi_luogoideale"><img src="https://pigreco.luogoideale.org/images/social/twitter.png" alt="Seguici su twitter" /></a>
+				<a href="https://www.facebook.com/pigreco.luogoideale"><img src="https://www.luogoideale.org/images/social/facebook.png" alt="Seguici su facebook" /></a>
+				<a href="https://www.twitter.com/Pi_luogoideale"><img src="https://www.luogoideale.org/images/social/twitter.png" alt="Seguici su twitter" /></a>
 			</div>
 		</section>
 
@@ -142,7 +142,7 @@ function imageQuery($hashStr) {
 						</div>
 						<div id="fb-button-container">
 							<label>...or share on facebook</label>
-							<div id='fb-button' class="fb-like" data-href="https://pigreco.luogoideale.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+							<div id='fb-button' class="fb-like" data-href="https://www.luogoideale.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 						</div>
 					</div>
 				</div>

@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://pigreco.luogoideale.org/"
+base_url = "https://www.luogoideale.org/"
 
 # The language of this website
 default_language = "it"

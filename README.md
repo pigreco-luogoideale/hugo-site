@@ -1,7 +1,7 @@
 # Il sito di PiGreco
 
 Questi sono i codici sorgenti per il sito di
-[PiGreco - il Luogo Ideale](https://pigreco.luogoideale.org).
+[PiGreco - il Luogo Ideale](https://www.luogoideale.org).
 
 Quando questo codice viene cambiato, esso viene compilato in automatico e
 caricato sul server per essere reso pubblico. Il risultato della compilazione è
