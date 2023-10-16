@@ -26,4 +26,4 @@ Se questa cosa non ti piace, puoi controllare, verificare e cancellare i cookie 
 
 Per maggiori informazioni, visita [aboutcookies.org][1].
 
-[1]: http://aboutcookies.org
+[1]: https://aboutcookies.org

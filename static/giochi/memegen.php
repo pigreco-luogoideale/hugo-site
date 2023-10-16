@@ -30,17 +30,17 @@ function imageQuery($hashStr) {
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link href="http://pigreco.luogoideale.org/images/favicon.ico" rel="icon" type="image/x-icon" />
-		<meta property="og:image" content="http://wow.luogoideale.org/sss/memegen/meme.png<?php if (isset($_GET['id'])) { echo imageQuery($_GET['id']); } ?>" />
+		<link href="https://pigreco.luogoideale.org/images/favicon.ico" rel="icon" type="image/x-icon" />
+		<meta property="og:image" content="https://wow.luogoideale.org/sss/memegen/meme.png<?php if (isset($_GET['id'])) { echo imageQuery($_GET['id']); } ?>" />
 		<title>Come To The Math Side - PiGreco - il Luogo Ideale</title>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Poiret+One|Lobster|Maven+Pro:700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
-		<link href="http://pigreco.luogoideale.org/pigreco.css" rel="stylesheet" type="text/css" >
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Poiret+One|Lobster|Maven+Pro:700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
+		<link href="https://pigreco.luogoideale.org/pigreco.css" rel="stylesheet" type="text/css" >
 		<link href='fonts.css' rel='stylesheet' type='text/css' />
 		<link href='memegen/memegen.css' rel='stylesheet' type='text/css' />
-		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="memegen/jquery.query-object.js"></script>
 		<script type="text/javascript" src="memegen/snap.svg-min.js"></script>
 		<script type="text/javascript" src="memegen/memegen.js"></script>
@@ -53,7 +53,7 @@ function imageQuery($hashStr) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
 		  js = d.createElement(s); js.id = id;
-		  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1685311211716861&version=v2.0";
+		  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1685311211716861&version=v2.0";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 
@@ -65,21 +65,21 @@ function imageQuery($hashStr) {
 				</div>
 			</div>
 			<div id="logo">
-				<a href="http://pigreco.luogoideale.org/#home"><img src="http://pigreco.luogoideale.org/images/logo.png" alt="PiGreco - il Luogo Ideale"/></a>
+				<a href="https://pigreco.luogoideale.org/#home"><img src="https://pigreco.luogoideale.org/images/logo.png" alt="PiGreco - il Luogo Ideale"/></a>
 			</div>
 			<!-- Menu -->
 			<div id="menu" class="horizontal">
 				<ul>
-					<li><a href="http://pigreco.luogoideale.org/#news">News</a></li>
-					<li><a href="http://pigreco.luogoideale.org/#who">Chi siamo</a></li>
-					<li><a href="http://pigreco.luogoideale.org/#activity">Attività</a></li>
-					<li><a href="http://pigreco.luogoideale.org/#contacts">Contatti</a></li>
+					<li><a href="https://pigreco.luogoideale.org/#news">News</a></li>
+					<li><a href="https://pigreco.luogoideale.org/#who">Chi siamo</a></li>
+					<li><a href="https://pigreco.luogoideale.org/#activity">Attività</a></li>
+					<li><a href="https://pigreco.luogoideale.org/#contacts">Contatti</a></li>
 				</ul>
 			</div>
 			<!-- Social links -->
 			<div id="social">
-				<a href="http://www.facebook.com/pigreco.luogoideale"><img src="http://pigreco.luogoideale.org/images/social/facebook.png" alt="Seguici su facebook" /></a>
-				<a href="http://www.twitter.com/Pi_luogoideale"><img src="http://pigreco.luogoideale.org/images/social/twitter.png" alt="Seguici su twitter" /></a>
+				<a href="https://www.facebook.com/pigreco.luogoideale"><img src="https://pigreco.luogoideale.org/images/social/facebook.png" alt="Seguici su facebook" /></a>
+				<a href="https://www.twitter.com/Pi_luogoideale"><img src="https://pigreco.luogoideale.org/images/social/twitter.png" alt="Seguici su twitter" /></a>
 			</div>
 		</section>
 
@@ -142,12 +142,12 @@ function imageQuery($hashStr) {
 						</div>
 						<div id="fb-button-container">
 							<label>...or share on facebook</label>
-							<div id='fb-button' class="fb-like" data-href="http://pigreco.luogoideale.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+							<div id='fb-button' class="fb-like" data-href="https://pigreco.luogoideale.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 						</div>
 					</div>
 				</div>
 				<div id='meme-image'>
-					<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+					<svg xmlns="https://www.w3.org/2000/svg" version="1.1"
 					   width="375" height="500" id="meme_template">
 						<path id='logo-shadow' d="m 199.87942,65.46812 c 0,-1.953171 -5.54537,-3.537561 -12.38341,-3.537561 -6.84,0 -12.38537,1.58439 -12.38537,3.537561 0,1.715122 4.26732,3.14439 9.93268,3.469268 l 0.81171,0.663415 1.64098,1.340488 1.63902,-1.340488 0.81171,-0.663415 c 5.66536,-0.324878 9.93268,-1.754146 9.93268,-3.469268" style="opacity:0.2;fill:#000000" />
 						<path id='logo-shape' d="m 187.5,7.24744 c -13.80975,0 -25,11.19024 -25,25 0,12.11415 8.60976,22.21463 20.04878,24.5122 l 1.63415,4.70731 3.31707,9.46342 3.31708,-9.46342 1.63414,-4.70731 C 203.88927,54.46207 212.5,44.36159 212.5,32.24744 c 0,-13.80976 -11.19024,-25 -25,-25 z m -7.34146,18.26829 14.68293,0 0,3.04878 -2.34147,0 0,11.21952 -3.51219,0 0,-11.21952 -2.97561,0 0,11.21952 -3.5122,0 0,-11.21952 -2.34146,0 0,-3.04878 z" />

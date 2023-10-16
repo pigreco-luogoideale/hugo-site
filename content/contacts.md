@@ -20,9 +20,9 @@
 
 <center>
 
-[![Seguici su facebook](/images/social/facebook.png)](http://www.facebook.com/pigreco.luogoideale)
-[![Seguici su twitter](/images/social/twitter.png)](http://www.twitter.com/Pi_luogoideale)
-[![Seguici su instagram](/images/social/instagram.png)](http://instagram.com/pigrecoluogoideale#)
+[![Seguici su facebook](/images/social/facebook.png)](https://www.facebook.com/pigreco.luogoideale)
+[![Seguici su twitter](/images/social/twitter.png)](https://www.twitter.com/Pi_luogoideale)
+[![Seguici su instagram](/images/social/instagram.png)](https://instagram.com/pigrecoluogoideale#)
 
 </center>
 </div>

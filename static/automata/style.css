@@ -3,7 +3,7 @@ body {
 	font-size: 0.9em;
 	background-color: #eee;
 	background-attachment: fixed;
-	background-image: url('http://pigreco.luogoideale.org/images/pattern.png');
+	background-image: url('https://pigreco.luogoideale.org/images/pattern.png');
 }
 
 #tab_setup, #tab_code, #tab_state, #tab_log, #tab_help {
