@@ -3,7 +3,9 @@ ErrorDocument 404 /404.html
 Redirect /concorso_estivo http://pigreco.luogoideale.org/concorso-estivo
 Redirect /concorso_estivo_laboratori http://pigreco.luogoideale.org/concorso-estivo-laboratori
 
-# Redirect pigreco. -> www. unsure if it's working
-# RewriteEngine On
-# RewriteCond %{HTTP_HOST} ^pigreco\.luogoideale\.org$ [NC]
-# RewriteRule ^https://www.luogoideale.org%{REQUEST_URI} [L,R=301]
+# Redirect pigreco. -> www.
+RewriteEngine On
+# Filter URLs that start with the wrong subdomain
+RewriteCond %{HTTP_HOST} ^pigreco.luogoideale.org$ [NC]
+# Redirect the browser to www.luogoideale.org by 301 redirect
+RewriteRule ^(.*)$ https://www.luogoideale.org/$1 [R=301,L]
