@@ -42,4 +42,4 @@ Aggiungere un tocco di matematica alle festività natalizie.
 
 Si può rendere più originale il Natale aggiungendo un tocco di matematica nelle decorazioni per la casa o per l’albero, ma anche nei biglietti di auguri, nei pacchetti, a tavola... 
 
-Questo laboratorio vi proporrà giochi matematici a tema natalizio, vi guiderà nella creazione di lavoretti natalizi con spunti matematici per fornirvi un punto di vista nuovo sulla festa più attesa dell’anno! 
+Questo laboratorio vi proporrà giochi matematici a tema natalizio, vi guiderà nella realizzazione di creazioni natalizie con spunti matematici e viceversa per fornirvi un punto di vista nuovo sulla festa più attesa dell’anno! 
