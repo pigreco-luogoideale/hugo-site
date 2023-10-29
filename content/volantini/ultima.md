@@ -19,7 +19,7 @@ raw = true
 +++
 
 <section class="page front-cover">
-<h1>Lasciatevi<br>contagiare dalla</br>Matematica!</h1>
+<h1>Lasciatevi<br>contagiare dalla</br>matematica!</h1>
 <img src="/images/logo.png">
 <h2>Associazione<br>PiGreco - il Luogo Ideale</h2>
 <h3>www.luogoideale.org</h3>
