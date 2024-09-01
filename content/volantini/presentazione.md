@@ -19,7 +19,7 @@ raw = true
 +++
 
 <section class="page info" style="position: relative; padding: 0">
-<div class="page-header"><span>Attività 2023-2024</span></div>
+<div class="page-header"><span>Attività 2024-2025</span></div>
 <div class="page-content">
 <h1 class="ico ico-logo">Associazione PiGreco - il Luogo Ideale</h1>
 

@@ -31,11 +31,11 @@ taxonomies = [
     # Volantini da produrre automaticamente
     [extra.weasyprint.volantino-primogrado]
     url = "http://127.0.0.1:1111/volantino/primociclo"
-    out = "/static/volantini/volantino_2023_primociclo.pdf"
+    out = "/static/volantini/volantino_2024_primociclo.pdf"
 
     [extra.weasyprint.volantino-secondogrado]
     url = "http://127.0.0.1:1111/volantino/secondociclo"
-    out = "/static/volantini/volantino_2023_secondociclo.pdf"
+    out = "/static/volantini/volantino_2024_secondociclo.pdf"
 
     # Ordine delle pagine
     [extra.taxonomies.ordine]

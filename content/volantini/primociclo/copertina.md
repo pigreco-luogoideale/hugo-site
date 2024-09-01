@@ -20,7 +20,7 @@ raw = true
 +++
 
 <section class="page front-cover">
-<h1>Attività<br/>2023-2024<br/>Infanzia<br/>e Primo ciclo</h1>
+<h1>Attività<br/>2024-2025<br/>Infanzia<br/>e Primo ciclo</h1>
 <img src="/images/logo.png">
 <h2>Associazione<br>PiGreco - il Luogo Ideale</h2>
 <h3>www.luogoideale.org</h3>

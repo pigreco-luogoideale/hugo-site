@@ -27,7 +27,7 @@ Il calendario degli appuntamenti viene stabilito tra il tutor e lo studente coin
 
 ### Costi e contatti
 Per ogni anno scolastico il costo di iscrizione al servizio è di 10 euro.  
-Costo all’ora per studenti della scuola secondaria di I e II grado: 25 euro.    
+Costo all’ora per studenti della scuola secondaria di I e II grado: 27 euro.    
 Costo all’ora per studenti universitari: dai 35 euro.    
 Il pagamento avviene mensilmente, tramite bonifico, dopo il conteggio delle ore effettivamente svolte. 
 Le prenotazioni che vengono cancellate con meno di 24 ore di preavviso, vengono conteggiate ugualmente nel totale mensile.
