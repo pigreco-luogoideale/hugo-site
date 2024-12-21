@@ -40,40 +40,67 @@ Ideatrice e fondatrice di PiGreco. Sono laureata in Matematica, ho lavorato nell
 <div>
 <h2>I collaboratori</h2>
 <div class="balloonbox">
+
 {% ballooner(name="Alessandro Re", row=4, opaque=true, trigger=true, visibility="hidden") %}
 Informatico multiruolo, ho sposato la causa di PiGreco e ne ho realizzato il sito. Quando serve fornisco il mio supporto, non solo tecnologico.
 {% end %}
 
-{% ballooner(name="Benedetta De Pieri", row=4, opaque=true, trigger=true, visibility="hidden") %}
-Grazie alla laurea in filosofia e al dottorato in Innovazione Sociale, aiuto PiGreco nella raccolta fondi e nell'unire la cultura scientifica a quella umanistica.
+
+{% ballooner(name="Clara Lahoud", row=4, opaque=true, trigger=true, visibility="hidden") %}
+Studentessa di Fisica presso l'Università di Milano Bicocca. Aiuto i ragazzi nello studio di matematica e fisica, cercando di andar oltre numeri e formule e di farne vedere la bellezza.
 {% end %}
 
-{% ballooner(name="Elisa Maestroni", row=4, opaque=true, trigger=true, visibility="hidden") %}
-Educatrice alla scuola dell'infanzia, mi occupo di portare la matematica anche ai più piccoli sperimentando con loro attraverso il gioco e la fantasia.
+{% ballooner(name="Debora Caloni", row=4, opaque=true, trigger=true, visibility="hidden") %}
+Ingegnere di formazione, clown e formatrice di professione. Lavoro con i bambini della scuola dell'infanzia e primaria per giocare insieme a loro a scoprire regole matematiche e scientifiche.
 {% end %}
 
-{% ballooner(name="Giulia Cesari", row=4, opaque=true, trigger=true, visibility="hidden") %}
-Con una laurea e un dottorato in matematica, aiuto gli studenti a riappacificarsi con questa materia condividendo la mia esperienza e le mie passioni.
-{% end %}
 </div>
 
 <div class="balloonbox">
-{% ballooner(name="Giulia Mandelli", row=4, opaque=true, trigger=true, visibility="hidden") %}
-Maestra nella scuola dell'infanzia, in PiGreco sono spesso la mano che colora ogni cosa... Per rendere la matematica ancora più accattivante!
-{% end %}
-
-{% ballooner(name="Irene Nava", row=4, opaque=true, trigger=true, visibility="hidden") %}
-Tra architettura, illustrazione e falegnameria mi piace concretizzare la creatività, ho aiutato PiGreco con i miei disegni e nei laboratori alla scuola primaria.
-{% end %}
 
 {% ballooner(name="Marta Manzari", row=4, opaque=true, trigger=true, visibility="hidden") %}
 Studente di informatica e amante della matematica tanto che quando non la sto studiando per l'università, mi piace aiutare gli altri a studiarla e superare le difficoltà.
 {% end %}
 
-{% ballooner(name="Maurizio Giaffredo", row=4, opaque=true, trigger=true, visibility="hidden") %}
-Laureando in Matematica presso l'Università di Milano, insegnante e divulgatore, ho collaborato con PiGreco svolgendo laboratori e conferenze.
+
+{% ballooner(name="Marco Testa", row=4, opaque=true, trigger=true, visibility="hidden") %}
+Fisico, docente e formatore. Il mio contributo per PiGreco è fare domande scomode, suggerire nuove idee e cercare punti di incontro tra matematica e fisica.
 {% end %}
+
+
+{% ballooner(name="Maurizio Giaffredo", row=4, opaque=true, trigger=true, visibility="hidden") %}
+Laureando in Matematica presso l'Università di Milano, insegnante e divulgatore, ho collaborato con PiGreco svolgendo laboratori, conferenze e attività di formazione docenti.
+{% end %}
+
 </div>
+
+</div>
+
+<h2>Grazie anche a...</h2>
+<div class="balloonbox smaller-avatar">
+
+{% ballooner(name="Benedetta De Pieri", row=5, opaque=true, trigger=true, visibility="hidden") %}
+Grazie alla laurea in filosofia e al dottorato in Innovazione Sociale, ho aiutato PiGreco nella raccolta fondi e nell'unire la cultura scientifica a quella umanistica.
+{% end %}
+
+
+{% ballooner(name="Irene Nava", row=5, opaque=true, trigger=true, visibility="hidden") %}
+Tra architettura, illustrazione e falegnameria mi piace concretizzare la creatività, ho aiutato PiGreco con i miei disegni e nei laboratori alla scuola primaria.
+{% end %}
+
+
+{% ballooner(name="Giulia Mandelli", row=5, opaque=true, trigger=true, visibility="hidden") %}
+Maestra nella scuola dell'infanzia, in PiGreco sono stata la mano che colorava ogni cosa... Per rendere la matematica ancora più accattivante!
+{% end %}
+
+
+{% ballooner(name="Elisa Maestroni", row=5, opaque=true, trigger=true, visibility="hidden") %}
+Educatrice alla scuola dell'infanzia, mi sono occupata di portare la matematica anche ai più piccoli sperimentando con loro attraverso il gioco e la fantasia.
+{% end %}
+
+{% ballooner(name="Giulia Cesari", row=5, opaque=true, trigger=true, visibility="hidden") %}
+Con una laurea e un dottorato in matematica, ho aiutato gli studenti a riappacificarsi con questa materia condividendo la mia esperienza e le mie passioni.
+{% end %}
 
 </div>
 
