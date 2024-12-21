@@ -371,6 +371,13 @@ img.people {
   margin: 0px;
 }
 
+.smaller-avatar {
+  img.people {
+    width: 80%;
+    margin: 0px;
+  }
+}
+
 .balloonbox {
   & {
     display: flex;
@@ -425,6 +432,18 @@ img.people {
 
     &:nth-child(4) .balloon {
       left: -125%;
+    }
+  }
+  .ballooner5 {
+    @include ballooner-image;
+
+    .balloon {
+      width: 200%;
+    }
+
+    // Position text for 5th child
+    &:nth-child(5) .balloon {
+      left: -100%;
     }
   }
 }
