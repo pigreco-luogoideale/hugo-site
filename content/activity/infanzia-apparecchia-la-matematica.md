@@ -28,13 +28,13 @@ weight = 102
 # Lo style invece è la classe nella .page-header in sass/css/volantino-screen.scss
 header = { text = "Scuola dell'infanzia", style = "infanzia" }
 # Questo valore, opzionale (default è false) indica se mettere l'icona "anche online"
-#online = true
+# online = true
 
 [extra.volantino.meta]
 # ico-XXXX indica l'icona da mettere a sinistra, tra quelle in sass/css/volantino-screen.scss
 # Devono essere tutte diverse 
 ico-durata = ["Durata?", "3 incontri da 1 ora ciascuno"]
-ico-rimborso = ["Rimborso?", "150 euro a percorso"]
+# ico-rimborso = ["Rimborso?", "150 euro a percorso"]
 # ico-modalita = ["Modalita", "Valore 3"]
 +++
 

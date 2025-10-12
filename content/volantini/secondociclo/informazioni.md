@@ -25,13 +25,11 @@ raw = true
 <div class="page-content">
 <h1 class="ico ico-generali">Informazioni generali</h1>
 
-- Tutte le attività sono pensate per essere svolte (anche) online.
-
 - Ogni attività è pensata per essere svolta con una singola classe.
 
-- Tutte le attività possono essere adattate per venire incontro alle esigenze degli insegnanti.
+- Tutte le attività possono essere adattate per venire incontro alle esigenze delle classi.
 
-- I rimborsi indicati non comprendono IVA ed eventuali spese di viaggio.
+- Contattateci con le vostre richieste per avere un preventivo.
 
 <h1 class="ico ico-contatti">Contatti</h1>
 <div class="page-meta">

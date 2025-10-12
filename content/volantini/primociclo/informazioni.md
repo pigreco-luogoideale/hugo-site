@@ -37,7 +37,7 @@ raw = true
 
 - Tutte le attività possono essere adattate per venire incontro alle esigenze degli insegnanti.
 
-- I rimborsi indicati non comprendono IVA ed eventuali spese di viaggio.
+- Contattateci con le vostre richieste per avere un preventivo.
 
 <h1 class="ico ico-contatti">Contatti</h1>
 <div class="page-meta">
