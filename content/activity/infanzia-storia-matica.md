@@ -46,6 +46,6 @@ Quali sono le magie che può fare una strega matematica?
 <h2 class="ico ico-infanzia-risposta">Risposta</h2>
 
 Matica è una strega molto brava in matematica e grazie alla magia della geometria riesce a trasformare le forme piane e far apparire nuove figure! 
-Ascoltando la sua sotria scopriremo quali sono queste figure e per cose le possiamo usare.
+Ascoltando la sua storia scopriremo quali sono queste figure e per cosa le possiamo usare.
 
 Al termine del racconto potremo trasformarci anche noi in piccoli maghi geometri, imparando a riconoscere le figure e a trasformarle seguendo la nostra fantasia.
