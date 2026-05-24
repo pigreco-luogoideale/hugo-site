@@ -1,7 +1,7 @@
 name: "Build and Deploy with Nix"
 on:
-  pull_request:
   push:
+    branches: [ master ]
 jobs:
   Nix-build-and-Upload:
     runs-on: ubuntu-latest
