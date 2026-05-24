@@ -129,3 +129,16 @@ di farlo per permettere a zola serve di fare il rebuild:
 
     $ CMD="watchexec -d 1000 -e scss,md,html -- weasyprint http://localhost:1111/volantino/primociclo/ volantino-dev.pdf"
     $ nix-shell -p python39Packages.weasyprint watchexec --run "$CMD"
+
+## Per aggiornare sagome
+
+Se il gioco "sagome" viene aggiornato, al momento bisogna aggiornare il flake e
+fare un commit:
+
+```
+nix flake update sagome
+git commit -am "chore: update sagome"
+git push
+```
+
+La CD si occuperà di fare deploy e aggiornamento.
