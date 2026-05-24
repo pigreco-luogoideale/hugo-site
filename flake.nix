@@ -71,7 +71,7 @@
         '';
     in {
       packages.default = pkgs.zola;
-
+      packages.rclone = pkgs.rclone;
       packages.sito = pkgs.stdenv.mkDerivation {
         pname = packageName;
         version = "1.0.0";

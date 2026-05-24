@@ -24,6 +24,6 @@ jobs:
     - name: What's in here
       run: tree -L 2
     - name: Check rclone config
-      run: rclone listremotes --config="rclone.conf"
+      run: nix run .#rclone -- listremotes --config="rclone.conf"
     - name: Update to FTP
-      run: rclone sync --config="rclone.conf" -v result luogoideale:/htdocs/
+      run: nix run .#rclone -- sync --config="rclone.conf" -v result luogoideale:/htdocs/
