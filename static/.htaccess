@@ -9,3 +9,8 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^pigreco.luogoideale.org$ [NC]
 # Redirect the browser to www.luogoideale.org by 301 redirect
 RewriteRule ^(.*)$ https://www.luogoideale.org/$1 [R=301,L]
+
+<IfModule mod_headers.c>
+    # Keep the cache for 24h
+    Header set Cache-Control "public, max-age=86400"
+</IfModule>
