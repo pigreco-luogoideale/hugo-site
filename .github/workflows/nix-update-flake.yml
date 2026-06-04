@@ -1,0 +1,40 @@
+name: Update flake inputs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Modify file
+        run: |
+          echo "Updated at $(date -u)" >> version.txt
+
+      - name: Commit and push
+        run: |
+          BRANCH="auto-pr/$(date -u +%Y%m%d-%H%M%S)"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add version.txt
+          git commit -m "Foo: bar"
+          git push origin "$BRANCH"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
+
+      - name: Create PR
+        # *** Platform-specific: replace this step when porting ***
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "Foo: bar" \
+            --body "Automated PR"
