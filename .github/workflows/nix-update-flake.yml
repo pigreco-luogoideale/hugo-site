@@ -41,7 +41,7 @@ jobs:
           # Wait a bit so github should be ready to create the PR
           sleep 3
           gh pr create \
-            --base main \
+            --base master \
             --head "$BRANCH" \
             --title "chore: nix flake update" \
             --body "This automated PR updates flake.lock inputs"
