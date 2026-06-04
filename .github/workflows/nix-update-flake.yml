@@ -8,33 +8,38 @@ permissions:
   pull-requests: write
 
 jobs:
-  auto-pr:
+  update-flake-inputs:
     runs-on: ubuntu-latest
     steps:
+      # Get nix
+      - uses: cachix/install-nix-action@v31
+        with:
+          # Token is used to fetch nixpkgs using the github API and avoid rate limit
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Get the repo
       - uses: actions/checkout@v4
 
-      - name: Modify file
+      - name: Update flake inputs
         run: |
-          echo "Updated at $(date -u)" >> version.txt
+          nix flake update sagome
 
       - name: Commit and push
         run: |
-          BRANCH="auto-pr/$(date -u +%Y%m%d-%H%M%S)"
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="update-flake-inputs/$(date -u +%Y%m%d-%H%M%S)"
+          git config user.name "pigreco-bot"
+          git config user.email "webmaster@luogoideale.org"
           git checkout -b "$BRANCH"
-          git add version.txt
-          git commit -m "Foo: bar"
+          git commit -am "chore: flake updated"
           git push origin "$BRANCH"
           echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
 
       - name: Create PR
-        # *** Platform-specific: replace this step when porting ***
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh pr create \
             --base main \
             --head "$BRANCH" \
-            --title "Foo: bar" \
-            --body "Automated PR"
+            --title "chore: nix flake update" \
+            --body "This automated PR updates flake.lock inputs"
