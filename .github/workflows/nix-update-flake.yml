@@ -38,6 +38,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Wait a bit so github should be ready to create the PR
+          sleep 3
           gh pr create \
             --base main \
             --head "$BRANCH" \
