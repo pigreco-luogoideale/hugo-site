@@ -522,11 +522,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1779705271,
-        "narHash": "sha256-i1x1pe8T8cFcM+dlnifkWKvug6Zrk1ofGamPiu/xXRQ=",
+        "lastModified": 1780568780,
+        "narHash": "sha256-7WqYxjNoYDH9y4tQp3vAIAoUJRf12tB6NsHGeA6xphE=",
         "owner": "pigreco-luogoideale",
         "repo": "sagome",
-        "rev": "679bf56b98d674e5560cc64b045e59863d8874f7",
+        "rev": "b0fcacb31690c581539dc738b86d35e041ee0379",
         "type": "github"
       },
       "original": {
