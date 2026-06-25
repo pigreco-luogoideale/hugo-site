@@ -142,11 +142,11 @@
       <option value="rectangle">Rettangolo (5 × 8)</option>
       <option value="s">Forma S</option>
       <option value="t">Forma T</option>
-      <option value="piramide">Piramide</option>
-      <option value="rovesciata">Piramide Rovesciata</option>
+      <option value="piramide">Triangolo 1</option>
+      <option value="rovesciata">Triangolo 2</option>
     </select>
     <button onclick="resetGame()">Nuova Partita</button>
-    <button id="modeBtn" onclick="toggleMode()">Modalità: Difficile</button>
+    <button id="modeBtn" onclick="toggleMode()">Modalità: diagonale</button>
   </div>
 
   <div id="status" class="status turn">Turno del Giocatore 1</div>
@@ -157,12 +157,12 @@
 
   <div class="rules">
     <h2>Come Si Gioca</h2>
-    <p><strong>Obiettivo:</strong> Sii il primo giocatore a fare 3 villette in fila!</p>
+    <p><strong>Obiettivo:</strong> Sii il primo a mettere 3 villette a schiera!</p>
     <p><strong>Regole:</strong></p>
     <ol>
-      <li>I giocatori si alternano piazzando una villetta su una casella vuota. Entrambi i giocatori usano la stessa icona.</li>
-      <li id="ruleWin">Il primo giocatore a completare 3 villette in fila (in orizzontale, verticale o diagonale) vince immediatamente.</li>
-      <li>Importante: le villette non sono colorate diversamente — qualsiasi 3 in fila conta! Vince il giocatore che ha piazzato l'ultima villetta.</li>
+      <li>I giocatori si alternano posizionando una casa casella vuota. Entrambi i giocatori usano la stessa icona.</li>
+      <li id="ruleWin">Il primo giocatore a far sì che ci siano 3 case in fila (in orizzontale, verticale o diagonale) vince immediatamente.</li>
+      <li>Importante: le case sono tutte uguali — qualsiasi 3 in fila è valido indipendentemente da chi ha posizionato le altre case! Vince il giocatore che ha piazzato l'ultima casa.</li>
     </ol>
   </div>
 
@@ -237,10 +237,10 @@
 
     function toggleMode() {
       easyMode = !easyMode;
-      modeBtn.textContent = easyMode ? 'Modalità: Facile' : 'Modalità: Difficile';
+      modeBtn.textContent = easyMode ? 'Modalità: Facile' : 'Modalità: diagonale';
       ruleWin.textContent = easyMode
-        ? 'Il primo giocatore a completare 3 villette in fila (in orizzontale o verticale) vince immediatamente.'
-        : 'Il primo giocatore a completare 3 villette in fila (in orizzontale, verticale o diagonale) vince immediatamente.';
+        ? 'Il primo giocatore a posizionare 3 case in fila (in orizzontale o verticale) vince immediatamente.'
+        : 'Il primo giocatore a posizionare 3 case in fila (in orizzontale, verticale o diagonale) vince immediatamente.';
       resetGame();
     }
 
