@@ -23,7 +23,9 @@ jobs:
         RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
     - name: What's in here
       run: tree -L 2
-    - name: Check rclone config
-      run: nix run .#rclone -- listremotes --config="rclone.conf"
+    - name: Check rclone config and connectivity
+      run: |
+        nix run .#rclone -- listremotes --config="rclone.conf"
+        nix run .#rclone -- lsd --config="rclone.conf" luogoideale:
     - name: Update to FTP
       run: nix run .#rclone -- sync --config="rclone.conf" -v result luogoideale:/htdocs/
