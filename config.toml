@@ -102,7 +102,7 @@ taxonomies = [
 
 	[extra.taxonomies.tutti.lezioni]
     posizione = 2
-	name = "Lezioni"
+	name = "Giochi"
     #redirect = "/activity/lezioni"
 	description = """
          Lezioni da soli o in piccoli gruppi sotto la superivisione dei nostri tutor per

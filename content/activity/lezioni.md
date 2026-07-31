@@ -6,7 +6,7 @@ description = "Lezioni private di matematica e fisica per aiutare gli studenti i
 template = "activity/page.html"
 
 [taxonomies]
-tutti = ["lezioni"]
+#tutti = ["lezioni"]
 
 
 [extra]

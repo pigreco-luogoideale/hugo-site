@@ -6,7 +6,7 @@ description = "Un'occasione per lavorare in piccoli gruppi sotto la supervisione
 template = "activity/page.html"
 
 [taxonomies]
-tutti = ["lezioni"]
+#tutti = ["lezioni"]
 
 
 [extra]
