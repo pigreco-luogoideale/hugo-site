@@ -40,7 +40,7 @@ taxonomies = [
     # Ordine delle pagine
     [extra.taxonomies.ordine]
     scuole = ["infanzia", "primaria", "primogrado", "secondogrado"]
-    tutti = ["animazione", "formazione", "lezioni", "altro"]
+    tutti = ["animazione", "formazione", "giochi", "altro"]
 
     # Titoli e descrizioni per la sezione scuole
 	[extra.taxonomies.scuole.infanzia]
@@ -100,13 +100,13 @@ taxonomies = [
         # accquisirne di nuove, confrontarsi con i coetanei e
         # prepararsi per affrontare esami, verifiche e problemi quotidiani.
 
-	[extra.taxonomies.tutti.lezioni]
+	[extra.taxonomies.tutti.giochi]
     posizione = 2
-	name = "Giochi"
-    #redirect = "/activity/lezioni"
+    name = "Giochi"
+    redirect = "/giochi"
 	description = """
-         Lezioni da soli o in piccoli gruppi sotto la superivisione dei nostri tutor per
-         colmare eventuali lacune e per sviluppare un metodo di studio efficace e specifico per la matematica.
+         Giochi e rompicapi matematici per mettere alla prova le proprie abilità
+         di calcolo e strategia, sfidandosi da soli o con gli amici.
     """
 
 	[extra.taxonomies.tutti.altro]
