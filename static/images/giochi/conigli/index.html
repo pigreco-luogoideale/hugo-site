@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scambia i conigli</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('sfondo.svg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 16px;
+        }
+        h1 {
+            margin-bottom: 6px;
+            font-size: 2.2rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            background: rgba(30,60,30,0.55);
+            padding: 10px 18px;
+            border-radius: 14px;
+            backdrop-filter: blur(10px);
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .size-btn {
+            width: 36px;
+            height: 36px;
+            border: 2px solid rgba(255,255,255,0.6);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .size-btn:hover {
+            background: rgba(255,255,255,0.35);
+            transform: scale(1.1);
+        }
+        .size-btn.active {
+            background: white;
+            color: #1a936f;
+            border-color: white;
+            transform: scale(1.15);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .instructions {
+            margin-bottom: 20px;
+            text-align: center;
+            max-width: 600px;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        .board {
+            display: flex;
+            gap: 8px;
+            background: rgba(30,60,30,0.55);
+            padding: 18px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 95vw;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .cell {
+            width: clamp(48px, 10vw, 68px);
+            height: clamp(48px, 10vw, 68px);
+            background: rgba(255,255,255,0.22);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: 3px solid rgba(255,255,255,0.35);
+        }
+        .cell.empty {
+            background: rgba(255,255,255,0.08);
+            border-style: dashed;
+            opacity: 0.6;
+        }
+        .bunny {
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.2s, filter 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        .bunny:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
+        }
+        .bunny-img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            pointer-events: none;
+        }
+        .left-bunny .bunny-img {
+            transform: scaleX(-1);
+        }
+        .stats {
+            margin-top: 20px;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        .message {
+            margin-top: 14px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            min-height: 40px;
+            text-align: center;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .btn-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+        }
+        .btn {
+            padding: 12px 28px;
+            font-size: 1.05rem;
+            border: none;
+            border-radius: 12px;
+            background: white;
+            color: #1a936f;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐰 Scambia i conigli 🐰</h1>
+
+    <div class="selector">
+        <span>Conigli per lato:</span>
+        <button class="size-btn active" id="btn-2" onclick="setSize(2)">2</button>
+        <button class="size-btn" id="btn-3" onclick="setSize(3)">3</button>
+        <button class="size-btn" id="btn-4" onclick="setSize(4)">4</button>
+        <button class="size-btn" id="btn-5" onclick="setSize(5)">5</button>
+    </div>
+
+    <div class="instructions" id="instructions">
+        I conigli marroni sono a sinistra, quelli bianchi a destra.<br>
+        Clicca un coniglio per farlo avanzare (marroni → destra, bianchi → sinistra).<br>
+        Un coniglio può spostarsi nella casella vuota accanto, oppure saltare oltre un altro coniglio.<br>
+        Scambia i due gruppi per vincere!
+    </div>
+
+    <div class="board" id="board"></div>
+    <div class="stats">Mosse: <span id="moveCount">0</span></div>
+    <div class="message" id="message"></div>
+    <div class="btn-row">
+        <button class="btn" id="undoBtn" onclick="undoMove()" disabled>Annulla mossa</button>
+        <button class="btn" id="resetBtn" onclick="initGame()">Ricomincia</button>
+    </div>
+
+    <script>
+        // L = conigli a sinistra (marroni, vanno a destra)
+        // R = conigli a destra (bianchi, vanno a sinistra)
+        // null = casella vuota
+        let bunniesPerSide = 2;
+        let board = [];
+        let moves = 0;
+        let history = [];
+
+        const boardEl = document.getElementById('board');
+        const messageEl = document.getElementById('message');
+        const moveCountEl = document.getElementById('moveCount');
+        const instructionsEl = document.getElementById('instructions');
+        const undoBtn = document.getElementById('undoBtn');
+
+        function setSize(n) {
+            bunniesPerSide = n;
+            document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + n).classList.add('active');
+            initGame();
+        }
+
+        function buildInitialBoard() {
+            board = [];
+            for (let i = 0; i < bunniesPerSide; i++) board.push('L');
+            board.push(null);
+            for (let i = 0; i < bunniesPerSide; i++) board.push('R');
+        }
+
+        function pushHistory() {
+            history.push({ board: board.slice(), moves: moves });
+            undoBtn.disabled = false;
+        }
+
+        function undoMove() {
+            if (history.length === 0) return;
+            const prev = history.pop();
+            board = prev.board;
+            moves = prev.moves;
+            messageEl.textContent = '';
+            if (history.length === 0) undoBtn.disabled = true;
+            render(false); // false = don't push history
+        }
+
+        function render(pushHist = true) {
+            boardEl.innerHTML = '';
+            board.forEach((cell, index) => {
+                const cellEl = document.createElement('div');
+                cellEl.className = 'cell' + (cell === null ? ' empty' : '');
+
+                if (cell === 'L') {
+                    const bunnyWrap = document.createElement('span');
+                    bunnyWrap.className = 'bunny left-bunny';
+                    bunnyWrap.title = 'Coniglio di sinistra (va a destra)';
+                    bunnyWrap.innerHTML = '<img src="bunnyl.svg" class="bunny-img" alt="coniglio di sinistra">';
+                    bunnyWrap.onclick = () => tryMove(index);
+                    cellEl.appendChild(bunnyWrap);
+                } else if (cell === 'R') {
+                    const bunnyWrap = document.createElement('span');
+                    bunnyWrap.className = 'bunny right-bunny';
+                    bunnyWrap.title = 'Coniglio di destra (va a sinistra)';
+                    bunnyWrap.innerHTML = '<img src="bunnyr.svg" class="bunny-img" alt="coniglio di destra">';
+                    bunnyWrap.onclick = () => tryMove(index);
+                    cellEl.appendChild(bunnyWrap);
+                }
+
+                boardEl.appendChild(cellEl);
+            });
+
+            moveCountEl.textContent = moves;
+            checkWin(pushHist);
+        }
+
+        function tryMove(index) {
+            if (messageEl.textContent.includes('Hai vinto')) return;
+
+            const bunny = board[index];
+            const emptyIndex = board.indexOf(null);
+            let moved = false;
+
+            if (bunny === 'L') {
+                // Conigli marroni vanno a destra (avanti)
+                if (index + 1 === emptyIndex) {
+                    pushHistory();
+                    swap(index, emptyIndex);
+                    moved = true;
+                } else if (index + 2 === emptyIndex && board[index + 1] !== null) {
+                    pushHistory();
+                    swap(index, emptyIndex);
+                    moved = true;
+                }
+            } else if (bunny === 'R') {
+                // Conigli bianchi vanno a sinistra (avanti)
+                if (index - 1 === emptyIndex) {
+                    pushHistory();
+                    swap(index, emptyIndex);
+                    moved = true;
+                } else if (index - 2 === emptyIndex && board[index - 1] !== null) {
+                    pushHistory();
+                    swap(index, emptyIndex);
+                    moved = true;
+                }
+            }
+
+            if (moved) {
+                moves++;
+                render(false);
+            }
+        }
+
+        function swap(from, to) {
+            board[to] = board[from];
+            board[from] = null;
+        }
+
+        function checkWin(pushHist) {
+            let won = true;
+            // Prime bunniesPerSide caselle devono essere R
+            for (let i = 0; i < bunniesPerSide; i++) {
+                if (board[i] !== 'R') won = false;
+            }
+            // Centro deve essere vuoto
+            if (board[bunniesPerSide] !== null) won = false;
+            // Ultime bunniesPerSide caselle devono essere L
+            for (let i = bunniesPerSide + 1; i < board.length; i++) {
+                if (board[i] !== 'L') won = false;
+            }
+
+            if (won) {
+                messageEl.innerHTML = '🎉 Hai vinto! Tutti i conigli sono scambiati! 🎉';
+                messageEl.style.color = '#ffeb3b';
+            }
+        }
+
+        function updateInstructions() {
+            instructionsEl.innerHTML = `
+                I conigli marroni sono a sinistra, quelli bianchi a destra.<br>
+                Clicca un coniglio per farlo avanzare (marroni → destra, bianchi → sinistra).<br>
+                Un coniglio può spostarsi nella casella vuota accanto, oppure saltare oltre un altro coniglio.<br>
+                Scambia i due gruppi per vincere! (${bunniesPerSide} per lato)
+            `;
+        }
+
+        function initGame() {
+            buildInitialBoard();
+            moves = 0;
+            history = [];
+            undoBtn.disabled = true;
+            messageEl.textContent = '';
+            updateInstructions();
+            render(false);
+        }
+
+        initGame();
+    </script>
+</body>
+</html>

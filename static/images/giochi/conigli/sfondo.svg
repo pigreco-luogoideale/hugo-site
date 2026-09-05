@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87CEEB"/>
+      <stop offset="60%" stop-color="#B0E0E6"/>
+      <stop offset="100%" stop-color="#E0F7FA"/>
+    </linearGradient>
+    <linearGradient id="hillGrad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7CB342"/>
+      <stop offset="100%" stop-color="#558B2F"/>
+    </linearGradient>
+    <linearGradient id="hillGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8BC34A"/>
+      <stop offset="100%" stop-color="#689F38"/>
+    </linearGradient>
+    <linearGradient id="hillGrad3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AED581"/>
+      <stop offset="100%" stop-color="#7CB342"/>
+    </linearGradient>
+    <filter id="cloudShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#ffffff" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="800" fill="url(#skyGrad)"/>
+
+  <!-- Sun -->
+  <circle cx="1000" cy="100" r="55" fill="#FFD54F" opacity="0.9"/>
+  <circle cx="1000" cy="100" r="42" fill="#FFECB3" opacity="0.5"/>
+
+  <!-- Clouds -->
+  <g fill="#FFFFFF" opacity="0.85" filter="url(#cloudShadow)">
+    <ellipse cx="180" cy="120" rx="50" ry="22"/>
+    <ellipse cx="230" cy="105" rx="45" ry="28"/>
+    <ellipse cx="270" cy="125" rx="38" ry="20"/>
+
+    <ellipse cx="520" cy="180" rx="55" ry="24"/>
+    <ellipse cx="580" cy="160" rx="48" ry="30"/>
+    <ellipse cx="630" cy="185" rx="42" ry="22"/>
+
+    <ellipse cx="880" cy="220" rx="50" ry="20"/>
+    <ellipse cx="930" cy="205" rx="44" ry="26"/>
+    <ellipse cx="970" cy="225" rx="36" ry="18"/>
+  </g>
+
+  <!-- Distant hills -->
+  <path d="M -50 520 Q 300 380 650 500 T 1250 480 L 1250 850 L -50 850 Z" fill="url(#hillGrad3)"/>
+
+  <!-- Mid hills -->
+  <path d="M -50 580 Q 350 450 700 580 T 1250 540 L 1250 850 L -50 850 Z" fill="url(#hillGrad2)"/>
+
+  <!-- Foreground hill -->
+  <path d="M -50 650 Q 400 550 800 660 T 1250 620 L 1250 850 L -50 850 Z" fill="url(#hillGrad1)"/>
+
+  <!-- Flowers scattered -->
+  <g opacity="0.9">
+    <!-- Flower 1 -->
+    <circle cx="150" cy="710" r="5" fill="#FF8A80"/>
+    <circle cx="142" cy="705" r="5" fill="#FF8A80"/>
+    <circle cx="158" cy="705" r="5" fill="#FF8A80"/>
+    <circle cx="150" cy="698" r="5" fill="#FF8A80"/>
+    <circle cx="150" cy="710" r="3" fill="#FFEB3B"/>
+
+    <!-- Flower 2 -->
+    <circle cx="350" cy="760" r="5" fill="#CE93D8"/>
+    <circle cx="342" cy="755" r="5" fill="#CE93D8"/>
+    <circle cx="358" cy="755" r="5" fill="#CE93D8"/>
+    <circle cx="350" cy="748" r="5" fill="#CE93D8"/>
+    <circle cx="350" cy="760" r="3" fill="#FFEB3B"/>
+
+    <!-- Flower 3 -->
+    <circle cx="580" cy="700" r="5" fill="#81D4FA"/>
+    <circle cx="572" cy="695" r="5" fill="#81D4FA"/>
+    <circle cx="588" cy="695" r="5" fill="#81D4FA"/>
+    <circle cx="580" cy="688" r="5" fill="#81D4FA"/>
+    <circle cx="580" cy="700" r="3" fill="#FFEB3B"/>
+
+    <!-- Flower 4 -->
+    <circle cx="820" cy="740" r="5" fill="#FF8A80"/>
+    <circle cx="812" cy="735" r="5" fill="#FF8A80"/>
+    <circle cx="828" cy="735" r="5" fill="#FF8A80"/>
+    <circle cx="820" cy="728" r="5" fill="#FF8A80"/>
+    <circle cx="820" cy="740" r="3" fill="#FFEB3B"/>
+
+    <!-- Flower 5 -->
+    <circle cx="1050" cy="680" r="5" fill="#CE93D8"/>
+    <circle cx="1042" cy="675" r="5" fill="#CE93D8"/>
+    <circle cx="1058" cy="675" r="5" fill="#CE93D8"/>
+    <circle cx="1050" cy="668" r="5" fill="#CE93D8"/>
+    <circle cx="1050" cy="680" r="3" fill="#FFEB3B"/>
+
+    <!-- Flower 6 -->
+    <circle cx="250" cy="630" r="4" fill="#81D4FA"/>
+    <circle cx="244" cy="626" r="4" fill="#81D4FA"/>
+    <circle cx="256" cy="626" r="4" fill="#81D4FA"/>
+    <circle cx="250" cy="620" r="4" fill="#81D4FA"/>
+    <circle cx="250" cy="630" r="2.5" fill="#FFEB3B"/>
+
+    <!-- Flower 7 -->
+    <circle cx="720" cy="640" r="4" fill="#FF8A80"/>
+    <circle cx="714" cy="636" r="4" fill="#FF8A80"/>
+    <circle cx="726" cy="636" r="4" fill="#FF8A80"/>
+    <circle cx="720" cy="630" r="4" fill="#FF8A80"/>
+    <circle cx="720" cy="640" r="2.5" fill="#FFEB3B"/>
+
+    <!-- Flower 8 -->
+    <circle cx="950" cy="600" r="4" fill="#CE93D8"/>
+    <circle cx="944" cy="596" r="4" fill="#CE93D8"/>
+    <circle cx="956" cy="596" r="4" fill="#CE93D8"/>
+    <circle cx="950" cy="590" r="4" fill="#CE93D8"/>
+    <circle cx="950" cy="600" r="2.5" fill="#FFEB3B"/>
+  </g>
+
+  <!-- Grass tufts -->
+  <g stroke="#33691E" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M 120 720 Q 125 705 130 720 M 125 720 Q 128 700 132 720"/>
+    <path d="M 480 750 Q 485 735 490 750 M 485 750 Q 488 730 492 750"/>
+    <path d="M 650 720 Q 655 705 660 720 M 655 720 Q 658 700 662 720"/>
+    <path d="M 880 760 Q 885 745 890 760 M 885 760 Q 888 740 892 760"/>
+    <path d="M 1120 700 Q 1125 685 1130 700 M 1125 700 Q 1128 680 1132 700"/>
+  </g>
+
+  <!-- Small decorative carrots -->
+  <g opacity="0.85">
+    <!-- Carrot 1 -->
+    <path d="M 300 680 Q 305 660 310 680" fill="none" stroke="#FF7043" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 302 665 L 298 655 M 305 665 L 307 654 M 308 665 L 312 656" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Carrot 2 -->
+    <path d="M 750 690 Q 755 670 760 690" fill="none" stroke="#FF7043" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 752 675 L 748 665 M 755 675 L 757 664 M 758 675 L 762 666" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

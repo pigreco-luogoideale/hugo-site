@@ -1,0 +1,311 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torre di Hanoi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 { color: #333; margin-bottom: 10px; }
+
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .stats {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 300px;
+            width: 600px;
+            background: white;
+            border-bottom: 10px solid #5d4037;
+            border-radius: 5px;
+            padding-bottom: 10px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .peg {
+            width: 150px;
+            height: 250px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.3s;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .peg:hover { background-color: rgba(0, 0, 0, 0.05); }
+        .peg.selected { background-color: rgba(0, 123, 255, 0.2); }
+
+        .peg::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 12px;
+            height: 200px;
+            background-color: #8d6e63;
+            z-index: 0;
+            border-radius: 5px;
+        }
+
+        .disk {
+            height: 25px;
+            border-radius: 12px;
+            z-index: 1;
+            margin-bottom: 2px;
+            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            height: 60px;
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .win { color: #28a745; }
+        .error { color: #dc3545; }
+
+        .instructions {
+            margin-top: 30px;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .instructions h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        button:hover { background-color: #0056b3; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
+        
+        .undo-btn { background-color: #6c757d; }
+        .undo-btn:hover { background-color: #5a6268; }
+        .retry-btn { background-color: #ffc107; color: #333; font-weight: bold; margin-left: 10px; }
+        .retry-btn:hover { background-color: #e0a800; }
+    </style>
+</head>
+<body>
+
+    <h1>Torre di Hanoi</h1>
+
+    <div class="controls">
+        <label>Dischi:</label>
+        <button onclick="startGame(4)">4</button>
+        <button onclick="startGame(5)">5</button>
+        <button onclick="startGame(6)">6</button>
+        <button class="undo-btn" id="undoBtn" onclick="undoMove()" disabled>⬅ Indietro</button>
+    </div>
+
+    <div class="stats">Mosse: <span id="moveCount">0</span></div>
+
+    <div class="game-container">
+        <div class="peg" id="peg0" onclick="handlePegClick(0)"></div>
+        <div class="peg" id="peg1" onclick="handlePegClick(1)"></div>
+        <div class="peg" id="peg2" onclick="handlePegClick(2)"></div>
+    </div>
+
+    <div id="message"></div>
+
+    <div class="instructions">
+        <h2>Come si gioca?</h2>
+        <p>L'obiettivo è spostare l'intera torre dal primo palo a uno qualsiasi degli altri due pali.</p>
+        <ul>
+            <li><strong>Sposta un disco:</strong> Clicca prima sul palo di origine, poi su quello di destinazione.</li>
+            <li><strong>La Regola d'Oro:</strong> Non puoi mai poggiare un disco più grande sopra uno più piccolo.</li>
+            <li><strong>Sfida:</strong> Prova a risolverlo nel minor numero di mosse possibile!</li>
+        </ul>
+    </div>
+
+    <script>
+        let pegs = [[], [], []];
+        let selectedPeg = null;
+        let moveHistory = [];
+        let diskCount = 0;
+        let moves = 0;
+
+        const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FFB833', '#33FFF3'];
+
+        function startGame(num) {
+            diskCount = num;
+            pegs = [[], [], []];
+            moveHistory = [];
+            selectedPeg = null;
+            moves = 0;
+            
+            document.getElementById('moveCount').innerText = moves;
+            document.getElementById('message').innerHTML = "";
+            document.getElementById('message').className = "";
+            document.getElementById('undoBtn').disabled = true;
+
+            for (let i = num; i > 0; i--) {
+                pegs[0].push(i);
+            }
+            render();
+        }
+
+        function render() {
+            for (let i = 0; i < 3; i++) {
+                const pegElement = document.getElementById(`peg${i}`);
+                pegElement.innerHTML = ''; 
+                pegElement.classList.remove('selected');
+                if (selectedPeg === i) pegElement.classList.add('selected');
+
+                pegs[i].forEach(diskSize => {
+                    const diskDiv = document.createElement('div');
+                    diskDiv.className = 'disk';
+                    diskDiv.style.width = (diskSize * 20 + 40) + 'px';
+                    diskDiv.style.backgroundColor = colors[diskSize - 1];
+                    pegElement.appendChild(diskDiv);
+                });
+            }
+        }
+
+        function handlePegClick(pegIndex) {
+            if (selectedPeg === null) {
+                if (pegs[pegIndex].length > 0) {
+                    selectedPeg = pegIndex;
+                    clearMessage();
+                }
+            } else {
+                if (selectedPeg !== pegIndex) {
+                    const success = moveDisk(selectedPeg, pegIndex);
+                    if (!success) {
+                        showMessage("Non si può!", "error");
+                    }
+                }
+                selectedPeg = null;
+            }
+            render();
+        }
+
+        function moveDisk(from, to, isUndo = false) {
+            const disk = pegs[from][pegs[from].length - 1];
+            const targetDisk = pegs[to][pegs[to].length - 1];
+
+            if (targetDisk && disk > targetDisk) {
+                return false;
+            }
+
+            if (!isUndo) {
+                moveHistory.push({ from, to });
+                document.getElementById('undoBtn').disabled = false;
+                moves++;
+                document.getElementById('moveCount').innerText = moves;
+            } else {
+                moves--;
+                document.getElementById('moveCount').innerText = moves;
+            }
+
+            pegs[to].push(pegs[from].pop());
+            checkWin();
+            return true;
+        }
+
+        function undoMove() {
+            if (moveHistory.length === 0) return;
+            const lastMove = moveHistory.pop();
+            moveDisk(lastMove.to, lastMove.from, true);
+            if (moveHistory.length === 0) document.getElementById('undoBtn').disabled = true;
+            clearMessage();
+            render();
+        }
+
+        function checkWin() {
+            if (pegs[1].length === diskCount || pegs[2].length === diskCount) {
+                const minMoves = Math.pow(2, diskCount) - 1;
+                
+                if (moves === minMoves) {
+                    showMessage(`🎉 Perfetto! Hai vinto in ${moves} mosse (il minimo possibile)!`, "win");
+                } else {
+                    const retryBtn = `<button class="retry-btn" onclick="startGame(${diskCount})">Riprova</button>`;
+                    showMessage(`🎉 Hai vinto in ${moves} mosse! <br> Puoi farcela in sole ${minMoves} mosse. Vuoi riprovare? ${retryBtn}`, "win");
+                }
+            }
+        }
+
+        function showMessage(text, className) {
+            const msgDiv = document.getElementById('message');
+            msgDiv.innerHTML = text;
+            msgDiv.className = className;
+        }
+
+        function clearMessage() {
+            const msgDiv = document.getElementById('message');
+            msgDiv.innerHTML = "";
+            msgDiv.className = "";
+        }
+
+        startGame(4);
+    </script>
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
