@@ -14,17 +14,31 @@ thumb = "/images/activities/lezioni_1.jpg"
     <div class="content activities">
         <h2>Giochi</h2>
         <a href="/giochi/conigli/" class="activity">
-            <img src="/images/activities/lezioni_1.jpg" alt="" />
+            <img src="/images/giochi/conigli.jpg" alt="" />
             <div class="description">
                 <h1>Scambia i conigli</h1>
-                <p>Il classico rompicapo: scambia le posizioni dei due gruppi di conigli senza sovrascrivarli.</p>
+                <p>Riesci a invertire le posizioni dei conigli facendoli saltare solo in avanti?</p>
             </div>
         </a>
-        <a href="/giochi/villette.html" class="activity">
-            <img src="/images/activities/lezioni_2.jpg" alt="" />
+		<a href="giochi/torredihanoi.html" class="activity">
+            <img src="/images/giochi/torredihanoi.jpg" alt="" />
             <div class="description">
-                <h1>Villette a Schiera</h1>
-                <p>Metti in fila tre villette prima del tuo avversario, su diversi tipi di tavoliere.</p>
+                <h1>Torre di Hanoi</h1>
+                <p>Sposta la torre su un altro palo muovendo un solo livello per volta.</p>
+            </div>
+        </a>
+		<a href="https://www.luogoideale.org/sagome/" class="activity">
+            <img src="/images/giochi/sagome.jpg" alt="" />
+            <div class="description">
+                <h1>Sagome geometriche</h1>
+                <p>Come si farà ad ottenere lo stesso disegno sovrapponendo le figure?</p>
+            </div>
+        </a>
+		<a href="/giochi/villette.html" class="activity">
+            <img src="/images/giochi/villette.jpg" alt="" />
+            <div class="description">
+                <h1>Villette a schiera</h1>
+                <p>Sfida i tuoi amici e cerca di essere il primo a mettere tre case in fila.</p>
             </div>
         </a>
     </div>
