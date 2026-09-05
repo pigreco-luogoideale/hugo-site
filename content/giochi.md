@@ -20,7 +20,7 @@ thumb = "/images/activities/lezioni_1.jpg"
                 <p>Riesci a invertire le posizioni dei conigli facendoli saltare solo in avanti?</p>
             </div>
         </a>
-		<a href="giochi/torredihanoi.html" class="activity">
+		<a href="/giochi/torredihanoi.html" class="activity">
             <img src="/images/giochi/torredihanoi.jpg" alt="" />
             <div class="description">
                 <h1>Torre di Hanoi</h1>
